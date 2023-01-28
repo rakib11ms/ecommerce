@@ -24,10 +24,16 @@ import img10 from "../images/img-panjabi-pink.jpg";
 import img11 from "../images/white Tshirt.jpg";
 import img12 from "../images/white Tshirt.jpg";
 
+
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+
 function Home() {
     const settings = {
         infinite: true,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         speed: 2000,
@@ -97,6 +103,28 @@ function Home() {
         ],
     };
 
+
+
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 4
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 4
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+
     return (
         <>
             <div className="container">
@@ -141,7 +169,7 @@ function Home() {
                 <hr className="my-2" />
 
                 <section className="navs ">
-                    <nav class="navbar navbar-expand-lg navbar-light  bg-white mx-5 px-5 ">
+                    <nav class="navbar navbar-expand-lg navbar-light responsive-nav  ">
                         <div class="container-fluid">
                             <button
                                 class="navbar-toggler"
@@ -173,7 +201,7 @@ function Home() {
                                         >
                                             PANJABI
                                         </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <ul class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
                                             <div className="nav-dropdown-parent-vertical">
                                                 <div className="">
                                                     <li>
@@ -531,30 +559,6 @@ function Home() {
             </div>
 
             <section className="hero-sliders">
-                {/* <div id="carouselExampleControls" class="carousel slide carousal-height" data-bs-ride="carousel">
-                    <div class="carousel-inner carousal-height">
-                        <div class="carousel-item active">
-                            <img src="https://elements-cover-images-0.imgix.net/45ef3e71-6a63-49e4-a47d-428200b0d4a4?auto=compress%2Cformat&fit=max&w=900&s=46c2d079f339e9a95e1b57f2b5055cf5" class="d-block w-100" alt="..." />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://i0.wp.com/www.nogorpolli.com/wp-content/uploads/2018/12/most-popular-men-fashion-clothing-in-easy-fashion-ltd-bangladesh-nogorpolli.jpg?fit=770%2C514&ssl=1" class="d-block w-100" alt="..." />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://www.nogorpolli.com/wp-content/uploads/2018/12/yellow-is-the-most-innovative-clothing-brand-in-bangladesh-nogorpolli-%E0%A6%A8%E0%A6%97%E0%A6%B0-%E0%A6%AA%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A7%80-nogor-polli-apparel-clothing-fashion-store.png" class="d-block w-100" alt="..." />
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-
-
-
-                </div> */}
 
                 <div
                     id="carouselExampleIndicators"
@@ -627,7 +631,7 @@ function Home() {
                                 <img src={van} className="after-hero-image-card-logo" />
                             </div>
                             <div className="">
-                                <p className="my-1">FASTEST SHIPPING COUNTRYSIDE</p>
+                                <p className="mt-2 py-0 my-1">FASTEST SHIPPING COUNTRYSIDE</p>
                             </div>
                         </div>
 
@@ -636,7 +640,7 @@ function Home() {
                                 <img src={refund} className="after-hero-image-card-logo" />
                             </div>
                             <div className="">
-                                <p className="my-1">EASY RETURN POLICY</p>
+                                <p className="mt-2 py-0 my-1">EASY RETURN POLICY</p>
                             </div>
                         </div>
 
@@ -645,7 +649,7 @@ function Home() {
                                 <img src={supportlogo} className="after-hero-image-card-logo" />
                             </div>
                             <div className="">
-                                <p className="my-1">ONLINE SUPPORT 24/7</p>
+                                <p className="mt-2 py-0 my-1">ONLINE SUPPORT 24/7</p>
                             </div>
                         </div>
 
@@ -654,7 +658,7 @@ function Home() {
                                 <img src={premium} className="after-hero-image-card-logo" />
                             </div>
                             <div className="">
-                                <p className="my-1">PREMEMIUM QUALITY PRODUCTS</p>
+                                <p className="mt-2 py-0 my-1">PREMEMIUM QUALITY PRODUCTS</p>
                             </div>
                         </div>
                     </div>
@@ -662,21 +666,98 @@ function Home() {
             </section>
 
             {/* Ashiq Code  */}
-            <section>
+            <section className="my-5">
                 <div>
                     {/* Browse Our Catagories */}
-
-                    <div className="Name-tag-div1">
-                        <div className="Name-tag-div2">
-                            <h2 className="Name-tag">Browse Our Catagories</h2>
+                    <div className="broswe-our-cat-heading my-3">
+                        <div className="Name-tag-div1">
+                            <div className="Name-tag-div2">
+                                <h2 className="Name-tag fs-4">BROWSE OUR CATEGORIES</h2>
+                            </div>
                         </div>
+                        <div className="check-1">
+                            <div className="check-2 check5"></div>
+                        </div>
+
                     </div>
 
-                    <div className="check-1">
-                        <div className="check-2"></div>
-                    </div>
+                    {/* <div className="d-flex my-3"> */}
 
                     <Slider {...settings}>
+                        <div className="browse-cat-single-item mx-2 ">
+                            <img src={img1} />
+                            <div className="browse-cat-single-inside-btn ">
+                                <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> JACKET</h6></button>
+
+                            </div>
+
+                        </div>
+                        <div className="browse-cat-single-item mx-2">
+                            <img src={img2} />
+                            <div className="browse-cat-single-inside-btn ">
+                                <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> LUXARY PANJABI</h6></button>
+
+                            </div>
+                        </div>
+                        <div className="browse-cat-single-item mx-2">
+                            <img src={img3} />
+                            <div className="browse-cat-single-inside-btn ">
+                                <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> PREMIMUM T-SHIRT</h6></button>
+
+                            </div>
+                        </div>
+                        <div className="browse-cat-single-item mx-2">
+                            <img src={img4} />
+                            <div className="browse-cat-single-inside-btn ">
+                                <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> LUXARY PANJABI</h6></button>
+
+                            </div>
+                        </div>
+                        <div className="browse-cat-single-item mx-2">
+                            <img src={img5} />
+                            <div className="browse-cat-single-inside-btn ">
+                                <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> LUXARY PANJABI</h6></button>
+
+                            </div>
+                        </div>
+                        <div className="browse-cat-single-item mx-2">
+                            <img src={img6} />
+                            <div className="browse-cat-single-inside-btn ">
+                                <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> JACKET</h6></button>
+
+                            </div>
+
+                        </div>
+                        <div className="browse-cat-single-item mx-2">
+                            <img src={img7} />
+                            <div className="browse-cat-single-inside-btn ">
+                                <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> JACKET</h6></button>
+
+                            </div>
+
+                        </div>
+                        <div className="browse-cat-single-item mx-2">
+                            <img src={img6} />
+                            <div className="browse-cat-single-inside-btn ">
+                                <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> JACKET</h6></button>
+
+                            </div>
+
+                        </div>
+
+                    </Slider>
+
+                </div>
+            </section>
+
+            {/* </div> */}
+
+
+
+
+
+
+            {/* <Slider {...settings}>
                         <div className="single-slider  ">
                             <img className="bcimages img-fluid" src={img1} />
                             <div className="bc-button-div">
@@ -723,441 +804,272 @@ function Home() {
                                 <button className="bc-button rounded">Women-Dress</button>
                             </div>
                         </div>
-                    </Slider>
+                    </Slider> */}
 
-                    {/* Best Selling  */}
-                    <div>
-                        <div className="Name-tag-div1">
-                            <div className="Name-tag-div2">
-                                <h2 className="Name-tag">BEST SELLING PRODUCT</h2>
-                            </div>
+            <section className="">
+
+                <div className="broswe-our-cat-heading my-3">
+                    <div className="Name-tag-div1">
+                        <div className="Name-tag-div2">
+                            <h2 className="Name-tag fs-4">BEST SELLING PRODUCTS</h2>
                         </div>
-
-                        <div className="check-1">
-                            <div className="check-2"></div>
-                        </div>
-
-                        <Slider {...style} className="container mt-5">
-                            <div className="card">
-                                <img src={img8} className="card-img-top img-fluid" alt="..." />
-                                <ul className="check-inputs">
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bG-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bB-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bM-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bP-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bR-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                </ul>
-                                <div className="card-body">
-                                    <p className="card-text">
-                                        Premium Quality Solid T-Shirt For Men
-                                    </p>
-                                    <h5 className="card-title">Tk. 350</h5>
-                                    <button className="Add-cart-button">Add To card</button>
-                                </div>
-                            </div>
-
-                            <div className="card">
-                                <img src={img8} className="card-img-top img-fluid" alt="..." />
-                                <ul className="check-inputs">
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bG-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bB-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bM-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bP-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bR-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                </ul>
-                                <div className="card-body">
-                                    <p className="card-text">
-                                        Premium Quality Solid T-Shirt For Men
-                                    </p>
-                                    <h5 className="card-title">Tk. 350</h5>
-                                    <button className="Add-cart-button">Add To card</button>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <img src={img8} className="card-img-top img-fluid" alt="..." />
-                                <ul className="check-inputs">
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bG-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bB-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bM-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bP-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bR-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                </ul>
-                                <div className="card-body">
-                                    <p className="card-text">
-                                        Premium Quality Solid T-Shirt For Men
-                                    </p>
-                                    <h5 className="card-title">Tk. 350</h5>
-                                    <button className="Add-cart-button">Add To card</button>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <img src={img8} className="card-img-top img-fluid" alt="..." />
-                                <ul className="check-inputs">
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bG-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bB-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bM-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bP-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bR-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                </ul>
-                                <div className="card-body">
-                                    <p className="card-text">
-                                        Premium Quality Solid T-Shirt For Men
-                                    </p>
-                                    <h5 className="card-title">Tk. 350</h5>
-                                    <button className="Add-cart-button">Add To card</button>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <img src={img8} className="card-img-top img-fluid" alt="..." />
-                                <ul className="check-inputs">
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bG-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bB-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bM-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bP-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bR-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                </ul>
-                                <div className="card-body">
-                                    <p className="card-text">
-                                        Premium Quality Solid T-Shirt For Men
-                                    </p>
-                                    <h5 className="card-title">Tk. 350</h5>
-                                    <button className="Add-cart-button">Add To card</button>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <img src={img8} className="card-img-top img-fluid" alt="..." />
-                                <ul className="check-inputs">
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bG-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bB-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bM-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bP-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bR-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                </ul>
-                                <div className="card-body">
-                                    <p className="card-text">
-                                        Premium Quality Solid T-Shirt For Men
-                                    </p>
-                                    <h5 className="card-title">Tk. 350</h5>
-                                    <button className="Add-cart-button">Add To card</button>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <img src={img8} className="card-img-top img-fluid" alt="..." />
-                                <ul className="check-inputs">
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bG-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bB-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bM-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bP-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bR-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                </ul>
-                                <div className="card-body">
-                                    <p className="card-text">
-                                        Premium Quality Solid T-Shirt For Men
-                                    </p>
-                                    <h5 className="card-title">Tk. 350</h5>
-                                    <button className="Add-cart-button">Add To card</button>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <img src={img8} className="card-img-top img-fluid" alt="..." />
-                                <ul className="check-inputs">
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bG-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bB-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bM-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bP-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                    <div className="form-check">
-                                        <input
-                                            className="form-check-input bR-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="flexCheckDefault"
-                                        />
-                                    </div>
-                                </ul>
-                                <div className="card-body">
-                                    <p className="card-text">
-                                        Premium Quality Solid T-Shirt For Men
-                                    </p>
-                                    <h5 className="card-title">Tk. 350</h5>
-                                    <button className="Add-cart-button">Add To card</button>
-                                </div>
-                            </div>
-                        </Slider>
                     </div>
+                    <div className="check-1">
+                        <div className="check-2 check5"></div>
+                    </div>
+
                 </div>
+
+                <div className="best-selling-products-images-wrapper my-2">
+
+                    <Carousel responsive={responsive}>
+                        <div class="best-selling-prouct-items">
+                            <div className="best-selling-prouct-items-top">
+                                <img src={img2} class="card-img-top" alt="..." />
+                                <div className="best-selling-prouct-items-image-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+
+                                    <div className="d-flex align-items-center bg-light rounded px-2 py-1">
+                                        <div className="">
+                                            <h6>4.6</h6>
+                                        </div>
+                                        <div className="mx-2">
+                                            <h6>4.6</h6>
+                                        </div>
+                                        
+                                        <div className="">
+                                            
+                                            <h6>25</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className="best-selling-prouct-items-content px-2">
+                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                <div className="d-flex align-items-center  ">
+                                    <h6 className="fs-5">TK 250</h6>
+                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                </div>
+                                <div className="add-to-cart-btn text-center ">
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bg-light"> Add to Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="best-selling-prouct-items">
+                            <div className="best-selling-prouct-items-top">
+                                <img src={img4} class="card-img-top" alt="..." />
+                                <div className="best-selling-prouct-items-image-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className="best-selling-prouct-items-content px-2">
+                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                <div className="d-flex align-items-center  ">
+                                    <h6 className="fs-5">TK 250</h6>
+                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                </div>
+                                <div className="add-to-cart-btn text-center ">
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bg-light"> Add to Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="best-selling-prouct-items">
+                            <div className="best-selling-prouct-items-top">
+                                <img src={img5} class="card-img-top" alt="..." />
+                                <div className="best-selling-prouct-items-image-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className="best-selling-prouct-items-content px-2">
+                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                <div className="d-flex align-items-center  ">
+                                    <h6 className="fs-5">TK 250</h6>
+                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                </div>
+                                <div className="add-to-cart-btn text-center ">
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bg-light"> Add to Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="best-selling-prouct-items">
+                            <div className="best-selling-prouct-items-top">
+                                <img src={img6} class="card-img-top" alt="..." />
+                                <div className="best-selling-prouct-items-image-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className="best-selling-prouct-items-content px-2">
+                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                <div className="d-flex align-items-center  ">
+                                    <h6 className="fs-5">TK 250</h6>
+                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                </div>
+                                <div className="add-to-cart-btn text-center ">
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bg-light"> Add to Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="best-selling-prouct-items">
+                            <div className="best-selling-prouct-items-top">
+                                <img src={img2} class="card-img-top" alt="..." />
+                                <div className="best-selling-prouct-items-image-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className="best-selling-prouct-items-content px-2">
+                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                <div className="d-flex align-items-center  ">
+                                    <h6 className="fs-5">TK 250</h6>
+                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                </div>
+                                <div className="add-to-cart-btn text-center ">
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bg-light"> Add to Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        {/* <div class="best-selling-prouct-items">
+                            <img src={img3} class="card-img-top" alt="..." />
+
+                        </div>
+                        <div class="best-selling-prouct-items">
+                            <img src={img4} class="card-img-top" alt="..." />
+
+                        </div>
+                        <div class="best-selling-prouct-items">
+                            <img src={img5} class="card-img-top" alt="..." />
+
+                        </div>
+                        <div class="best-selling-prouct-items">
+                            <img src={img7} class="card-img-top" alt="..." />
+
+                        </div> */}
+                    </Carousel>
+
+
+                </div>
+
+
+
+
             </section>
         </>
     );

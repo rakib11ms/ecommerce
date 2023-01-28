@@ -7,32 +7,8 @@
   /* position: absolute; */
   /* width: 200px; */
 }
-.Name-tag {
-  /* border-bottom: 3px solid rgb(88, 39, 39); */
-  /* padding-bottom: 68px; */
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.check-1 {
-  height: 2px;
-  width: 100%;
-  background-color: rgb(206, 206, 206);
-  position: relative;
-  z-index: 0.9;
-}
-.check-2 {
-  left: 42%;
-  position: absolute;
-  /* display: flex; */
-  /* align-items: center; */
-  background-color: rgb(85, 19, 19);
-  height: 2px;
-  width: 200px;
-  z-index: 400;
-}
+/*  */
 
 .single-slider {
   position: relative;
