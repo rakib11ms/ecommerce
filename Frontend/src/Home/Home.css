@@ -1,0 +1,106 @@
+.web-logo {
+    height: 50px;
+    width: 120px;
+}
+
+.web-logo>* {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.right-logos-top {
+    display: flex;
+    /* width: 33%; */
+
+}
+
+.right-logos-top>div>i {
+    margin: 0px 7px;
+    flex: 1;
+
+}
+
+
+.navbar-section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-input-top {
+    /* width: 33%; */
+}
+
+.nav-link-margin{
+    margin-left: 20px;
+}
+
+.nav-dropdown-parent-vertical{
+    width:700px;
+    display: flex;
+}
+
+
+
+
+.carousal-height{
+    height: 500px;
+}
+
+.carousel-indicators {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+  }
+  .carousel-indicators > .dot1{
+    border-radius: 50%;
+    height: 12px;
+    width:12px;
+    /* background-color: yellow; */
+  } 
+  .carousel-indicators >.dot2{
+    border-radius: 50%;
+    height: 12px;
+    width:12px;
+    /* background-color: yellow; */
+
+  }
+
+  .carousel-indicators >.dot3{
+    border-radius: 50%;
+    height: 12px;
+    width:12px;
+    /* background-color: yellow; */
+
+  }
+  .after-hero-image-card{
+    display: flex;
+    justify-content: space-around;
+  }
+  .after-hero-image-card>*{
+    border: 1px solid #d2d2d2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 20px;
+
+  }
+
+  .after-hero-image-card-logo{
+       width:30px;
+  }
+  
+@media only screen and (max-width: 600px) {
+    body {
+      /* background-color: lightblue; */
+    }
+    .nav-dropdown-parent-vertical{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+  }
