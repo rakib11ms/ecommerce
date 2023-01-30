@@ -8,6 +8,7 @@ import refund from "../images/refund.png";
 import premium from "../images/premium.png";
 import hero from "../images/hero.png";
 import hero2 from "../images/hero2.png";
+import model from "../images/model.jpg";
 
 import React, { Component, useRef, useState } from "react";
 import Slider from "react-slick";
@@ -124,6 +125,27 @@ function Home() {
             items: 1
         }
     };
+
+
+    const responsiveSingleDemoImageCards = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 4
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    }
 
     return (
         <>
@@ -668,7 +690,7 @@ function Home() {
             {/* Ashiq Code  */}
             <section className="my-5">
                 {/* Browse Our Catagories */}
-                <div className="broswe-our-cat-heading my-3">
+                <div className="broswe-our-cat-heading my-3 px-5 container">
                     <div className="Name-tag-div1">
                         <div className="Name-tag-div2">
                             <h2 className="Name-tag fs-4">BROWSE OUR CATEGORIES</h2>
@@ -755,7 +777,7 @@ function Home() {
 
             <section className="">
 
-                <div className="broswe-our-cat-heading my-3 container ">
+                <div className="broswe-our-cat-heading my-3 container px-5 ">
                     <div className="Name-tag-div1">
                         <div className="Name-tag-div2">
                             <h2 className="Name-tag fs-4">BEST SELLING PRODUCTS</h2>
@@ -876,7 +898,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -931,7 +953,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -973,7 +995,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1028,7 +1050,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1083,7 +1105,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1100,7 +1122,7 @@ function Home() {
 
             <section className="my-5">
 
-                <div className="broswe-our-cat-heading my-3">
+                <div className="broswe-our-cat-heading my-3 container px-5">
                     <div className="Name-tag-div1">
                         <div className="Name-tag-div2">
                             <h2 className="Name-tag fs-4">NEW ARRIVAL PRODUCTS</h2>
@@ -1117,7 +1139,7 @@ function Home() {
                     <Carousel responsive={responsive}>
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
-                                <img src={img7} class="card-img-top" alt="..." />
+                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product_post_2-02.jpg" class="card-img-top" alt="..." />
                                 <div className="best-selling-prouct-items-image-content">
                                     <div class="form-check">
                                         <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
@@ -1140,6 +1162,116 @@ function Home() {
 
                                     </div>
 
+                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                        <div className=" ">
+                                            <h6 className="my-0">4.6</h6>
+                                        </div>
+                                        <div className="mx-1 ">
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                        </div>
+
+                                        <div className="">
+
+                                            <h6 className="my-0"> <span> | </span> 25</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className="best-selling-prouct-items-content px-2 " >
+                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                <div className="d-flex align-items-center  ">
+                                    <h6 className="fs-5">TK 250</h6>
+                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 300</p>
+
+                                </div>
+                                <div className="add-to-cart-btn text-center   ">
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="best-selling-prouct-items pb-2 my-3">
+                            <div className="best-selling-prouct-items-top">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Qv43HXGffGQy3AM6BEV94fSV5r-vtlLx8uM7-wfjWiJpvjBouFlDSv0M8NE4oqFYbAM&usqp=CAU" class="card-img-top" alt="..." />
+                                <div className="best-selling-prouct-items-image-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+
+                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                        <div className=" ">
+                                            <h6 className="my-0">4.6</h6>
+                                        </div>
+                                        <div className="mx-1 ">
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                        </div>
+
+                                        <div className="">
+
+                                            <h6 className="my-0"> <span> | </span> 25</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div className="best-selling-prouct-items-content px-2 " >
+                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                <div className="d-flex align-items-center  ">
+                                    <h6 className="fs-5">TK 400</h6>
+                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                </div>
+                                <div className="add-to-cart-btn text-center   ">
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="best-selling-prouct-items pb-2 my-3">
+                            <div className="best-selling-prouct-items-top">
+                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/web_products-1-11_1.jpg" class="card-img-top" alt="..." />
+                                <div className="best-selling-prouct-items-image-content">
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                    </div>
                                     <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
@@ -1166,116 +1298,6 @@ function Home() {
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
                                     <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="best-selling-prouct-items pb-2 my-3">
-                            <div className="best-selling-prouct-items-top">
-                                <img src={img7} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                        <div className=" ">
-                                            <h6 className="my-0">4.6</h6>
-                                        </div>
-                                        <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                        </div>
-
-                                        <div className="">
-
-                                            <h6 className="my-0"> <span> | </span> 25</h6>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div className="best-selling-prouct-items-content px-2 " >
-                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
-                                <div className="d-flex align-items-center  ">
-                                    <h6 className="fs-5">TK 250</h6>
-                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
-
-                                </div>
-                                <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="best-selling-prouct-items pb-2 my-3">
-                            <div className="best-selling-prouct-items-top">
-                                <img src={img11} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                        <div className=" ">
-                                            <h6 className="my-0">4.6</h6>
-                                        </div>
-                                        <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                        </div>
-
-                                        <div className="">
-
-                                            <h6 className="my-0"> <span> | </span> 25</h6>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div className="best-selling-prouct-items-content px-2 " >
-                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
-                                <div className="d-flex align-items-center  ">
-                                    <h6 className="fs-5">TK 250</h6>
-                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
-
-                                </div>
-                                <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1330,7 +1352,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1372,7 +1394,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1427,7 +1449,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1495,7 +1517,7 @@ function Home() {
                         <Carousel responsive={responsive}>
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
-                                    <img src={img2} class="card-img-top" alt="..." />
+                                    <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
                                     <div className="card-section-without-color-image">
 
                                         <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
@@ -1531,7 +1553,7 @@ function Home() {
 
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
-                                    <img src={img4} class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/website_product-3-17.jpg" class="card-img-top" alt="..." />
                                     <div className="card-section-without-color-image">
                                         <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
                                             <div className=" ">
@@ -1558,7 +1580,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1566,7 +1588,7 @@ function Home() {
 
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
-                                    <img src={img5} class="card-img-top" alt="..." />
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKJRz2B9bS2FMCVABiffLDxrN5vDWqo4avLfFZLHDuQYUBV7LdbbRTWeR5NSzV6n-uPc&usqp=CAU" class="card-img-top" alt="..." />
                                     <div className="card-section-without-color-image">
                                         <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
                                             <div className=" ">
@@ -1593,7 +1615,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1601,7 +1623,7 @@ function Home() {
 
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
-                                    <img src={img6} class="card-img-top" alt="..." />
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHJUgGMXcEixsUET351f9tMhwJh2y4rjKXcG5vmL-chc9F-ccRT36NiIt2yAsIKZO9AQ&usqp=CAU" class="card-img-top" alt="..." />
                                     <div className="card-section-without-color-image">
 
                                     </div>
@@ -1615,7 +1637,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1650,7 +1672,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill border bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1685,6 +1707,698 @@ function Home() {
                     {/* </div> */}
                 </div>
             </section>
+
+
+            <section className="single-demo-images-cards-section container bg-light px-0">
+                <div className="single-demo-image ">
+                    <img src={model} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div className="single-demo-image-overlay text-center text-black ">
+                        <h4>LONG SLEEVE T-SHIRT</h4>
+                        <button type="button" className="btn btn-light px-4  text-center  rounded-pill btn-sm fw-bold "> VIEW ALL</button>
+                    </div>
+                </div>
+                <div className="single-demo-image-cards ">
+                    <div className="ps-5">
+
+                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGw9aP7I12msRVdZVOL_5mqAnBY5I1mNSd_Q&usqp=CAU" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+                                        <div className="top-left-radius-code bg-secondary text-white d-inline-block ">
+                                            <p className="my-0 px-2 fs-7">CODE1212A</p>
+                                        </div>
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="size-div d-flex">
+
+                                            <div className="available-size-para mx-0 text-dark px-0">
+                                                Available size
+
+                                            </div>
+                                            <div className="text-light  bg-secondary size py-0 ">
+                                                <p className="my-0 py-0">M</p>
+                                                <hr className="my-0" />
+                                                <p className="my-0">XL</p>
+                                                <hr className="my-0" />
+                                                <p className="my-0">XXL</p>
+                                                <hr className="my-0" />
+                                                <p className="mb-0 pb-0">XXL</p>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post1_1.jpg" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+                                        <div className="top-left-radius-code bg-secondary text-white d-inline-block ">
+                                            <p className="my-0 px-2 fs-7">CODE1212A</p>
+                                        </div>
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="size-div d-flex">
+
+                                            <div className="available-size-para mx-0 text-dark px-0">
+                                                Available size
+
+                                            </div>
+                                            <div className="text-light  bg-secondary size py-0 ">
+                                                <p className="my-0 py-0">M</p>
+                                                <hr className="my-0" />
+                                                <p className="my-0">XL</p>
+                                                <hr className="my-0" />
+                                                <p className="my-0">XXL</p>
+                                                <hr className="my-0" />
+                                                <p className="mb-0 pb-0">XXL</p>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaTAKXQBAXMG5YGh4Zx5yOmoRz9BNaGhEEw&usqp=CAU" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+                                        <div className="top-left-radius-code bg-secondary text-white d-inline-block ">
+                                            <p className="my-0 px-2 fs-7">CODE1212A</p>
+                                        </div>
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="size-div d-flex">
+
+                                            <div className="available-size-para mx-0 text-dark px-0">
+                                                Available size
+
+                                            </div>
+                                            <div className="text-light  bg-secondary size py-0 ">
+                                                <p className="my-0 py-0">M</p>
+                                                <hr className="my-0" />
+                                                <p className="my-0">XL</p>
+                                                <hr className="my-0" />
+                                                <p className="my-0">XXL</p>
+                                                <hr className="my-0" />
+                                                <p className="mb-0 pb-0">XXL</p>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src={img2} class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+                                        <div className="top-left-radius-code bg-secondary text-white d-inline-block ">
+                                            <p className="my-0 px-2 fs-7">CODE1212A</p>
+                                        </div>
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="size-div d-flex">
+
+                                            <div className="available-size-para mx-0 text-dark px-0">
+                                                Available size
+
+                                            </div>
+                                            <div className="text-light  bg-secondary size py-0 ">
+                                                <p className="my-0 py-0">M</p>
+                                                <hr className="my-0" />
+                                                <p className="my-0">XL</p>
+                                                <hr className="my-0" />
+                                                <p className="my-0">XXL</p>
+                                                <hr className="my-0" />
+                                                <p className="mb-0 pb-0">XXL</p>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </Carousel>
+                    </div>
+                </div>
+            </section>
+
+
+            <section className="single-demo-images-cards-section container bg-light px-0 my-5">
+                <div className="single-demo-image order-1">
+                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/f/b/fb_product_post-2-17.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+                <div className="single-demo-image-cards ">
+                    <div className="ps-5">
+
+                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                            <div class="best-selling-prouct-items pb-2 my-3">
+                                <div className="best-selling-prouct-items-top">
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post21_-_copy.jpg" class="card-img-top" alt="..." />
+                                    <div className="best-selling-prouct-items-image-content">
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+
+                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className=" ">
+                                                <h6 className="my-0">4.6</h6>
+                                            </div>
+                                            <div className="mx-1 ">
+                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            </div>
+
+                                            <div className="">
+
+                                                <h6 className="my-0"> <span> | </span> 25</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div className="best-selling-prouct-items-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 300</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="best-selling-prouct-items pb-2 my-3">
+                                <div className="best-selling-prouct-items-top">
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post3_-_copy.jpg" class="card-img-top" alt="..." />
+                                    <div className="best-selling-prouct-items-image-content">
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+
+                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className=" ">
+                                                <h6 className="my-0">4.6</h6>
+                                            </div>
+                                            <div className="mx-1 ">
+                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            </div>
+
+                                            <div className="">
+
+                                                <h6 className="my-0"> <span> | </span> 25</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div className="best-selling-prouct-items-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 400</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="best-selling-prouct-items pb-2 my-3">
+                                <div className="best-selling-prouct-items-top">
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/o/women_s_tops-03.jpg" class="card-img-top" alt="..." />
+                                    <div className="best-selling-prouct-items-image-content">
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className=" ">
+                                                <h6 className="my-0">4.6</h6>
+                                            </div>
+                                            <div className="mx-1 ">
+                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            </div>
+
+                                            <div className="">
+
+                                                <h6 className="my-0"> <span> | </span> 25</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div className="best-selling-prouct-items-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="best-selling-prouct-items pb-2 my-3">
+                                <div className="best-selling-prouct-items-top">
+                                    <img src={img10} class="card-img-top" alt="..." />
+                                    <div className="best-selling-prouct-items-image-content">
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className=" ">
+                                                <h6 className="my-0">4.6</h6>
+                                            </div>
+                                            <div className="mx-1 ">
+                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            </div>
+
+                                            <div className="">
+
+                                                <h6 className="my-0"> <span> | </span> 25</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div className="best-selling-prouct-items-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="best-selling-prouct-items pb-2 my-3">
+                                <div className="best-selling-prouct-items-top">
+                                    <img src={img9} class="card-img-top" alt="..." />
+                                    <div className="best-selling-prouct-items-image-content">
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div className="best-selling-prouct-items-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="best-selling-prouct-items pb-2 my-3">
+                                <div className="best-selling-prouct-items-top">
+                                    <img src={img2} class="card-img-top" alt="..." />
+                                    <div className="best-selling-prouct-items-image-content">
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
+
+                                        </div>
+                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className=" ">
+                                                <h6 className="my-0">4.6</h6>
+                                            </div>
+                                            <div className="mx-1 ">
+                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            </div>
+
+                                            <div className="">
+
+                                                <h6 className="my-0"> <span> | </span> 25</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div className="best-selling-prouct-items-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </Carousel>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section className="newsletter-section container rounded-3  py-5 px-5">
+
+                <div className="newsletter-section-wrapper pt-3">
+                    <div className="">
+                        <h2 className="text-dark ">Join Our Newsletter To Get Offers</h2>
+                        <p>Subscribe our news letter and updated</p>
+                    </div>
+                    <div className="d-flex  flex-grow-1 ms-5 justify-content-end">
+                        <input type="text" class="form-control me-3 border-secondary border-2 w-50" placeholder="Enter your email"></input>
+
+                        <button className="btn btn-secondary px-4 py-2">Subscribe</button>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+
+            <footer className="contatiner-fluid  bg-dark text-light">
+
+                <div className="container">
+                    <div className="footer-wrapper pt-5">
+                        <div className="">
+                            <div className="footer-company-image">
+                                {/* <img src="" /> */}
+
+                                <h3>Company Name
+                                </h3>
+                            </div>
+                            <h5>+880123123123</h5>
+                            <p>WorkTime:Sat- 10::Am -12:30 Am</p>
+
+                            <div className="">
+                                <i className="fa fa-facebook"></i>
+                                <i className="fa fa-instagram mx-2"></i>
+                                <i className="fa fa-instagram mx-2"></i>
+                                <i className="fa fa-instagram mx-2"></i>
+                            </div>
+                        </div>
+
+                        <div className="">
+                            <h6 className="text-info">INFORMATION</h6>
+
+                            <div className="">
+                                <li>About US</li>
+                                <li>Privacy policy</li>
+                                <li>Shipping Information</li>
+                                <li>About US</li>
+                                <li>Contact US</li>
+                                <li>Faq</li>
+                            </div>
+                        </div>
+
+                        <div className="">
+                            <h6 className="text-info">CONTACT US</h6>
+
+                            <div className="">
+                                <p>About US Join Our Newsletter To Get Offers
+                                </p>
+                                <p>Subscribe our news letter and updated
+
+                                </p>
+
+                                <p>Faq</p>
+                            </div>
+                        </div>
+                        <div className="">
+                            <h6 className="text-info">CONTACT US</h6>
+
+                            <div className="">
+                                <p>About US Join Our Newsletter To Get Offers
+                                </p>
+                                <p>Subscribe our news letter and updated
+
+                                </p>
+
+                                <p>Faq</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+
+
+
+
 
 
 
