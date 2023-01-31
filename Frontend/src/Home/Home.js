@@ -2330,10 +2330,15 @@ function Home() {
 
 
 
-            <footer className="contatiner-fluid  bg-dark text-light">
+            <footer className="contatiner-fluid footer-whole-wrapper text-light  mt-5">
+                <div className="footer-background-image">
+                        <img src="https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg"/>
+                </div>
 
-                <div className="container">
+
                     <div className="footer-wrapper pt-5">
+
+                      
                         <div className="">
                             <div className="footer-company-image">
                                 {/* <img src="" /> */}
@@ -2391,8 +2396,7 @@ function Home() {
                                 <p>Faq</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        </div>
 
             </footer>
 
