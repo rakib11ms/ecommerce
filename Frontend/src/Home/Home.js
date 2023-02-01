@@ -9,6 +9,8 @@ import premium from "../images/premium.png";
 import hero from "../images/hero.png";
 import hero2 from "../images/hero2.png";
 import model from "../images/model.jpg";
+import footer from "../images/footer_page.png";
+import singlePanjabi from "../images/singlePanjabi.jpg";
 
 import React, { Component, useRef, useState } from "react";
 import Slider from "react-slick";
@@ -1712,9 +1714,9 @@ function Home() {
             <section className="single-demo-images-cards-section container bg-light px-0">
                 <div className="single-demo-image ">
                     <img src={model} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <div className="single-demo-image-overlay text-center text-black ">
-                        <h4>LONG SLEEVE T-SHIRT</h4>
-                        <button type="button" className="btn btn-light px-4  text-center  rounded-pill btn-sm fw-bold "> VIEW ALL</button>
+                    <div className="single-demo-image-overlay text-center text-black py-1  ">
+                        <h4 className="text-white">LONG SLEEVE T-SHIRT</h4>
+                        <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
                     </div>
                 </div>
                 <div className="single-demo-image-cards ">
@@ -1978,6 +1980,10 @@ function Home() {
             <section className="single-demo-images-cards-section container bg-light px-0 my-5">
                 <div className="single-demo-image order-1">
                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/f/b/fb_product_post-2-17.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div className="single-demo-image-overlay text-center text-black py-1  ">
+                        <h4 className="text-white">LONG SLEEVE SHIRT</h4>
+                        <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
+                    </div>
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
@@ -2308,10 +2314,366 @@ function Home() {
                 </div>
             </section>
 
+            <section className="single-demo-images-cards-section container bg-light px-0">
+                <div className="single-demo-image ">
+                    <img src={singlePanjabi} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div className="single-demo-image-overlay text-center text-black py-1  ">
+                        <h4 className="text-white">LONG SLEEVE T-SHIRT</h4>
+                        <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
+                    </div>
+                </div>
+                <div className="single-demo-image-cards ">
+                    <div className="ps-5">
+
+                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGw9aP7I12msRVdZVOL_5mqAnBY5I1mNSd_Q&usqp=CAU" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post1_1.jpg" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
 
 
 
-            <section className="newsletter-section container rounded-3  py-5 px-5">
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaTAKXQBAXMG5YGh4Zx5yOmoRz9BNaGhEEw&usqp=CAU" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src={img2} class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </Carousel>
+                    </div>
+                </div>
+            </section>
+
+            <section className="single-demo-images-cards-section container bg-light mt-5 px-0">
+                <div className="single-demo-image order-1">
+                    <img src={model} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div className="single-demo-image-overlay text-center text-black py-1  ">
+                        <h4 className="text-white">LONG SLEEVE T-SHIRT</h4>
+                        <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
+                    </div>
+                </div>
+                <div className="single-demo-image-cards ">
+                    <div className="ps-5">
+
+                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGw9aP7I12msRVdZVOL_5mqAnBY5I1mNSd_Q&usqp=CAU" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post1_1.jpg" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaTAKXQBAXMG5YGh4Zx5yOmoRz9BNaGhEEw&usqp=CAU" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src={img2} class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </Carousel>
+                    </div>
+                </div>
+            </section>
+
+
+            <section className="newsletter-section container rounded-3  py-5 mt-5 px-5">
 
                 <div className="newsletter-section-wrapper pt-3">
                     <div className="">
@@ -2330,84 +2692,89 @@ function Home() {
 
 
 
-            <footer className="contatiner-fluid footer-whole-wrapper text-light  mt-5">
+            <footer className="contatiner-fluid footer-whole-wrapper text-white  mt-5">
                 <div className="footer-background-image">
-                        <img src="https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg"/>
+                    <img src="https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg" />
                 </div>
 
 
-                    <div className="footer-wrapper pt-5">
+                <div className="footer-wrapper pt-5">
 
-                      
-                        <div className="">
-                            <div className="footer-company-image">
-                                {/* <img src="" /> */}
 
-                                <h3>Company Name
-                                </h3>
+                    <div className="">
+                        <div className="footer-company-image">
+                            {/* <img src="" /> */}
+
+                            <h3>Company Name
+                            </h3>
+                        </div>
+                        <h5 className="mt-4 fw-bold fs-4 " style={{ color: "rgb(158, 123, 57)" }}>+88 0123123123</h5>
+                        <p className="mb-2">Worktime: SAT- FRI, 10AM -11 PM</p>
+
+                        <div className="footer-social-icons-wrapper">
+
+                            <div className="footer-social-icons">
+                                <i className="footer-social-icon-items fab fa-facebook"></i>
+
                             </div>
-                            <h5>+880123123123</h5>
-                            <p>WorkTime:Sat- 10::Am -12:30 Am</p>
+                            <div className="footer-social-icons mx-2">
+                                <i className="footer-social-icon-items fab fa-instagram mx-1"></i>
+
+                            </div>
+                            <div className="footer-social-icons mx-2">
+                                <i className="footer-social-icon-items fab fa-whatsapp mx-1"></i>
+
+                            </div>
+                            <div className="footer-social-icons mx-2">
+                                <i className="footer-social-icon-items fab fa-instagram mx-1"></i>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="">
+                        <h6 className="text-color-footer">INFORMATION</h6>
+
+                        <div className="footer-li mt-3 ">
+                            <li className="my-2 fw-bold ">About Us</li>
+                            <li className="my-2 fw-bold ">Privacy Policy</li>
+                            <li className="my-2 fw-bold ">Shipping Information</li>
+                            <li className="my-2 fw-bold ">Return & Exchange Policy</li>
+                            <li className="my-2 fw-bold ">Contact Us</li>
+                            <li className="my-2 fw-bold ">FAQs</li>
+                        </div>
+                    </div>
+
+                    <div className="">
+                        <h6 className="text-color-footer">CONTACT INFO</h6>
+
+                        <div className="mt-3">
+                            <span className="my-1 text-justify ">98/2,Vista Garden (3rd-Floor) , Shepara,Parbata , Mirpur-10,Dhaka-1216,Bangladesh.
+                            </span>
+                            <p className="mt-2">manfaredbd@gmail.com
+
+                            </p>
+
+
 
                             <div className="">
-                                <i className="fa fa-facebook"></i>
-                                <i className="fa fa-instagram mx-2"></i>
-                                <i className="fa fa-instagram mx-2"></i>
-                                <i className="fa fa-instagram mx-2"></i>
+                                <p className="my-0 mx-5 ">091823128123</p>
+
+                                <p className="my-0">0177-8749534 | 0177-8749534</p>
+                                <p className="my-0">0177-8749534| 0177-8749534</p>
                             </div>
                         </div>
+                    </div>
+                    <div className="">
 
-                        <div className="">
-                            <h6 className="text-info">INFORMATION</h6>
-
-                            <div className="">
-                                <li>About US</li>
-                                <li>Privacy policy</li>
-                                <li>Shipping Information</li>
-                                <li>About US</li>
-                                <li>Contact US</li>
-                                <li>Faq</li>
-                            </div>
+                        <div className="mt-3 px-5">
+                            <img src={footer} style={{ width: '100%', height: '100%' }} />
                         </div>
-
-                        <div className="">
-                            <h6 className="text-info">CONTACT US</h6>
-
-                            <div className="">
-                                <p>About US Join Our Newsletter To Get Offers
-                                </p>
-                                <p>Subscribe our news letter and updated
-
-                                </p>
-
-                                <p>Faq</p>
-                            </div>
-                        </div>
-                        <div className="">
-                            <h6 className="text-info">CONTACT US</h6>
-
-                            <div className="">
-                                <p>About US Join Our Newsletter To Get Offers
-                                </p>
-                                <p>Subscribe our news letter and updated
-
-                                </p>
-
-                                <p>Faq</p>
-                            </div>
-                        </div>
-                        </div>
+                    </div>
+                </div>
 
             </footer>
-
-
-
-
-
-
-
-
-
 
 
 
