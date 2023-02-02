@@ -1,0 +1,17 @@
+#loginModalDialog{
+    margin-top:10%;
+    max-width: 700px;
+}
+.login-icon-fb{
+    background-color: rgb(34, 34, 105);
+}
+#wrapper_1:after {
+    content: "";
+    background-color: #dddd;
+    position: absolute;
+    width: 1px;
+    height: 85%;
+    top: 20px;
+    left: 51%;
+    display: block;
+  }

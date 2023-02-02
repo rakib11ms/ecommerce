@@ -1,4 +1,7 @@
 import "./Home.css";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
+
 // import weblogo from './images/weblogo.png'
 // import web from '../../images/weblogo.png'
 import weblogo from "../images/weblogo.png";
@@ -9,7 +12,6 @@ import premium from "../images/premium.png";
 import hero from "../images/hero.png";
 import hero2 from "../images/hero2.png";
 import model from "../images/model.jpg";
-import footer from "../images/footer_page.png";
 import singlePanjabi from "../images/singlePanjabi.jpg";
 
 import React, { Component, useRef, useState } from "react";
@@ -26,7 +28,6 @@ import img9 from "../images/img-panjabi-white.jpg";
 import img10 from "../images/img-panjabi-pink.jpg";
 import img11 from "../images/white Tshirt.jpg";
 import img12 from "../images/white Tshirt.jpg";
-
 
 
 import Carousel from 'react-multi-carousel';
@@ -120,7 +121,7 @@ function Home() {
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 2
+            items: 1
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
@@ -148,10 +149,29 @@ function Home() {
             items: 1
         }
     }
+    const responsiveBestSelling={
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 4
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }  
+    }
 
     return (
         <>
-            <div className="container">
+            {/* <div className="container">
                 <section className="navbar-section-top mt-2  px-5 ">
                     <div className="search-input-top ">
                         <div class="input-group  ">
@@ -580,7 +600,9 @@ function Home() {
                         </div>
                     </nav>
                 </section>
-            </div>
+          </div>   */}
+
+            <Navbar></Navbar>
 
             <section className="hero-sliders">
 
@@ -794,7 +816,7 @@ function Home() {
                 <div className="best-selling-products-images-wrapper my-2 container">
 
 
-                    <Carousel responsive={responsive} >
+                    <Carousel responsive={responsiveBestSelling} >
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src={img2} class="card-img-top" alt="..." />
@@ -1476,7 +1498,7 @@ function Home() {
                             <h5 className="iframe-video-titles">ELITE PANJABI</h5>
                             <iframe width="560" height="100%" src="https://www.youtube-nocookie.com/embed/TfwMSbmZznM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
-                        <div className="ms-4 flex-grow-1">
+                        <div className="ms-4 flex-grow-2">
                             <h5 className="iframe-video-titles">PASSION POLO</h5>
 
                             <iframe width="560" height="100%" src="https://www.youtube-nocookie.com/embed/t3C75jXDP7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                        </div>
@@ -1715,6 +1737,8 @@ function Home() {
                 <div className="single-demo-image ">
                     <img src={model} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div className="single-demo-image-overlay text-center text-black py-1  ">
+
+
                         <h4 className="text-white">LONG SLEEVE T-SHIRT</h4>
                         <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
                     </div>
@@ -2328,7 +2352,7 @@ function Home() {
                         <Carousel responsive={responsiveSingleDemoImageCards} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGw9aP7I12msRVdZVOL_5mqAnBY5I1mNSd_Q&usqp=CAU" class="card-img-top" alt="..." />
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBjLdClKmuLwbRbcSbyj-qiH9iD1WOGvK0rQ&usqp=CAU" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
@@ -2367,7 +2391,7 @@ function Home() {
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post1_1.jpg" class="card-img-top" alt="..." />
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz81-nNEfYKTaCThLOIosWWqNfuesV-RGRUiZA2WtIFTFl0YLexOIRrNb2VN8kaPoFmEU&usqp=CAU" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
@@ -2408,7 +2432,7 @@ function Home() {
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaTAKXQBAXMG5YGh4Zx5yOmoRz9BNaGhEEw&usqp=CAU" class="card-img-top" alt="..." />
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsnGbEERq2TGJlkn-Y_jxHRTPIKmiD1n4ru3v68gGGZw9m-26kHiV2ha7OrJKi4vEz_Ag&usqp=CAU" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
@@ -2495,9 +2519,9 @@ function Home() {
 
             <section className="single-demo-images-cards-section container bg-light mt-5 px-0">
                 <div className="single-demo-image order-1">
-                    <img src={model} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src="https://static-01.daraz.com.bd/p/3569b570fac7837cf27c31581dd94f39.png" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div className="single-demo-image-overlay text-center text-black py-1  ">
-                        <h4 className="text-white">LONG SLEEVE T-SHIRT</h4>
+                        <h4 className="text-white">KAMIZ SELOWAR</h4>
                         <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
                     </div>
                 </div>
@@ -2507,7 +2531,7 @@ function Home() {
                         <Carousel responsive={responsiveSingleDemoImageCards} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGw9aP7I12msRVdZVOL_5mqAnBY5I1mNSd_Q&usqp=CAU" class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
@@ -2546,7 +2570,7 @@ function Home() {
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post1_1.jpg" class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/7/d/7days-product-for-web_women7.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
@@ -2587,7 +2611,7 @@ function Home() {
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaTAKXQBAXMG5YGh4Zx5yOmoRz9BNaGhEEw&usqp=CAU" class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/u/puja_web-05.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
@@ -2692,90 +2716,7 @@ function Home() {
 
 
 
-            <footer className="contatiner-fluid footer-whole-wrapper text-white  mt-5">
-                <div className="footer-background-image">
-                    <img src="https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg" />
-                </div>
-
-
-                <div className="footer-wrapper pt-5">
-
-
-                    <div className="">
-                        <div className="footer-company-image">
-                            {/* <img src="" /> */}
-
-                            <h3>Company Name
-                            </h3>
-                        </div>
-                        <h5 className="mt-4 fw-bold fs-4 " style={{ color: "rgb(158, 123, 57)" }}>+88 0123123123</h5>
-                        <p className="mb-2">Worktime: SAT- FRI, 10AM -11 PM</p>
-
-                        <div className="footer-social-icons-wrapper">
-
-                            <div className="footer-social-icons">
-                                <i className="footer-social-icon-items fab fa-facebook"></i>
-
-                            </div>
-                            <div className="footer-social-icons mx-2">
-                                <i className="footer-social-icon-items fab fa-instagram mx-1"></i>
-
-                            </div>
-                            <div className="footer-social-icons mx-2">
-                                <i className="footer-social-icon-items fab fa-whatsapp mx-1"></i>
-
-                            </div>
-                            <div className="footer-social-icons mx-2">
-                                <i className="footer-social-icon-items fab fa-instagram mx-1"></i>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div className="">
-                        <h6 className="text-color-footer">INFORMATION</h6>
-
-                        <div className="footer-li mt-3 ">
-                            <li className="my-2 fw-bold ">About Us</li>
-                            <li className="my-2 fw-bold ">Privacy Policy</li>
-                            <li className="my-2 fw-bold ">Shipping Information</li>
-                            <li className="my-2 fw-bold ">Return & Exchange Policy</li>
-                            <li className="my-2 fw-bold ">Contact Us</li>
-                            <li className="my-2 fw-bold ">FAQs</li>
-                        </div>
-                    </div>
-
-                    <div className="">
-                        <h6 className="text-color-footer">CONTACT INFO</h6>
-
-                        <div className="mt-3">
-                            <span className="my-1 text-justify ">98/2,Vista Garden (3rd-Floor) , Shepara,Parbata , Mirpur-10,Dhaka-1216,Bangladesh.
-                            </span>
-                            <p className="mt-2">manfaredbd@gmail.com
-
-                            </p>
-
-
-
-                            <div className="">
-                                <p className="my-0 mx-5 ">091823128123</p>
-
-                                <p className="my-0">0177-8749534 | 0177-8749534</p>
-                                <p className="my-0">0177-8749534| 0177-8749534</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="">
-
-                        <div className="mt-3 px-5">
-                            <img src={footer} style={{ width: '100%', height: '100%' }} />
-                        </div>
-                    </div>
-                </div>
-
-            </footer>
-
+            <Footer></Footer>
 
 
         </>

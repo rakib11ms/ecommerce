@@ -352,7 +352,7 @@
   bottom: 10px;
   /* left: 10%; */
   width: 100%;
-  background-color: rgba(60, 64, 67, 0.15)
+  background-color: rgba(60, 64, 67, 0.15);
 }
 
 
@@ -524,6 +524,7 @@
 @media only screen and (max-width: 576px) {
   body {
     /* background-color: lightblue; */
+    font-size: 12px;
   }
 
   .responsive-nav {
@@ -546,4 +547,27 @@
   .after-heo-image-cards {
     margin: 5px 0px;
   }
+
+  .carousal-height{
+    height: 200px;
+}
+.carousel-item>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.check-2 {
+  left: 20%;
+  position: absolute;
+  background-color: rgb(107, 31, 31);
+  height: 2px;
+  width: 200px;
+  z-index: 400;
+}
+.flex-grow-1,.flex-grow-2{
+  width: 100%;
+  height: 100%;
+}
 }
