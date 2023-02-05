@@ -15,3 +15,8 @@
     left: 51%;
     display: block;
   }
+
+  .navbar-font{
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+  }

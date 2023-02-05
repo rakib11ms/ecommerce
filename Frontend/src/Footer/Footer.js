@@ -58,7 +58,7 @@ function Footer() {
                         </div>
                     </div>
 
-                    <div className="">
+                    <div className="footer-contact-text">
                         <h6 className="text-color-footer">CONTACT INFO</h6>
 
                         <div className="mt-3">

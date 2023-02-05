@@ -33,6 +33,9 @@ import img12 from "../images/white Tshirt.jpg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import Carousel from 'react-responsive-carousel';
+
 
 function Home() {
     const settings = {
@@ -149,7 +152,7 @@ function Home() {
             items: 1
         }
     }
-    const responsiveBestSelling={
+    const responsiveBestSelling = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
@@ -157,7 +160,7 @@ function Home() {
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3
+            items: 4
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -166,441 +169,11 @@ function Home() {
         mobile: {
             breakpoint: { max: 464, min: 0 },
             items: 1
-        }  
+        }
     }
 
     return (
         <>
-            {/* <div className="container">
-                <section className="navbar-section-top mt-2  px-5 ">
-                    <div className="search-input-top ">
-                        <div class="input-group  ">
-                            <span
-                                class="input-group-text bg-white text-secondary bg-transparent border-0"
-                                id="basic-addon1"
-                            >
-                                {" "}
-                                <i className="fa fa-search text-dark"> </i>
-                            </span>
-                            <input
-                                type="text"
-                                class="form-control bg-transparent border-0"
-                                placeholder="Search Products..."
-                                aria-label="Username"
-                                aria-describedby="basic-addon1"
-                            />
-                        </div>
-                    </div>
-
-                    <div className="me-5 pe-5">
-                        <div className="web-logo">
-                            <img src={weblogo} />
-                        </div>
-                    </div>
-
-                    <div className="right-logos-top text-secondary ">
-                        <div className="">
-                            <i className="fa fa-phone"></i>
-                        </div>
-                        <div className="">
-                            <i className="far fa-flag"></i>
-                        </div>
-                        <div className="">
-                            <i class="far fa-user"></i>
-                        </div>
-                    </div>
-                </section>
-                <hr className="my-2" />
-
-                <section className="navs ">
-                    <nav class="navbar navbar-expand-lg navbar-light responsive-nav  ">
-                        <div class="container-fluid">
-                            <button
-                                class="navbar-toggler"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent"
-                                aria-controls="navbarSupportedContent"
-                                aria-expanded="false"
-                                aria-label="Toggle navigation"
-                            >
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div
-                                class="collapse navbar-collapse "
-                                id="navbarSupportedContent"
-                            >
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
-                                    <li class="nav-item dropdown ">
-                                        <a class="nav-link">HOME</a>
-                                    </li>
-                                    <li class="nav-item dropdown nav-link-margin">
-                                        <a
-                                            class="nav-link dropdown-toggle"
-                                            href="#"
-                                            id="navbarDropdown"
-                                            role="button"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            PANJABI
-                                        </a>
-                                        <ul class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
-                                            <div className="nav-dropdown-parent-vertical">
-                                                <div className="">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Another action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Something else
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                </div>
-
-                                                <div className="">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Another action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Something else
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                </div>
-
-                                                <div className="">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Another action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Something else
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                </div>
-                                                <div className="">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Another action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Something else
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                </div>
-                                                <div className="">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Another action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Something else
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                </div>
-                                            </div>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item dropdown nav-link-margin">
-                                        <a
-                                            class="nav-link dropdown-toggle"
-                                            href="#"
-                                            id="navbarDropdown"
-                                            role="button"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            T-SHIRT
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Another action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Something else here
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item dropdown nav-link-margin">
-                                        <a
-                                            class="nav-link dropdown-toggle"
-                                            href="#"
-                                            id="navbarDropdown"
-                                            role="button"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            SHIRT
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Another action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Something else here
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item dropdown nav-link-margin">
-                                        <a
-                                            class="nav-link dropdown-toggle"
-                                            href="#"
-                                            id="navbarDropdown"
-                                            role="button"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            POLO SHIRT
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Another action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Something else here
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item dropdown nav-link-margin">
-                                        <a
-                                            class="nav-link dropdown-toggle"
-                                            href="#"
-                                            id="navbarDropdown"
-                                            role="button"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            WINNER
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Another action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Something else here
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item dropdown nav-link-margin">
-                                        <a
-                                            class="nav-link dropdown-toggle"
-                                            href="#"
-                                            id="navbarDropdown"
-                                            role="button"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            FOOTWEAR
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Another action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Something else here
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item dropdown nav-link-margin">
-                                        <a
-                                            class="nav-link dropdown-toggle"
-                                            href="#"
-                                            id="navbarDropdown"
-                                            role="button"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            BOTTOMWEAR
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Another action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Something else here
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item dropdown nav-link-margin">
-                                        <a
-                                            class="nav-link dropdown-toggle"
-                                            href="#"
-                                            id="navbarDropdown"
-                                            role="button"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            ACCESSESORIES
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Another action
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    Something else here
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </section>
-          </div>   */}
 
             <Navbar></Navbar>
 
@@ -672,7 +245,7 @@ function Home() {
             <section className="after-hero-image my-4">
                 <div className="container">
                     <div className="after-hero-image-card">
-                        <div className="after-heo-image-cards">
+                        <div className="after-heo-image-cards border">
                             <div className="after-hero-image-card-logos">
                                 <img src={van} className="after-hero-image-card-logo" />
                             </div>
@@ -681,7 +254,7 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className="after-heo-image-cards">
+                        <div className="after-heo-image-cards border">
                             <div className="after-hero-image-card-logos">
                                 <img src={refund} className="after-hero-image-card-logo" />
                             </div>
@@ -690,7 +263,7 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className="after-heo-image-cards">
+                        <div className="after-heo-image-cards border">
                             <div className="after-hero-image-card-logos">
                                 <img src={supportlogo} className="after-hero-image-card-logo" />
                             </div>
@@ -699,7 +272,7 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className="border">
+                        <div className="after-heo-image-cards border">
                             <div className="after-hero-image-card-logos">
                                 <img src={premium} className="after-hero-image-card-logo" />
                             </div>
@@ -732,7 +305,7 @@ function Home() {
                     <div className="browse-cat-single-item ">
                         <img src={img1} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> JACKET</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> JACKET</h6></button>
 
                         </div>
 
@@ -740,35 +313,35 @@ function Home() {
                     <div className="browse-cat-single-item">
                         <img src={img2} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> LUXARY PANJABI</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> LUXARY PANJABI</h6></button>
 
                         </div>
                     </div>
                     <div className="browse-cat-single-item">
                         <img src={img3} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> PREMIMUM T-SHIRT</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> PREMIMUM T-SHIRT</h6></button>
 
                         </div>
                     </div>
                     <div className="browse-cat-single-item">
                         <img src={img4} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> LUXARY PANJABI</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> LUXARY PANJABI</h6></button>
 
                         </div>
                     </div>
                     <div className="browse-cat-single-item">
                         <img src={img5} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> LUXARY PANJABI</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> LUXARY PANJABI</h6></button>
 
                         </div>
                     </div>
                     <div className="browse-cat-single-item">
                         <img src={img6} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> JACKET</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> JACKET</h6></button>
 
                         </div>
 
@@ -776,7 +349,7 @@ function Home() {
                     <div className="browse-cat-single-item">
                         <img src={img7} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> JACKET</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> JACKET</h6></button>
 
                         </div>
 
@@ -784,7 +357,7 @@ function Home() {
                     <div className="browse-cat-single-item">
                         <img src={img6} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="fs-5 fw-bold my-0"> JACKET</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> JACKET</h6></button>
 
                         </div>
 
@@ -813,36 +386,17 @@ function Home() {
 
                 </div>
 
-                <div className="best-selling-products-images-wrapper my-2 container">
+                <div className="best-selling-products-images-wrapper my-2 container px-0 ">
 
 
-                    <Carousel responsive={responsiveBestSelling} >
-                        <div class="best-selling-prouct-items pb-2 my-3">
+
+                    <Carousel responsive={responsive}>
+                        <div class="best-selling-prouct-items pb-2 my-3 ">
                             <div className="best-selling-prouct-items-top">
-                                <img src={img2} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+                                <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1 ">
 
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -867,7 +421,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -875,29 +429,9 @@ function Home() {
 
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
-                                <img src={img4} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/website_product-3-17.jpg" class="card-img-top" alt="..." />
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -922,7 +456,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -930,29 +464,9 @@ function Home() {
 
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
-                                <img src={img5} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKJRz2B9bS2FMCVABiffLDxrN5vDWqo4avLfFZLHDuQYUBV7LdbbRTWeR5NSzV6n-uPc&usqp=CAU" class="card-img-top" alt="..." />
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -977,7 +491,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -985,28 +499,8 @@ function Home() {
 
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
-                                <img src={hero} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHJUgGMXcEixsUET351f9tMhwJh2y4rjKXcG5vmL-chc9F-ccRT36NiIt2yAsIKZO9AQ&usqp=CAU" class="card-img-top" alt="..." />
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
 
                                 </div>
 
@@ -1019,7 +513,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1028,28 +522,8 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src={img2} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -1074,66 +548,12 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="best-selling-prouct-items pb-2 my-3">
-                            <div className="best-selling-prouct-items-top">
-                                <img src={img12} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                        <div className=" ">
-                                            <h6 className="my-0">4.6</h6>
-                                        </div>
-                                        <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                        </div>
-
-                                        <div className="">
-
-                                            <h6 className="my-0"> <span> | </span> 25</h6>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div className="best-selling-prouct-items-content px-2 " >
-                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
-                                <div className="d-flex align-items-center  ">
-                                    <h6 className="fs-5">TK 250</h6>
-                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
-
-                                </div>
-                                <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
-                                </div>
-                            </div>
-
-                        </div>
                     </Carousel>
 
                 </div>
@@ -1160,143 +580,13 @@ function Home() {
 
                 <div className="best-selling-products-images-wrapper my-2 px-0 container">
 
-                    <Carousel responsive={responsive}>
-                        <div class="best-selling-prouct-items pb-2 my-3">
+                <Carousel responsive={responsive}>
+                        <div class="best-selling-prouct-items pb-2 my-3 ">
                             <div className="best-selling-prouct-items-top">
-                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product_post_2-02.jpg" class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+                                <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1 ">
 
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                        <div className=" ">
-                                            <h6 className="my-0">4.6</h6>
-                                        </div>
-                                        <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                        </div>
-
-                                        <div className="">
-
-                                            <h6 className="my-0"> <span> | </span> 25</h6>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div className="best-selling-prouct-items-content px-2 " >
-                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
-                                <div className="d-flex align-items-center  ">
-                                    <h6 className="fs-5">TK 250</h6>
-                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 300</p>
-
-                                </div>
-                                <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="best-selling-prouct-items pb-2 my-3">
-                            <div className="best-selling-prouct-items-top">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Qv43HXGffGQy3AM6BEV94fSV5r-vtlLx8uM7-wfjWiJpvjBouFlDSv0M8NE4oqFYbAM&usqp=CAU" class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                        <div className=" ">
-                                            <h6 className="my-0">4.6</h6>
-                                        </div>
-                                        <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                        </div>
-
-                                        <div className="">
-
-                                            <h6 className="my-0"> <span> | </span> 25</h6>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div className="best-selling-prouct-items-content px-2 " >
-                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
-                                <div className="d-flex align-items-center  ">
-                                    <h6 className="fs-5">TK 400</h6>
-                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
-
-                                </div>
-                                <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="best-selling-prouct-items pb-2 my-3">
-                            <div className="best-selling-prouct-items-top">
-                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/web_products-1-11_1.jpg" class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -1321,7 +611,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1329,29 +619,9 @@ function Home() {
 
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
-                                <img src={img10} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/website_product-3-17.jpg" class="card-img-top" alt="..." />
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -1376,7 +646,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1384,27 +654,20 @@ function Home() {
 
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
-                                <img src={img9} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKJRz2B9bS2FMCVABiffLDxrN5vDWqo4avLfFZLHDuQYUBV7LdbbRTWeR5NSzV6n-uPc&usqp=CAU" class="card-img-top" alt="..." />
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                        <div className=" ">
+                                            <h6 className="my-0">4.6</h6>
+                                        </div>
+                                        <div className="mx-1 ">
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                        </div>
 
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+                                        <div className="">
 
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
+                                            <h6 className="my-0"> <span> | </span> 25</h6>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -1418,7 +681,29 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="best-selling-prouct-items pb-2 my-3">
+                            <div className="best-selling-prouct-items-top">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHJUgGMXcEixsUET351f9tMhwJh2y4rjKXcG5vmL-chc9F-ccRT36NiIt2yAsIKZO9AQ&usqp=CAU" class="card-img-top" alt="..." />
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+
+                                </div>
+
+                            </div>
+                            <div className="best-selling-prouct-items-content px-2 " >
+                                <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                <div className="d-flex align-items-center  ">
+                                    <h6 className="fs-5">TK 250</h6>
+                                    <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                </div>
+                                <div className="add-to-cart-btn text-center   ">
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -1427,28 +712,8 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src={img2} class="card-img-top" alt="..." />
-                                <div className="best-selling-prouct-items-image-content">
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                    </div>
-                                    <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -1473,13 +738,14 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                 </div>
                             </div>
 
                         </div>
 
                     </Carousel>
+
 
 
                 </div>
@@ -1542,9 +808,9 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image">
+                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
 
-                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                        <div className="d-flex align-items-center  px-2  py-1 my-0">
                                             <div className=" ">
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
@@ -1569,7 +835,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1578,8 +844,8 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/website_product-3-17.jpg" class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image">
-                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                        <div className="d-flex align-items-center  px-2  py-1 my-0">
                                             <div className=" ">
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
@@ -1604,7 +870,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1613,8 +879,8 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKJRz2B9bS2FMCVABiffLDxrN5vDWqo4avLfFZLHDuQYUBV7LdbbRTWeR5NSzV6n-uPc&usqp=CAU" class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image">
-                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                        <div className="d-flex align-items-center  px-2  py-1 my-0">
                                             <div className=" ">
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
@@ -1639,7 +905,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1648,7 +914,7 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHJUgGMXcEixsUET351f9tMhwJh2y4rjKXcG5vmL-chc9F-ccRT36NiIt2yAsIKZO9AQ&usqp=CAU" class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image">
+                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
 
                                     </div>
 
@@ -1661,7 +927,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1670,8 +936,8 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src={img2} class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image">
-                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                        <div className="d-flex align-items-center  px-2  py-1 my-0">
                                             <div className=" ">
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
@@ -1696,7 +962,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1709,8 +975,10 @@ function Home() {
                 </div>
             </section>
 
-            <section className="image-overlay-about-section my-5 px-0">
-                <div className="container">
+
+            <div className="container">
+
+            <section className="image-overlay-about-section my-5  px-0">
                     {/* <div className="row"> */}
 
                     <div className="img-overlay-full-width-img">
@@ -1721,43 +989,34 @@ function Home() {
                             <div className="">
                                 <img src={weblogo} className="w-25 " />
                             </div>
-                            <div className="contentss my-3">
+                            <div className="contentss my-3 ">
                                 <p className="my-1">ChatGPT is not fhe cost of this operation in terms of machine is massive.on in terms of machine is m fhe cost of this operation. </p>
                                 <p className="">ChatGPT is not fhe cost of this operation in terms of machine is massive. Google search can crawl the web and update their index all the time but the resources needed to train a LLM as big as GPT-3 are phenomenal. </p>
                             </div>
                         </div>
-                    </div>
 
                     {/* </div> */}
                 </div>
             </section>
+            </div>
 
 
-            <section className="single-demo-images-cards-section container bg-light px-0">
+            <section className="single-demo-images-cards-section container bg-light  px-0">
                 <div className="single-demo-image ">
                     <img src={model} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <div className="single-demo-image-overlay text-center text-black py-1  ">
-
-
-                        <h4 className="text-white">LONG SLEEVE T-SHIRT</h4>
-                        <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
-                    </div>
+                   
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
-
-                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                    <Carousel responsive={responsiveSingleDemoImageCards} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGw9aP7I12msRVdZVOL_5mqAnBY5I1mNSd_Q&usqp=CAU" class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
-                                        <div className="top-left-radius-code bg-secondary text-white d-inline-block ">
-                                            <p className="my-0 px-2 fs-7">CODE1212A</p>
-                                        </div>
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1772,25 +1031,6 @@ function Home() {
                                             </div>
                                         </div>
 
-                                        <div className="size-div d-flex">
-
-                                            <div className="available-size-para mx-0 text-dark px-0">
-                                                Available size
-
-                                            </div>
-                                            <div className="text-light  bg-secondary size py-0 ">
-                                                <p className="my-0 py-0">M</p>
-                                                <hr className="my-0" />
-                                                <p className="my-0">XL</p>
-                                                <hr className="my-0" />
-                                                <p className="my-0">XXL</p>
-                                                <hr className="my-0" />
-                                                <p className="mb-0 pb-0">XXL</p>
-
-                                            </div>
-                                        </div>
-
-
 
                                     </div>
 
@@ -1803,22 +1043,19 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post1_1.jpg" class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/7/d/7days-product-for-web_women7.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
-                                        <div className="top-left-radius-code bg-secondary text-white d-inline-block ">
-                                            <p className="my-0 px-2 fs-7">CODE1212A</p>
-                                        </div>
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1833,23 +1070,6 @@ function Home() {
                                             </div>
                                         </div>
 
-                                        <div className="size-div d-flex">
-
-                                            <div className="available-size-para mx-0 text-dark px-0">
-                                                Available size
-
-                                            </div>
-                                            <div className="text-light  bg-secondary size py-0 ">
-                                                <p className="my-0 py-0">M</p>
-                                                <hr className="my-0" />
-                                                <p className="my-0">XL</p>
-                                                <hr className="my-0" />
-                                                <p className="my-0">XXL</p>
-                                                <hr className="my-0" />
-                                                <p className="mb-0 pb-0">XXL</p>
-
-                                            </div>
-                                        </div>
 
 
 
@@ -1864,22 +1084,19 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaTAKXQBAXMG5YGh4Zx5yOmoRz9BNaGhEEw&usqp=CAU" class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/u/puja_web-05.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
-                                        <div className="top-left-radius-code bg-secondary text-white d-inline-block ">
-                                            <p className="my-0 px-2 fs-7">CODE1212A</p>
-                                        </div>
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1894,23 +1111,6 @@ function Home() {
                                             </div>
                                         </div>
 
-                                        <div className="size-div d-flex">
-
-                                            <div className="available-size-para mx-0 text-dark px-0">
-                                                Available size
-
-                                            </div>
-                                            <div className="text-light  bg-secondary size py-0 ">
-                                                <p className="my-0 py-0">M</p>
-                                                <hr className="my-0" />
-                                                <p className="my-0">XL</p>
-                                                <hr className="my-0" />
-                                                <p className="my-0">XXL</p>
-                                                <hr className="my-0" />
-                                                <p className="mb-0 pb-0">XXL</p>
-
-                                            </div>
-                                        </div>
 
 
 
@@ -1925,7 +1125,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1935,12 +1135,8 @@ function Home() {
                                     <img src={img2} class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
-                                        <div className="top-left-radius-code bg-secondary text-white d-inline-block ">
-                                            <p className="my-0 px-2 fs-7">CODE1212A</p>
-                                        </div>
-
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1955,26 +1151,6 @@ function Home() {
                                             </div>
                                         </div>
 
-                                        <div className="size-div d-flex">
-
-                                            <div className="available-size-para mx-0 text-dark px-0">
-                                                Available size
-
-                                            </div>
-                                            <div className="text-light  bg-secondary size py-0 ">
-                                                <p className="my-0 py-0">M</p>
-                                                <hr className="my-0" />
-                                                <p className="my-0">XL</p>
-                                                <hr className="my-0" />
-                                                <p className="my-0">XXL</p>
-                                                <hr className="my-0" />
-                                                <p className="mb-0 pb-0">XXL</p>
-
-                                            </div>
-                                        </div>
-
-
-
                                     </div>
 
                                 </div>
@@ -1986,7 +1162,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1996,6 +1172,7 @@ function Home() {
 
 
                         </Carousel>
+
                     </div>
                 </div>
             </section>
@@ -2011,161 +1188,34 @@ function Home() {
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
+                    <Carousel responsive={responsiveSingleDemoImageCards} >
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
 
-                        <Carousel responsive={responsiveSingleDemoImageCards} >
-                            <div class="best-selling-prouct-items pb-2 my-3">
-                                <div className="best-selling-prouct-items-top">
-                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post21_-_copy.jpg" class="card-img-top" alt="..." />
-                                    <div className="best-selling-prouct-items-image-content">
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+                                                <div className="">
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-
-                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                            <div className=" ">
-                                                <h6 className="my-0">4.6</h6>
-                                            </div>
-                                            <div className="mx-1 ">
-                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                            </div>
-
-                                            <div className="">
-
-                                                <h6 className="my-0"> <span> | </span> 25</h6>
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
                                             </div>
                                         </div>
+
 
                                     </div>
 
                                 </div>
-                                <div className="best-selling-prouct-items-content px-2 " >
-                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
-                                    <div className="d-flex align-items-center  ">
-                                        <h6 className="fs-5">TK 250</h6>
-                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 300</p>
-
-                                    </div>
-                                    <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="best-selling-prouct-items pb-2 my-3">
-                                <div className="best-selling-prouct-items-top">
-                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/i/n/instagram_product-post3_-_copy.jpg" class="card-img-top" alt="..." />
-                                    <div className="best-selling-prouct-items-image-content">
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-
-                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                            <div className=" ">
-                                                <h6 className="my-0">4.6</h6>
-                                            </div>
-                                            <div className="mx-1 ">
-                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                            </div>
-
-                                            <div className="">
-
-                                                <h6 className="my-0"> <span> | </span> 25</h6>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div className="best-selling-prouct-items-content px-2 " >
-                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
-                                    <div className="d-flex align-items-center  ">
-                                        <h6 className="fs-5">TK 400</h6>
-                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
-
-                                    </div>
-                                    <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="best-selling-prouct-items pb-2 my-3">
-                                <div className="best-selling-prouct-items-top">
-                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/o/women_s_tops-03.jpg" class="card-img-top" alt="..." />
-                                    <div className="best-selling-prouct-items-image-content">
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                            <div className=" ">
-                                                <h6 className="my-0">4.6</h6>
-                                            </div>
-                                            <div className="mx-1 ">
-                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                            </div>
-
-                                            <div className="">
-
-                                                <h6 className="my-0"> <span> | </span> 25</h6>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div className="best-selling-prouct-items-content px-2 " >
+                                <div className="single-demo-image-cards-image-content px-2 " >
                                     <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
                                     <div className="d-flex align-items-center  ">
                                         <h6 className="fs-5">TK 250</h6>
@@ -2173,54 +1223,40 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
                             </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/7/d/7days-product-for-web_women7.jpg" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
 
-                            <div class="best-selling-prouct-items pb-2 my-3">
-                                <div className="best-selling-prouct-items-top">
-                                    <img src={img10} class="card-img-top" alt="..." />
-                                    <div className="best-selling-prouct-items-image-content">
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+                                                <div className="">
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                            <div className=" ">
-                                                <h6 className="my-0">4.6</h6>
-                                            </div>
-                                            <div className="mx-1 ">
-                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                            </div>
-
-                                            <div className="">
-
-                                                <h6 className="my-0"> <span> | </span> 25</h6>
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
                                             </div>
                                         </div>
+
+
+
 
                                     </div>
 
                                 </div>
-                                <div className="best-selling-prouct-items-content px-2 " >
+                                <div className="single-demo-image-cards-image-content px-2 " >
                                     <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
                                     <div className="d-flex align-items-center  ">
                                         <h6 className="fs-5">TK 250</h6>
@@ -2228,41 +1264,40 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
                             </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/u/puja_web-05.jpg" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
 
-                            <div class="best-selling-prouct-items pb-2 my-3">
-                                <div className="best-selling-prouct-items-top">
-                                    <img src={img9} class="card-img-top" alt="..." />
-                                    <div className="best-selling-prouct-items-image-content">
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
 
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
 
                                     </div>
 
                                 </div>
-                                <div className="best-selling-prouct-items-content px-2 " >
+                                <div className="single-demo-image-cards-image-content px-2 " >
                                     <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
                                     <div className="d-flex align-items-center  ">
                                         <h6 className="fs-5">TK 250</h6>
@@ -2270,54 +1305,36 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
                             </div>
-
-                            <div class="best-selling-prouct-items pb-2 my-3">
-                                <div className="best-selling-prouct-items-top">
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
                                     <img src={img2} class="card-img-top" alt="..." />
-                                    <div className="best-selling-prouct-items-image-content">
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault" />
+                                    <div className="card-items-overlay-content">
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckDefault" />
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                </div>
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-primary" type="checkbox" value="" id="flexCheckDefault" />
+                                                <div className="">
 
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input bg-dark" type="checkbox" value="" id="flexCheckDefault" />
-
-                                        </div>
-                                        <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
-                                            <div className=" ">
-                                                <h6 className="my-0">4.6</h6>
-                                            </div>
-                                            <div className="mx-1 ">
-                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
-                                            </div>
-
-                                            <div className="">
-
-                                                <h6 className="my-0"> <span> | </span> 25</h6>
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
                                             </div>
                                         </div>
 
                                     </div>
 
                                 </div>
-                                <div className="best-selling-prouct-items-content px-2 " >
+                                <div className="single-demo-image-cards-image-content px-2 " >
                                     <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
                                     <div className="d-flex align-items-center  ">
                                         <h6 className="fs-5">TK 250</h6>
@@ -2325,15 +1342,19 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
                             </div>
+
 
 
 
                         </Carousel>
+
+
+
                     </div>
                 </div>
             </section>
@@ -2341,23 +1362,20 @@ function Home() {
             <section className="single-demo-images-cards-section container bg-light px-0">
                 <div className="single-demo-image ">
                     <img src={singlePanjabi} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <div className="single-demo-image-overlay text-center text-black py-1  ">
-                        <h4 className="text-white">LONG SLEEVE T-SHIRT</h4>
-                        <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
-                    </div>
+                   
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
 
-                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                    <Carousel responsive={responsiveSingleDemoImageCards} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBjLdClKmuLwbRbcSbyj-qiH9iD1WOGvK0rQ&usqp=CAU" class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -2384,19 +1402,19 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz81-nNEfYKTaCThLOIosWWqNfuesV-RGRUiZA2WtIFTFl0YLexOIRrNb2VN8kaPoFmEU&usqp=CAU" class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/7/d/7days-product-for-web_women7.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -2425,19 +1443,19 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsnGbEERq2TGJlkn-Y_jxHRTPIKmiD1n4ru3v68gGGZw9m-26kHiV2ha7OrJKi4vEz_Ag&usqp=CAU" class="card-img-top" alt="..." />
+                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/u/puja_web-05.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -2466,7 +1484,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -2477,7 +1495,7 @@ function Home() {
                                     <div className="card-items-overlay-content">
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -2503,7 +1521,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -2513,6 +1531,7 @@ function Home() {
 
 
                         </Carousel>
+
                     </div>
                 </div>
             </section>
@@ -2536,7 +1555,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -2563,7 +1582,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -2575,7 +1594,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -2604,7 +1623,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -2616,7 +1635,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -2645,7 +1664,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -2656,7 +1675,7 @@ function Home() {
                                     <div className="card-items-overlay-content">
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center bg-light rounded px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -2682,7 +1701,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -2699,9 +1718,9 @@ function Home() {
 
             <section className="newsletter-section container rounded-3  py-5 mt-5 px-5">
 
-                <div className="newsletter-section-wrapper pt-3">
+                <div className="newsletter-section-wrapper pt-3 ">
                     <div className="">
-                        <h2 className="text-dark ">Join Our Newsletter To Get Offers</h2>
+                        <h2 className="join-our-news-text fs-3 ">Join Our Newsletter To Get Offers</h2>
                         <p>Subscribe our news letter and updated</p>
                     </div>
                     <div className="d-flex  flex-grow-1 ms-5 justify-content-end">

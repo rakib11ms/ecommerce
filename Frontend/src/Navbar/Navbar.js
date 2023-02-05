@@ -1,6 +1,6 @@
 import "../Home/Home.css";
 import './Navbar.css';
-import {react,useState} from 'react'
+import { react, useState } from 'react'
 import weblogo from "../images/weblogo.png";
 
 function Navbar() {
@@ -10,7 +10,7 @@ function Navbar() {
     //     console.log("The page has finished loading.");
     //     setModalShow(true)
     //   }
-      
+
     //   window.onload = myFunction;
     return (
         <>
@@ -83,8 +83,8 @@ function Navbar() {
 
 
                                             <div className=" w-100 pe-5 " id="wrapper_1">
-                                                
-                                                <h5  className="mb-2 text-dark">LOGIN</h5>
+
+                                                <h5 className="mb-2 text-dark">LOGIN</h5>
 
                                                 <div class="mb-3">
                                                     <label for="exampleFormControlInput1" class="form-label">Mobile No or Email address</label>
@@ -108,7 +108,7 @@ function Navbar() {
                                                 <div className="">
                                                     <p className="my-0">Forgot password?</p>
                                                 </div>
-                                               
+
                                             </div>
 
 
@@ -163,11 +163,11 @@ function Navbar() {
                             >
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
                                     <li class="nav-item dropdown ">
-                                        <a class="nav-link">HOME</a>
+                                        <a class="nav-link navbar-font" >HOME</a>
                                     </li>
                                     <li class="nav-item dropdown nav-link-margin">
                                         <a
-                                            class="nav-link dropdown-toggle"
+                                            class="nav-link dropdown-toggle navbar-font"
                                             href="#"
                                             id="navbarDropdown"
                                             role="button"
@@ -180,56 +180,28 @@ function Navbar() {
                                             <div className="nav-dropdown-parent-vertical">
                                                 <div className="">
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Another action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Something else
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
 
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                </div>
-
-                                                <div className="">
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Another action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Something else
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
@@ -237,81 +209,109 @@ function Navbar() {
 
                                                 <div className="">
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Another action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Something else
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
+                                                            Action
+                                                        </a>
+                                                    </li>
+                                                </div>
+
+                                                <div className="">
+                                                    <li>
+                                                        <a class="dropdown-item navbar-font" href="#">
+                                                            Action
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item navbar-font" href="#">
+                                                            Another action
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item navbar-font" href="#">
+                                                            Something else
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item navbar-font" href="#">
+                                                            Action
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
                                                 </div>
                                                 <div className="">
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Another action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Something else
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
                                                 </div>
                                                 <div className="">
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Another action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Something else
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a class="dropdown-item" href="#">
+                                                        <a class="dropdown-item navbar-font" href="#">
                                                             Action
                                                         </a>
                                                     </li>
@@ -321,7 +321,7 @@ function Navbar() {
                                     </li>
                                     <li class="nav-item dropdown nav-link-margin">
                                         <a
-                                            class="nav-link dropdown-toggle"
+                                            class="nav-link dropdown-toggle navbar-font"
                                             href="#"
                                             id="navbarDropdown"
                                             role="button"
@@ -332,17 +332,17 @@ function Navbar() {
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Another action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Something else here
                                                 </a>
                                             </li>
@@ -350,7 +350,7 @@ function Navbar() {
                                     </li>
                                     <li class="nav-item dropdown nav-link-margin">
                                         <a
-                                            class="nav-link dropdown-toggle"
+                                            class="nav-link dropdown-toggle navbar-font"
                                             href="#"
                                             id="navbarDropdown"
                                             role="button"
@@ -361,17 +361,17 @@ function Navbar() {
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Another action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Something else here
                                                 </a>
                                             </li>
@@ -379,7 +379,7 @@ function Navbar() {
                                     </li>
                                     <li class="nav-item dropdown nav-link-margin">
                                         <a
-                                            class="nav-link dropdown-toggle"
+                                            class="nav-link dropdown-toggle navbar-font"
                                             href="#"
                                             id="navbarDropdown"
                                             role="button"
@@ -390,17 +390,17 @@ function Navbar() {
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Another action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Something else here
                                                 </a>
                                             </li>
@@ -409,7 +409,7 @@ function Navbar() {
 
                                     <li class="nav-item dropdown nav-link-margin">
                                         <a
-                                            class="nav-link dropdown-toggle"
+                                            class="nav-link dropdown-toggle navbar-font"
                                             href="#"
                                             id="navbarDropdown"
                                             role="button"
@@ -420,17 +420,17 @@ function Navbar() {
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Another action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Something else here
                                                 </a>
                                             </li>
@@ -439,7 +439,7 @@ function Navbar() {
 
                                     <li class="nav-item dropdown nav-link-margin">
                                         <a
-                                            class="nav-link dropdown-toggle"
+                                            class="nav-link dropdown-toggle navbar-font"
                                             href="#"
                                             id="navbarDropdown"
                                             role="button"
@@ -450,17 +450,17 @@ function Navbar() {
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Another action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Something else here
                                                 </a>
                                             </li>
@@ -469,7 +469,7 @@ function Navbar() {
 
                                     <li class="nav-item dropdown nav-link-margin">
                                         <a
-                                            class="nav-link dropdown-toggle"
+                                            class="nav-link dropdown-toggle navbar-font"
                                             href="#"
                                             id="navbarDropdown"
                                             role="button"
@@ -480,17 +480,17 @@ function Navbar() {
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Another action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Something else here
                                                 </a>
                                             </li>
@@ -499,7 +499,7 @@ function Navbar() {
 
                                     <li class="nav-item dropdown nav-link-margin">
                                         <a
-                                            class="nav-link dropdown-toggle"
+                                            class="nav-link dropdown-toggle navbar-font"
                                             href="#"
                                             id="navbarDropdown"
                                             role="button"
@@ -510,17 +510,17 @@ function Navbar() {
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Another action
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="#">
+                                                <a class="dropdown-item navbar-font" href="#">
                                                     Something else here
                                                 </a>
                                             </li>
@@ -530,7 +530,7 @@ function Navbar() {
                             </div>
                         </div>
                     </nav>
-            
+
 
 
                 </section>

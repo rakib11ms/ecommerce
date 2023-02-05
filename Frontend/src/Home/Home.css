@@ -111,15 +111,16 @@
 }
 
 .after-hero-image-card>* {
-  border: 1px solid #d2d2d2;
+  /* border: 1px solid #d1d1d1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   flex: 1;
   margin: 0px 10px;
-  padding: 5px 0px;
-
+  padding: 7px 0px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
 
 .after-hero-image-card-logo {
@@ -144,9 +145,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   position: relative;
   width: 100%;
+  /* font-family: 'Poppins', sans-serif;
+  font-weight:500;
+  font-size: 1.6rem; */
 }
 
 /* .check5{
@@ -190,11 +194,19 @@
   z-index: 1;
 }
 
+
 .browse-cat-single-item>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 6px;
+}
+
+.browse-cat-single-item:hover {
+  opacity: 0.8;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .browse-cat-single-inside-btn {
@@ -207,6 +219,12 @@
 
 }
 
+.browse-category-card-font {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
 .best-selling-prouct-items {
 
   border-radius: 6px;
@@ -215,6 +233,13 @@
   position: relative;
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.best-selling-prouct-items:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transform: scale(0.95);
+  transition: all 0.2s ease;
 }
 
 .best-selling-prouct-items-top {
@@ -242,7 +267,7 @@
 }
 
 .card-section-without-color-image {
-  bottom: 5%;
+  bottom: 4%;
   position: absolute;
   left: 5px;
   z-index: 100;
@@ -262,6 +287,20 @@
   padding: 3px 20px;
 }
 
+.add-to-cart-btns:hover {
+  transform: scale(1.0.66);
+  transition: all 0.1s ease;
+  border: 1px solid skyblue;
+}
+
+.star-review-overlay {
+  background-color: #FAF9F6;
+  position: absolute;
+  opacity: 0.9;
+  z-index: 11111;
+
+
+}
 
 
 .i-frame-video-section-height {
@@ -282,7 +321,7 @@
 
 
 .img-overlay-full-width-img {
-  height: 300px;
+  height: 320px;
   z-index: -11;
   position: relative;
 
@@ -308,21 +347,11 @@
 }
 
 .contentss>p {
-  /* word-spacing: 1px; */
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 13px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -340,6 +369,12 @@
   height: 365px;
 }
 
+.code-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 13px;
+
+}
 
 
 .single-demo-image {
@@ -347,13 +382,6 @@
   position: relative;
 }
 
-.single-demo-image-overlay {
-  position: absolute;
-  bottom: 10px;
-  /* left: 10%; */
-  width: 100%;
-  background-color: rgba(60, 64, 67, 0.15);
-}
 
 
 .single-demo-image-cards {
@@ -413,27 +441,7 @@
   bottom: 10px;
 }
 
-.size-div,
-.available-size-para,
-.size>* {
-  font-size: 11px;
-  text-align: center;
-}
 
-.size {
-  width: 20px;
-}
-
-.available-size-para {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
-
-.size-div {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-}
 
 
 
@@ -448,9 +456,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: black rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif;
+
 }
 
+.join-our-news-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 
+}
 
 
 
@@ -489,6 +504,12 @@
   justify-content: space-between;
 
 
+
+}
+
+.footer-contact-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
 }
 
 .footer-wrapper>div {
@@ -518,7 +539,6 @@
 
 .text-color-footer {
   color: rgb(158, 123, 57);
-  font-weight: bold;
 }
 
 @media only screen and (max-width: 576px) {
@@ -548,26 +568,29 @@
     margin: 5px 0px;
   }
 
-  .carousal-height{
+  .carousal-height {
     height: 200px;
-}
-.carousel-item>img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  }
+
+  .carousel-item>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 
-.check-2 {
-  left: 20%;
-  position: absolute;
-  background-color: rgb(107, 31, 31);
-  height: 2px;
-  width: 200px;
-  z-index: 400;
-}
-.flex-grow-1,.flex-grow-2{
-  width: 100%;
-  height: 100%;
-}
+  .check-2 {
+    left: 20%;
+    position: absolute;
+    background-color: rgb(107, 31, 31);
+    height: 2px;
+    width: 200px;
+    z-index: 400;
+  }
+
+  .flex-grow-1,
+  .flex-grow-2 {
+    width: 100%;
+    height: 100%;
+  }
 }
