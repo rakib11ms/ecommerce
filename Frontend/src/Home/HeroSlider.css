@@ -1,0 +1,56 @@
+.carousel .thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  /* object-fit: cover;
+    cursor: pointer; */
+}
+
+.carousel .slide img {
+  height: 500px;
+  /* change this to whatever you want */
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  cursor: pointer;
+}
+
+.control-dots {
+  position: absolute;
+  /* background-color: #f2f2f2; */
+  right:-55%;
+  top: 50%;
+  transform: translateY(-50%)  rotate(-90deg);
+
+}
+
+.carousel .control-dots .dot {
+  height: 15px;
+  width: 15px;
+  background-color:white;
+  border: 2px solid #d4d4d4;
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    /* background-color: lightblue; */
+    font-size: 12px;
+  }
+
+  .carousel .thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    /* object-fit: cover;
+        cursor: pointer; */
+  }
+
+  .carousel .slide img {
+    height: 300px;
+    /* change this to whatever you want */
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    cursor: pointer;
+  }
+}

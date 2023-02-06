@@ -32,9 +32,8 @@ import img12 from "../images/white Tshirt.jpg";
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import HeroSlider from "./HeroSlider";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import Carousel from 'react-responsive-carousel';
 
 
 function Home() {
@@ -116,7 +115,8 @@ function Home() {
         superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
-            items: 4
+            items: 4,
+
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -128,7 +128,12 @@ function Home() {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 1
+            items: 2,
+
+            // partialVisible: true,
+            // partialVisibilityGutter: 32,
+
+
         }
     };
 
@@ -152,32 +157,13 @@ function Home() {
             items: 1
         }
     }
-    const responsiveBestSelling = {
-        superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 4
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 4
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
-    }
 
     return (
         <>
 
             <Navbar></Navbar>
 
-            <section className="hero-sliders">
+            {/* <section className="hero-sliders">
 
                 <div
                     id="carouselExampleIndicators"
@@ -231,16 +217,12 @@ function Home() {
                             />
                         </div>
                     </div>
-                    {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button> */}
+       
                 </div>
-            </section>
+            </section> */}
+
+
+            <HeroSlider></HeroSlider>
 
             <section className="after-hero-image my-4">
                 <div className="container">
@@ -390,13 +372,15 @@ function Home() {
 
 
 
-                    <Carousel responsive={responsive}>
+                    <Carousel responsive={responsive}
+
+                    >
                         <div class="best-selling-prouct-items pb-2 my-3 ">
                             <div className="best-selling-prouct-items-top">
                                 <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1 ">
+                                <div className="card-section-without-color-image  rounded  ">
 
-                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                    <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -430,8 +414,8 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/website_product-3-17.jpg" class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
-                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                <div className="card-section-without-color-image  rounded ">
+                                    <div className="d-flex align-items-center star-review-overlay rounded-1  px-2  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -441,7 +425,7 @@ function Home() {
 
                                         <div className="">
 
-                                            <h6 className="my-0"> <span> | </span> 25</h6>
+                                            <h6 className="my-0"> <span> | </span> 55</h6>
                                         </div>
                                     </div>
 
@@ -465,10 +449,10 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKJRz2B9bS2FMCVABiffLDxrN5vDWqo4avLfFZLHDuQYUBV7LdbbRTWeR5NSzV6n-uPc&usqp=CAU" class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
-                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                <div className="card-section-without-color-image  rounded ">
+                                    <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                         <div className=" ">
-                                            <h6 className="my-0">4.6</h6>
+                                            <h6 className="my-0">1.6</h6>
                                         </div>
                                         <div className="mx-1 ">
                                             <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
@@ -500,7 +484,7 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHJUgGMXcEixsUET351f9tMhwJh2y4rjKXcG5vmL-chc9F-ccRT36NiIt2yAsIKZO9AQ&usqp=CAU" class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                <div className="card-section-without-color-image star-review-overlay rounded-1 rounded py-0 px-1">
 
                                 </div>
 
@@ -522,8 +506,8 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src={img2} class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
-                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                <div className="card-section-without-color-image  rounded ">
+                                    <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -580,13 +564,13 @@ function Home() {
 
                 <div className="best-selling-products-images-wrapper my-2 px-0 container">
 
-                <Carousel responsive={responsive}>
+                    <Carousel responsive={responsive}>
                         <div class="best-selling-prouct-items pb-2 my-3 ">
                             <div className="best-selling-prouct-items-top">
                                 <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1 ">
+                                <div className="card-section-without-color-image rounded py-0 px-1 ">
 
-                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                    <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -620,8 +604,8 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/website_product-3-17.jpg" class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
-                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                <div className="card-section-without-color-image rounded py-0 px-1">
+                                    <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -655,8 +639,8 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKJRz2B9bS2FMCVABiffLDxrN5vDWqo4avLfFZLHDuQYUBV7LdbbRTWeR5NSzV6n-uPc&usqp=CAU" class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
-                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                <div className="card-section-without-color-image  rounded ">
+                                    <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -690,7 +674,7 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHJUgGMXcEixsUET351f9tMhwJh2y4rjKXcG5vmL-chc9F-ccRT36NiIt2yAsIKZO9AQ&usqp=CAU" class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                <div className="card-section-without-color-image star-review-overlay rounded-1 rounded py-0 px-1">
 
                                 </div>
 
@@ -712,8 +696,8 @@ function Home() {
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
                                 <img src={img2} class="card-img-top" alt="..." />
-                                <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
-                                    <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                <div className="card-section-without-color-image  rounded ">
+                                    <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                         <div className=" ">
                                             <h6 className="my-0">4.6</h6>
                                         </div>
@@ -808,9 +792,9 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                    <div className="card-section-without-color-image rounded py-0 px-1">
 
-                                        <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                        <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                             <div className=" ">
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
@@ -844,8 +828,8 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/website_product-3-17.jpg" class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
-                                        <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                    <div className="card-section-without-color-image  rounded ">
+                                        <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                             <div className=" ">
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
@@ -879,8 +863,8 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKJRz2B9bS2FMCVABiffLDxrN5vDWqo4avLfFZLHDuQYUBV7LdbbRTWeR5NSzV6n-uPc&usqp=CAU" class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
-                                        <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                    <div className="card-section-without-color-image rounded py-0 px-1">
+                                        <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                             <div className=" ">
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
@@ -914,7 +898,7 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHJUgGMXcEixsUET351f9tMhwJh2y4rjKXcG5vmL-chc9F-ccRT36NiIt2yAsIKZO9AQ&usqp=CAU" class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
+                                    <div className="card-section-without-color-image star-review-overlay rounded-1 rounded py-0 px-1">
 
                                     </div>
 
@@ -936,8 +920,8 @@ function Home() {
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src={img2} class="card-img-top" alt="..." />
-                                    <div className="card-section-without-color-image star-review-overlay rounded py-0 px-1">
-                                        <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                    <div className="card-section-without-color-image  rounded ">
+                                        <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                             <div className=" ">
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
@@ -978,7 +962,7 @@ function Home() {
 
             <div className="container">
 
-            <section className="image-overlay-about-section my-5  px-0">
+                <section className="image-overlay-about-section my-5  px-0">
                     {/* <div className="row"> */}
 
                     <div className="img-overlay-full-width-img">
@@ -995,20 +979,20 @@ function Home() {
                             </div>
                         </div>
 
-                    {/* </div> */}
-                </div>
-            </section>
+                        {/* </div> */}
+                    </div>
+                </section>
             </div>
 
 
             <section className="single-demo-images-cards-section container bg-light  px-0">
                 <div className="single-demo-image ">
                     <img src={model} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                   
+
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
-                    <Carousel responsive={responsiveSingleDemoImageCards} >
+                        <Carousel responsive={responsiveSingleDemoImageCards} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
                                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
@@ -1016,7 +1000,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1055,7 +1039,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1096,7 +1080,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1136,7 +1120,7 @@ function Home() {
                                     <div className="card-items-overlay-content">
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1188,7 +1172,7 @@ function Home() {
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
-                    <Carousel responsive={responsiveSingleDemoImageCards} >
+                        <Carousel responsive={responsiveSingleDemoImageCards} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
                                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
@@ -1196,7 +1180,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1235,7 +1219,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1276,7 +1260,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1316,7 +1300,7 @@ function Home() {
                                     <div className="card-items-overlay-content">
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1362,12 +1346,12 @@ function Home() {
             <section className="single-demo-images-cards-section container bg-light px-0">
                 <div className="single-demo-image ">
                     <img src={singlePanjabi} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                   
+
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
 
-                    <Carousel responsive={responsiveSingleDemoImageCards} >
+                        <Carousel responsive={responsiveSingleDemoImageCards} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
                                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
@@ -1375,7 +1359,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1414,7 +1398,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1455,7 +1439,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1495,7 +1479,7 @@ function Home() {
                                     <div className="card-items-overlay-content">
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1539,10 +1523,7 @@ function Home() {
             <section className="single-demo-images-cards-section container bg-light mt-5 px-0">
                 <div className="single-demo-image order-1">
                     <img src="https://static-01.daraz.com.bd/p/3569b570fac7837cf27c31581dd94f39.png" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <div className="single-demo-image-overlay text-center text-black py-1  ">
-                        <h4 className="text-white">KAMIZ SELOWAR</h4>
-                        <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
-                    </div>
+               
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
@@ -1555,7 +1536,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1594,7 +1575,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1635,7 +1616,7 @@ function Home() {
 
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1675,7 +1656,7 @@ function Home() {
                                     <div className="card-items-overlay-content">
 
                                         <div className="star-icon">
-                                            <div className="d-flex align-items-center  px-2  py-1 my-0">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
@@ -1719,12 +1700,12 @@ function Home() {
             <section className="newsletter-section container rounded-3  py-5 mt-5 px-5">
 
                 <div className="newsletter-section-wrapper pt-3 ">
-                    <div className="">
+                    <div className="newsletter-sec1">
                         <h2 className="join-our-news-text fs-3 ">Join Our Newsletter To Get Offers</h2>
-                        <p>Subscribe our news letter and updated</p>
+                        <p className="newsletter-sub">Subscribe our news letter and updated</p>
                     </div>
-                    <div className="d-flex  flex-grow-1 ms-5 justify-content-end">
-                        <input type="text" class="form-control me-3 border-secondary border-2 w-50" placeholder="Enter your email"></input>
+                    <div className="newsletter-sec2 d-flex flex-grow-1  justify-content-end">
+                        <input type="text" class="form-control me-3 border-secondary border-2 " placeholder="Enter your email"></input>
 
                         <button className="btn btn-secondary px-4 py-2">Subscribe</button>
                     </div>

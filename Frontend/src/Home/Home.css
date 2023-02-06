@@ -54,9 +54,19 @@
   display: flex;
 }
 
+/* 
+.navbar-nav .nav-item .nav-link {
+  color: black;
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+  color: rebeccapurple;
+}
 
 
-
+.navbar-nav .nav-item:hover .nav-dropdown-parent-vertical {
+  transform: scale(0.99);
+} */
 .carousal-height {
   height: 500px;
 }
@@ -104,6 +114,19 @@
   /* background-color: yellow; */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .after-hero-image-card {
   display: flex;
@@ -235,6 +258,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
+
 .best-selling-prouct-items:hover {
   opacity: 0.8;
   cursor: pointer;
@@ -270,8 +294,21 @@
   bottom: 4%;
   position: absolute;
   left: 5px;
-  z-index: 100;
+
+  /* background-color: white; */
 }
+
+.star-review-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(44, 39, 39);
+
+
+  /* opacity: 0.9;
+  z-index: 11111; */
+
+
+}
+
 
 .best-selling-prouct-items-content {
   height: 32%;
@@ -284,23 +321,17 @@
 
 .add-to-cart-btns {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  padding: 3px 20px;
+  padding: 3px 18px;
 }
 
 .add-to-cart-btns:hover {
+  transform: translateY(-5px);
   transform: scale(1.0.66);
   transition: all 0.1s ease;
-  border: 1px solid skyblue;
-}
-
-.star-review-overlay {
-  background-color: #FAF9F6;
-  position: absolute;
-  opacity: 0.9;
-  z-index: 11111;
-
+  border: 1px solid darkgray;
 
 }
+
 
 
 .i-frame-video-section-height {
@@ -458,7 +489,16 @@
   align-items: center;
   color: black rgba(0, 0, 0, 0.5);
   font-family: 'Montserrat', sans-serif;
+  flex-wrap: wrap;
 
+}
+
+.newsletter-sec1 {
+  width: 60%;
+}
+
+.newsletter-sec2 {
+  width: 40%;
 }
 
 .join-our-news-text {
@@ -492,16 +532,15 @@
 }
 
 .footer-wrapper {
-  background-color: black;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 111;
   padding: 0rem 7rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
+  cursor: pointer;
 
 
 
@@ -509,7 +548,15 @@
 
 .footer-contact-text {
   font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.footer-address-text {
+  font-family: 'Poppins', sans-serif;
   font-weight: 100;
+  font-size: 13px;
+  padding-right: 1rem;
+  color: #d1d1d1;
 }
 
 .footer-wrapper>div {
@@ -519,6 +566,9 @@
 
 .footer-li>* {
   list-style: none;
+  font-weight: 600;
+  font-size: 13px;
+  color: #f4f4f4;
 }
 
 .footer-social-icons-wrapper {
@@ -539,10 +589,11 @@
 
 .text-color-footer {
   color: rgb(158, 123, 57);
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 576px) {
-  body {
+  * {
     /* background-color: lightblue; */
     font-size: 12px;
   }
@@ -578,6 +629,14 @@
     object-fit: cover;
   }
 
+  .newsletter-sec1 {
+    width: 100%;
+  }
+
+  .newsletter-sec2 {
+    width: 100%;
+  }
+
 
   .check-2 {
     left: 20%;
@@ -593,4 +652,71 @@
     width: 100%;
     height: 100%;
   }
+
+  .best-selling-products-images-wrapper {
+    margin-left: 20px;
+  }
+
+  .best-selling-prouct-items {
+
+    border-radius: 6px;
+    width: 90%;
+    height: 340px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+
+
+
+
+  .best-selling-prouct-items-top>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+
+  }
+
+
+
+  .img-overlay-full-width-img {
+    height: 430px;
+    z-index: -11;
+    position: relative;
+
+  }
+
+  .img-overlay-full-width-img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+
+  .img-overlay-content {
+    position: absolute;
+    top: 7%;
+    z-index: 11;
+    width: 75%;
+    left: 13%;
+    opacity: 0.8;
+    /* transform: translate(-10%,-25%); */
+    border-radius: 15px;
+
+  }
+
+  .footer-wrapper {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0rem 7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    cursor: pointer;
+  
+  
+  
+  }
+  
 }
