@@ -20,7 +20,7 @@ function Footer() {
                             <h3>Company Name
                             </h3>
                         </div>
-                        <h5 className="mt-4 fw-bold fs-4 " style={{ color: "rgb(158, 123, 57)" }}>+88 0123123123</h5>
+                        <h5 className="mt-4 fw-bold  " style={{ color: "rgb(158, 123, 57)" }}>+88 0123123123</h5>
                         <p className="mb-2 ">Worktime: SAT- FRI, 10AM -11PM</p>
 
                         <div className="footer-social-icons-wrapper">
@@ -71,7 +71,7 @@ function Footer() {
 
 
                             <div className="">
-                                <p className="my-0 mx-5 footer-address-text ">091823128123</p>
+                                <p className="my-0  footer-address-text ">091823128123</p>
 
                                 <p className=" footer-address-text my-0">0177-8749534 | 0177-8749534</p>
                                 <p className=" footer-address-text my-0">0177-8749534| 0177-8749534</p>

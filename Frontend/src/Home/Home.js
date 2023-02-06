@@ -74,40 +74,40 @@ function Home() {
     };
 
     // Best Selling
-    var style = {
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: false,
-        speed: 2000,
-        autoplaySpeed: 2000,
-        cssEase: "linear",
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 3,
-                    infinite: true,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
+    // var style = {
+    //     infinite: true,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     speed: 2000,
+    //     autoplaySpeed: 2000,
+    //     cssEase: "linear",
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 3,
+    //                 infinite: true,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 600,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 2,
+    //                 initialSlide: 2,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 480,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //             },
+    //         },
+    //     ],
+    // };
 
 
 
@@ -115,7 +115,7 @@ function Home() {
         superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
-            items: 4,
+            items: 5,
 
         },
         desktop: {
@@ -372,10 +372,11 @@ function Home() {
 
 
 
-                    <Carousel responsive={responsive}
+                    <Carousel responsive={responsive}   
+ partialVisible={false}
 
                     >
-                        <div class="best-selling-prouct-items pb-2 my-3 ">
+                        <div class="best-selling-prouct-items pb-2 my-3  ">
                             <div className="best-selling-prouct-items-top">
                                 <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
                                 <div className="card-section-without-color-image  rounded  ">
@@ -411,7 +412,7 @@ function Home() {
 
                         </div>
 
-                        <div class="best-selling-prouct-items pb-2 my-3">
+                        <div class="best-selling-prouct-items pb-2 my-3 ">
                             <div className="best-selling-prouct-items-top">
                                 <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/website_product-3-17.jpg" class="card-img-top" alt="..." />
                                 <div className="card-section-without-color-image  rounded ">
@@ -446,7 +447,7 @@ function Home() {
 
                         </div>
 
-                        <div class="best-selling-prouct-items pb-2 my-3">
+                        <div class="best-selling-prouct-items pb-2 my-3 ">
                             <div className="best-selling-prouct-items-top">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKJRz2B9bS2FMCVABiffLDxrN5vDWqo4avLfFZLHDuQYUBV7LdbbRTWeR5NSzV6n-uPc&usqp=CAU" class="card-img-top" alt="..." />
                                 <div className="card-section-without-color-image  rounded ">
@@ -743,15 +744,15 @@ function Home() {
             <section className="iframe-video-section  py-3 ">
 
                 <div className="container i-frame-video-section-height py-3 ">
-                    <div className="d-flex h-100">
-                        <div className="flex-grow-1 ">
+                    <div className="d-flex justify-content-between h-100 iframe-wrapper">
+                        <div className="flex-grow-1  w-50">
                             <h5 className="iframe-video-titles">ELITE PANJABI</h5>
-                            <iframe width="560" height="100%" src="https://www.youtube-nocookie.com/embed/TfwMSbmZznM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/TfwMSbmZznM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
-                        <div className="ms-4 flex-grow-2">
+                        <div className="ms-4 flex-grow-2 w-50">
                             <h5 className="iframe-video-titles">PASSION POLO</h5>
 
-                            <iframe width="560" height="100%" src="https://www.youtube-nocookie.com/embed/t3C75jXDP7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                        </div>
+                            <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/t3C75jXDP7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                        </div>
                     </div>
                 </div>
 
@@ -1523,7 +1524,7 @@ function Home() {
             <section className="single-demo-images-cards-section container bg-light mt-5 px-0">
                 <div className="single-demo-image order-1">
                     <img src="https://static-01.daraz.com.bd/p/3569b570fac7837cf27c31581dd94f39.png" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-               
+
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
