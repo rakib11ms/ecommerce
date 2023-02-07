@@ -56,23 +56,23 @@ function Navbar() {
                         {/* <!-- Modal --> */}
                         <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" id="loginModalDialog">
-                                <div class="modal-content">
+                                <div class="modal-content login-register-wrapper">
                                     <div class="modal-header bg-light">
                                         <div className="d-flex justify-content-center  w-100">
-                                            <div className="d-flex rounded-3 ">
-                                                <div className="bg-dark bg-gradient rounded-start py-1 px-2">
+                                            <div className="d-flex rounded-1 ">
+                                                <div className="fb-icon-login rounded-start py-1 px-2">
                                                     <i className="fab fa-facebook text-white"></i>
                                                 </div>
-                                                <div className="bg-primary px-2 pe-4  rounded-end py-1 text-white">
+                                                <div className="login-with-fb px-2 pe-4  rounded-end py-1 text-white">
                                                     LOGIN WITH FACEBOOK
                                                 </div>
                                             </div>
 
-                                            <div className="d-flex rounded-3 mx-4 ">
-                                                <div className="bg-info rounded-start py-1 px-2">
+                                            <div className="d-flex rounded-1 mx-4 ">
+                                                <div className=" login-google-icon rounded-start py-1 px-2">
                                                     <i className="fab fa-google text-white"></i>
                                                 </div>
-                                                <div className="bg-danger px-2  pe-4 rounded-end py-1 text-white">
+                                                <div className="login-with-google px-2  pe-4 rounded-end py-1 text-white">
                                                     LOGIN WITH GOOGLE
                                                 </div>
                                             </div>
@@ -84,7 +84,7 @@ function Navbar() {
 
                                             <div className=" w-100 pe-5 " id="wrapper_1">
 
-                                                <h5 className="mb-2 text-dark">LOGIN</h5>
+                                                <h5 className="mb-2 login-text ">LOGIN</h5>
 
                                                 <div class="mb-3">
                                                     <label for="exampleFormControlInput1" class="form-label">Mobile No or Email address</label>
@@ -114,7 +114,7 @@ function Navbar() {
 
 
                                             <div className="w-100 ps-5 ">
-                                                <h5 className="mb-2 text-dark">REGISTER</h5>
+                                                <h5 className="mb-2  login-text">REGISTER</h5>
 
                                                 <div class="mb-3">
                                                     <label for="exampleFormControlInput1" class="form-label">Mobile No or Email address</label>

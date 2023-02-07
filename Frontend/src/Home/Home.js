@@ -1702,7 +1702,7 @@ function Home() {
 
                 <div className="newsletter-section-wrapper pt-3 ">
                     <div className="newsletter-sec1">
-                        <h2 className="join-our-news-text fs-3 ">Join Our Newsletter To Get Offers</h2>
+                        <h2 className="join-our-news-text  ">Join Our Newsletter To Get Offers</h2>
                         <p className="newsletter-sub">Subscribe our news letter and updated</p>
                     </div>
                     <div className="newsletter-sec2 d-flex flex-grow-1  justify-content-end">

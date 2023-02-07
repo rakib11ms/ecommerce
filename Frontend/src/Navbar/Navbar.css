@@ -1,22 +1,52 @@
-#loginModalDialog{
-    margin-top:10%;
-    max-width: 700px;
+#loginModalDialog {
+  margin-top: 10%;
+  max-width: 700px;
 }
-.login-icon-fb{
-    background-color: rgb(34, 34, 105);
-}
-#wrapper_1:after {
-    content: "";
-    background-color: #dddd;
-    position: absolute;
-    width: 1px;
-    height: 85%;
-    top: 20px;
-    left: 51%;
-    display: block;
-  }
 
-  .navbar-font{
-    font-family: 'Poppins', sans-serif;
-    font-weight:400;
-  }
+.login-icon-fb {
+  background-color: rgb(34, 34, 105);
+}
+
+#wrapper_1:after {
+  content: "";
+  background-color: #dddd;
+  position: absolute;
+  width: 1px;
+  height: 85%;
+  top: 20px;
+  left: 51%;
+  display: block;
+}
+
+.navbar-font {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.login-register-wrapper {
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.fb-icon-login {
+  background-color: #192641;
+
+}
+
+.login-with-fb {
+  background-color: #3b5998;
+}
+
+.login-google-icon {
+  background-color: #B22222;
+  margin-left: 1.5rem;
+}
+
+.login-with-google {
+  background-color: red;
+}
+
+.login-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; 
+}
