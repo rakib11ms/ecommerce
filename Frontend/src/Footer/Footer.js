@@ -1,5 +1,8 @@
 import "../Home/Home.css";
 import footer from "../images/footer_page.png";
+import company_logo from "../images/weblogo.png";
+import hero from "../images/hero.png";
+
 
 function Footer() {
     return (
@@ -15,13 +18,13 @@ function Footer() {
 
                     <div className="">
                         <div className="footer-company-image">
-                            {/* <img src="" /> */}
+                            <img src={company_logo} style={{ width: '170px', height: '100%', objectFit: "contain", background: 'transparent' }} />
 
-                            <h3>Company Name
-                            </h3>
+                            {/* <h3>Company Name
+                            </h3> */}
                         </div>
-                        <h5 className="mt-4 fw-bold  " style={{ color: "rgb(158, 123, 57)" }}>+88 0123123123</h5>
-                        <p className="mb-2 ">Worktime: SAT- FRI, 10AM -11PM</p>
+                        <h5 className="mt-4 fw-bold  fs-4" style={{ color: "rgb(158, 123, 57)" }}>+88 0123123123</h5>
+                        <p className="mb-2 py-0 my-0 fs-7 worktime-footer-text">Worktime: SAT- FRI, 10AM -11PM</p>
 
                         <div className="footer-social-icons-wrapper">
 
@@ -78,10 +81,10 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="">
+                    <div className="footer-right-fb-page-wrapper ">
 
-                        <div className="mt-3 ">
-                            <img src={footer} style={{ width: '100%', height: '100%' }} />
+                        <div className="mt-3 footer-right-fb-page  ">
+                            <img src={footer} />
                         </div>
                     </div>
                 </div>

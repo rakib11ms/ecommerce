@@ -36,7 +36,12 @@ import HeroSlider from "./HeroSlider";
 
 
 
+
 function Home() {
+
+
+
+
     const settings = {
         infinite: true,
         slidesToShow: 4,
@@ -46,6 +51,9 @@ function Home() {
         autoplaySpeed: 2000,
         cssEase: "linear",
         overflowX: "hidden",
+        arrows: false,
+
+
         responsive: [
             {
                 breakpoint: 1024,
@@ -73,41 +81,43 @@ function Home() {
         ],
     };
 
-    // Best Selling
-    // var style = {
-    //     infinite: true,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     autoplay: false,
-    //     speed: 2000,
-    //     autoplaySpeed: 2000,
-    //     cssEase: "linear",
-    //     responsive: [
-    //         {
-    //             breakpoint: 1024,
-    //             settings: {
-    //                 slidesToShow: 4,
-    //                 slidesToScroll: 3,
-    //                 infinite: true,
-    //             },
-    //         },
-    //         {
-    //             breakpoint: 600,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 2,
-    //                 initialSlide: 2,
-    //             },
-    //         },
-    //         {
-    //             breakpoint: 480,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //             },
-    //         },
-    //     ],
-    // };
+    // client review
+    var clientReview = {
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+
+
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 3,
+                    infinite: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
 
 
 
@@ -267,7 +277,7 @@ function Home() {
             </section>
 
             {/* Ashiq Code  */}
-            <section className="my-5">
+            <section className="my-4">
                 {/* Browse Our Catagories */}
                 <div className="broswe-our-cat-heading my-3 px-5 container">
                     <div className="Name-tag-div1">
@@ -283,7 +293,7 @@ function Home() {
 
                 {/* <div className="d-flex my-3"> */}
 
-                <Slider {...settings}>
+                <Slider {...settings} className="slider1">
                     <div className="browse-cat-single-item ">
                         <img src={img1} />
                         <div className="browse-cat-single-inside-btn ">
@@ -372,8 +382,8 @@ function Home() {
 
 
 
-                    <Carousel responsive={responsive}   
- partialVisible={false}
+                    <Carousel responsive={responsive}
+                        partialVisible={false}
 
                     >
                         <div class="best-selling-prouct-items pb-2 my-3  ">
@@ -386,7 +396,7 @@ function Home() {
                                             <h6 className="my-0">4.6</h6>
                                         </div>
                                         <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                         </div>
 
                                         <div className="">
@@ -406,7 +416,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -421,7 +431,7 @@ function Home() {
                                             <h6 className="my-0">4.6</h6>
                                         </div>
                                         <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                         </div>
 
                                         <div className="">
@@ -441,7 +451,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -456,7 +466,7 @@ function Home() {
                                             <h6 className="my-0">1.6</h6>
                                         </div>
                                         <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                         </div>
 
                                         <div className="">
@@ -476,7 +486,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -498,7 +508,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -513,7 +523,7 @@ function Home() {
                                             <h6 className="my-0">4.6</h6>
                                         </div>
                                         <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                         </div>
 
                                         <div className="">
@@ -533,7 +543,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -549,7 +559,7 @@ function Home() {
             </section>
 
 
-            <section className="my-5">
+            <section className="my-4">
 
                 <div className="broswe-our-cat-heading my-3 container px-5">
                     <div className="Name-tag-div1">
@@ -576,7 +586,7 @@ function Home() {
                                             <h6 className="my-0">4.6</h6>
                                         </div>
                                         <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                         </div>
 
                                         <div className="">
@@ -596,7 +606,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -611,7 +621,7 @@ function Home() {
                                             <h6 className="my-0">4.6</h6>
                                         </div>
                                         <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                         </div>
 
                                         <div className="">
@@ -631,7 +641,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -646,7 +656,7 @@ function Home() {
                                             <h6 className="my-0">4.6</h6>
                                         </div>
                                         <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                         </div>
 
                                         <div className="">
@@ -666,7 +676,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -688,7 +698,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -703,7 +713,7 @@ function Home() {
                                             <h6 className="my-0">4.6</h6>
                                         </div>
                                         <div className="mx-1 ">
-                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                            <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                         </div>
 
                                         <div className="">
@@ -723,7 +733,7 @@ function Home() {
 
                                 </div>
                                 <div className="add-to-cart-btn text-center   ">
-                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                    <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                 </div>
                             </div>
 
@@ -800,7 +810,7 @@ function Home() {
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
                                             <div className="mx-1 ">
-                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                             </div>
 
                                             <div className="">
@@ -820,7 +830,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -835,7 +845,7 @@ function Home() {
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
                                             <div className="mx-1 ">
-                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                             </div>
 
                                             <div className="">
@@ -855,7 +865,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -870,7 +880,7 @@ function Home() {
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
                                             <div className="mx-1 ">
-                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                             </div>
 
                                             <div className="">
@@ -890,7 +900,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -912,7 +922,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -927,7 +937,7 @@ function Home() {
                                                 <h6 className="my-0">4.6</h6>
                                             </div>
                                             <div className="mx-1 ">
-                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                             </div>
 
                                             <div className="">
@@ -947,7 +957,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark"> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1"> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1006,7 +1016,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1028,7 +1038,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1045,7 +1055,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1069,7 +1079,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1086,7 +1096,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1110,7 +1120,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1126,7 +1136,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1147,7 +1157,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1166,10 +1176,7 @@ function Home() {
             <section className="single-demo-images-cards-section container bg-light px-0 my-5">
                 <div className="single-demo-image order-1">
                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/f/b/fb_product_post-2-17.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <div className="single-demo-image-overlay text-center text-black py-1  ">
-                        <h4 className="text-white">LONG SLEEVE SHIRT</h4>
-                        <button type="button" className="btn btn-light view-all-buttons  text-center text-dark rounded-pill btn-sm fw-bold">VIEW ALL </button>
-                    </div>
+               
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
@@ -1186,7 +1193,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1208,7 +1215,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1225,7 +1232,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1249,7 +1256,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1266,7 +1273,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1290,7 +1297,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1306,7 +1313,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1327,7 +1334,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1365,7 +1372,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1387,7 +1394,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1404,7 +1411,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1428,7 +1435,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1445,7 +1452,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1469,7 +1476,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1485,7 +1492,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1506,7 +1513,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1542,7 +1549,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1564,7 +1571,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1581,7 +1588,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1605,7 +1612,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1622,7 +1629,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1646,7 +1653,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1662,7 +1669,7 @@ function Home() {
                                                     <h6 className="my-0">4.6</h6>
                                                 </div>
                                                 <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning"></i></h6>
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
                                                 </div>
 
                                                 <div className="">
@@ -1683,7 +1690,7 @@ function Home() {
 
                                     </div>
                                     <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark "> Add to Cart</button>
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
                                     </div>
                                 </div>
 
@@ -1696,6 +1703,232 @@ function Home() {
                     </div>
                 </div>
             </section>
+
+            <section className="customer-review-section">
+                <div className="container">
+                    <div className="customer-review-section-wrapper">
+                        <div className="customer-review-section-heading ">
+                            <h4 className="customer-review-text">Customers Review</h4>
+                            <span className="customer-think-text text-secondary">What are customers think about us</span>
+                        </div>
+                        <div className="customer-review-item-wrapper">
+                            <Slider {...clientReview} className="client-review-slider">
+
+
+                                <div className="customer-review-item ">
+                                    <div className="customer-review-item-top">
+
+                                        <div className="client-image">
+                                            <img src="https://thumbs.dreamstime.com/b/handsome-man-black-suit-white-shirt-posing-studio-attractive-guy-fashion-hairstyle-confident-man-short-beard-125019349.jpg" />
+                                            <div className="quotation-icon">
+                                                <i class="fa fa-quote-left fa-2x text-secondary" aria-hidden="true"></i>
+
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <div className="d-flex align-items-center">
+                                                <h5 className="text-secondary mt-2 me-1">5</h5>
+                                                <h6 className="my-0  "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="customer-review-content ">
+                                        <h5 className="customer-review-name ">Kabir Khan</h5>
+                                        <p className="customer-review-para text-secondary"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unk</p>
+
+                                    </div>
+                                </div>
+                                <div className="customer-review-item ">
+                                    <div className="customer-review-item-top">
+
+                                        <div className="client-image">
+                                            <img src="https://www.shutterstock.com/image-photo/pretty-smiling-joyfully-female-fair-260nw-776697943.jpg" />
+                                            <div className="quotation-icon">
+                                                <i class="fa fa-quote-left fa-2x text-secondary" aria-hidden="true"></i>
+
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <div className="d-flex align-items-center">
+                                                <h5 className="text-secondary mt-2 me-1">4</h5>
+                                                <h6 className="my-0  "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="customer-review-content ">
+                                        <h5 className="customer-review-name ">Sarah Khan</h5>
+                                        <p className="customer-review-para text-secondary">Lorem Ipsum is simply dummy text of . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unk</p>
+
+                                    </div>
+                                </div>
+                                <div className="customer-review-item ">
+                                    <div className="customer-review-item-top">
+
+                                        <div className="client-image">
+                                            <img src="https://www.shutterstock.com/image-photo/smiling-friendly-handsome-young-male-260nw-189402968.jpg" />
+                                            <div className="quotation-icon">
+                                                <i class="fa fa-quote-left fa-2x text-secondary" aria-hidden="true"></i>
+
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <div className="d-flex align-items-center">
+                                                <h5 className="text-secondary mt-2 me-1">5</h5>
+                                                <h6 className="my-0 ms-1"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="customer-review-content ">
+                                        <h5 className="customer-review-name ">Ratul Hasan</h5>
+                                        <p className="customer-review-para text-secondary">Lorem Ipsum is simply dummy text of . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unk</p>
+
+                                    </div>
+                                </div>
+                                <div className="customer-review-item ">
+                                    <div className="customer-review-item-top">
+
+                                        <div className="client-image">
+                                            <img src="https://www.shutterstock.com/image-photo/pretty-smiling-joyfully-female-fair-260nw-776697943.jpg" />
+                                            <div className="quotation-icon">
+                                                <i class="fa fa-quote-left fa-2x text-secondary" aria-hidden="true"></i>
+
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <div className="d-flex align-items-center">
+                                                <h5 className="text-secondary mt-2 me-1">4</h5>
+                                                <h6 className="my-0  "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="customer-review-content ">
+                                        <h5 className="customer-review-name ">Sarah Khan</h5>
+                                        <p className="customer-review-para text-secondary">Lorem Ipsum is simply dummy text of . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unk</p>
+
+                                    </div>
+                                </div>
+                                <div className="customer-review-item ">
+                                    <div className="customer-review-item-top">
+
+                                        <div className="client-image">
+                                            <img src="https://thumbs.dreamstime.com/b/handsome-man-black-suit-white-shirt-posing-studio-attractive-guy-fashion-hairstyle-confident-man-short-beard-125019349.jpg" />
+                                            <div className="quotation-icon">
+                                                <i class="fa fa-quote-left fa-2x text-secondary" aria-hidden="true"></i>
+
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <div className="d-flex align-items-center">
+                                                <h5 className="text-secondary mt-2 me-1">5</h5>
+                                                <h6 className="my-0 ms-1"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="customer-review-content ">
+                                        <h5 className="customer-review-name ">Emica De Suza</h5>
+                                        <p className="customer-review-para text-secondary">Lorem Ipsum is simply dummy text of . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unk</p>
+
+                                    </div>
+                                </div>
+                                <div className="customer-review-item ">
+                                    <div className="customer-review-item-top">
+
+                                        <div className="client-image">
+                                            <img src="https://www.shutterstock.com/image-photo/pretty-smiling-joyfully-female-fair-260nw-776697943.jpg" />
+                                            <div className="quotation-icon">
+                                                <i class="fa fa-quote-left fa-2x text-secondary" aria-hidden="true"></i>
+
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <div className="d-flex align-items-center">
+                                                <h5 className="text-secondary mt-2 me-1">4</h5>
+                                                <h6 className="my-0  "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="customer-review-content ">
+                                        <h5 className="customer-review-name ">Sarah Khan</h5>
+                                        <p className="customer-review-para text-secondary">Lorem Ipsum is simply dummy text of . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unk</p>
+
+                                    </div>
+                                </div>
+                                <div className="customer-review-item ">
+                                    <div className="customer-review-item-top">
+
+                                        <div className="client-image">
+                                            <img src="https://media.istockphoto.com/id/1311084168/photo/overjoyed-pretty-asian-woman-look-at-camera-with-sincere-laughter.jpg?s=612x612&w=0&k=20&c=akS4eKR3suhoP9cuk7_7ZVZrLuMMG0IgOQvQ5JiRmAg=" />
+                                            <div className="quotation-icon">
+                                                <i class="fa fa-quote-left fa-2x text-secondary" aria-hidden="true"></i>
+
+                                            </div>
+                                        </div>
+                                        <div className="">
+                                            <div className="d-flex align-items-center">
+                                                <h5 className="text-secondary mt-2 me-1">5</h5>
+                                                <h6 className="my-0 ms-1"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                <h6 className="my-0 "><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="customer-review-content ">
+                                        <h5 className="customer-review-name ">Kabir Khan</h5>
+                                        <p className="customer-review-para text-secondary">Lorem Ipsum is simply dummy text of . Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unk</p>
+
+                                    </div>
+                                </div>
+                            </Slider>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
 
 
             <section className="newsletter-section container rounded-3  py-5 mt-5 px-5">

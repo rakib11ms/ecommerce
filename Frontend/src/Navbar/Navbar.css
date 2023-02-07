@@ -35,6 +35,10 @@
 
 .login-with-fb {
   background-color: #3b5998;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100; 
+
+
 }
 
 .login-google-icon {
@@ -44,6 +48,9 @@
 
 .login-with-google {
   background-color: red;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100; 
+
 }
 
 .login-text {
