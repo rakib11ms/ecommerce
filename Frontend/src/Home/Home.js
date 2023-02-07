@@ -383,7 +383,12 @@ function Home() {
 
 
                     <Carousel responsive={responsive}
-                        partialVisible={false}
+                      swipeable={true}
+                      draggable={true}
+                      autoPlay={true}
+                        partialVisible={true}
+                        autoPlaySpeed={1000}
+                        transitionDuration={500}
 
                     >
                         <div class="best-selling-prouct-items pb-2 my-3  ">
@@ -1176,7 +1181,7 @@ function Home() {
             <section className="single-demo-images-cards-section container bg-light px-0 my-5">
                 <div className="single-demo-image order-1">
                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/f/b/fb_product_post-2-17.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-               
+
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
