@@ -46,7 +46,7 @@ function Navbar() {
                             <i className="fa fa-phone"></i>
                         </div>
                         <div className="">
-                            <i className="far fa-flag"></i>
+                            <i class="far fa-heart"></i>
                         </div>
                         <div className="" data-bs-toggle="modal" data-bs-target="#loginModal">
                             <i class="far fa-user"></i>
@@ -176,9 +176,9 @@ function Navbar() {
                                         >
                                             PANJABI
                                         </a>
-                                        <ul class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
+                                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
                                             <div className="nav-dropdown-parent-vertical">
-                                                <div className="">
+                                                <div className="nav-dropdown-parent-vertical-con1 ">
                                                     <li>
                                                         <a class="dropdown-item navbar-font" href="#">
                                                             Action
@@ -207,7 +207,7 @@ function Navbar() {
                                                     </li>
                                                 </div>
 
-                                                <div className="">
+                                                <div className="nav-dropdown-parent-vertical-con2 ">
                                                     <li>
                                                         <a class="dropdown-item navbar-font" href="#">
                                                             Action
@@ -235,7 +235,7 @@ function Navbar() {
                                                     </li>
                                                 </div>
 
-                                                <div className="">
+                                                <div className="nav-dropdown-parent-vertical-con3 ">
                                                     <li>
                                                         <a class="dropdown-item navbar-font" href="#">
                                                             Action
@@ -262,59 +262,11 @@ function Navbar() {
                                                         </a>
                                                     </li>
                                                 </div>
-                                                <div className="">
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Another action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Something else
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                </div>
-                                                <div className="">
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Another action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Something else
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item navbar-font" href="#">
-                                                            Action
-                                                        </a>
-                                                    </li>
+                                                <div className="nav-dropdown-parent-vertical-con-image ">
+
+                                                    <div className="nav-dropdown-parent-vertical-img">
+                                                        <img src="http://www.easywellshop.com/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-25-at-5.58.23-PM.jpg" />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </ul>
@@ -330,7 +282,7 @@ function Navbar() {
                                         >
                                             T-SHIRT
                                         </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
                                             <li>
                                                 <a class="dropdown-item navbar-font" href="#">
                                                     Action
@@ -391,7 +343,7 @@ function Navbar() {
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li>
                                                 <a class="dropdown-item navbar-font" href="#">
-                                                    Action
+                                                    Polo t-shirt
                                                 </a>
                                             </li>
                                             <li>

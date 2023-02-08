@@ -383,11 +383,11 @@ function Home() {
 
 
                     <Carousel responsive={responsive}
-                      swipeable={true}
-                      draggable={true}
-                      autoPlay={true}
+                        swipeable={true}
+                        draggable={true}
+                        autoPlay={true}
                         partialVisible={true}
-                        autoPlaySpeed={1000}
+                        autoPlaySpeed={3000}
                         transitionDuration={500}
 
                     >
@@ -580,10 +580,17 @@ function Home() {
 
                 <div className="best-selling-products-images-wrapper my-2 px-0 container">
 
-                    <Carousel responsive={responsive}>
+                    <Carousel responsive={responsive}
+                        swipeable={true}
+                        draggable={true}
+                        autoPlay={true}
+                        partialVisible={true}
+                        autoPlaySpeed={3000}
+                        transitionDuration={500}
+                    >
                         <div class="best-selling-prouct-items pb-2 my-3 ">
                             <div className="best-selling-prouct-items-top">
-                                <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
+                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/e/i/eid_2nd_period_website_tops-05.jpg" class="card-img-top" alt="..." />
                                 <div className="card-section-without-color-image rounded py-0 px-1 ">
 
                                     <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
@@ -619,7 +626,7 @@ function Home() {
 
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
-                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/w/e/website_product-3-17.jpg" class="card-img-top" alt="..." />
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc8HdHzsFO2eJctae3qs2_JjWRm0eJWUsXFIk6PXnF1sEyXboZgr8B7jmYjNkbLxlJnm0&usqp=CAU" class="card-img-top" alt="..." />
                                 <div className="card-section-without-color-image rounded py-0 px-1">
                                     <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                         <div className=" ">
@@ -654,7 +661,7 @@ function Home() {
 
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVKJRz2B9bS2FMCVABiffLDxrN5vDWqo4avLfFZLHDuQYUBV7LdbbRTWeR5NSzV6n-uPc&usqp=CAU" class="card-img-top" alt="..." />
+                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/900x900/e9c3970ab036de70892d86c6d221abfe/w/e/web-7_3__1.jpg" class="card-img-top" alt="..." />
                                 <div className="card-section-without-color-image  rounded ">
                                     <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                         <div className=" ">
@@ -689,7 +696,7 @@ function Home() {
 
                         <div class="best-selling-prouct-items pb-2 my-3">
                             <div className="best-selling-prouct-items-top">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHJUgGMXcEixsUET351f9tMhwJh2y4rjKXcG5vmL-chc9F-ccRT36NiIt2yAsIKZO9AQ&usqp=CAU" class="card-img-top" alt="..." />
+                                <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/e/_/e__1_1.jpg" class="card-img-top" alt="..." />
                                 <div className="card-section-without-color-image star-review-overlay rounded-1 rounded py-0 px-1">
 
                                 </div>
@@ -774,8 +781,8 @@ function Home() {
             </section>
 
 
-            <section className="home-page-hero-slider-2 mx-0 ">
-                <div class="container  my-5 px-0 w-100 ">
+            <section className="home-page-hero-slider-2 mx-0  ">
+                <div class="container  my-4 px-0 w-100 ">
                     <div id="carouselExampleIndicators1" class="carousel slide carousal-height2" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class=" mx-2 active dot1" aria-current="true" aria-label="Slide 1"></button>
@@ -800,11 +807,18 @@ function Home() {
             </section>
 
 
-            <section className="card-section-without-color ">
+            <section className="card-section-without-color  ">
                 <div className="container px-0">
                     <div className="best-selling-products-images-wrapper my-2 px-0 container">
 
-                        <Carousel responsive={responsive}>
+                        <Carousel responsive={responsive}
+                            swipeable={true}
+                            draggable={true}
+                            autoPlay={true}
+                            partialVisible={true}
+                            autoPlaySpeed={3000}
+                            transitionDuration={500}
+                        >
                             <div class="best-selling-prouct-items pb-2 my-3">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
@@ -1180,7 +1194,7 @@ function Home() {
 
             <section className="single-demo-images-cards-section container bg-light px-0 my-5">
                 <div className="single-demo-image order-1">
-                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/f/b/fb_product_post-2-17.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src="http://sc04.alicdn.com/kf/H5ce1148978504006876ebfc7ecd6eeb4u.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
 
                 </div>
                 <div className="single-demo-image-cards ">
@@ -1188,7 +1202,7 @@ function Home() {
                         <Carousel responsive={responsiveSingleDemoImageCards} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
+                                    <img src="https://s.alicdn.com/@sc04/kf/H31b3c59519a84c0eb7d1f581d5c87f52A.jpg_300x300.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
@@ -1227,48 +1241,7 @@ function Home() {
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/7/d/7days-product-for-web_women7.jpg" class="card-img-top" alt="..." />
-                                    <div className="card-items-overlay-content">
-
-
-                                        <div className="star-icon">
-                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
-                                                <div className=" ">
-                                                    <h6 className="my-0">4.6</h6>
-                                                </div>
-                                                <div className="mx-1 ">
-                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
-                                                </div>
-
-                                                <div className="">
-
-                                                    <h6 className="my-0"> <span> | </span> 25</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-
-                                    </div>
-
-                                </div>
-                                <div className="single-demo-image-cards-image-content px-2 " >
-                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
-                                    <div className="d-flex align-items-center  ">
-                                        <h6 className="fs-5">TK 250</h6>
-                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
-
-                                    </div>
-                                    <div className="add-to-cart-btn text-center   ">
-                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="single-demo-image-card-items pb-2 my-3">
-                                <div className="single-demo-image-cards-top">
-                                    <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/u/puja_web-05.jpg" class="card-img-top" alt="..." />
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6fGHgrhPXnEPjJtQkHPJFv-znXdoolf9_5ocvkzOBOK6flvg-jn20ZJC8FASuQfghGAQ&usqp=CAU" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
 
@@ -1309,7 +1282,48 @@ function Home() {
                             </div>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
-                                    <img src={img2} class="card-img-top" alt="..." />
+                                    <img src="http://sc04.alicdn.com/kf/H5748910f0baf481fa0f1b36ada783d1fY.jpg" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
+
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="https://m.media-amazon.com/images/I/517K22SK9HL._SY445_SX342_QL70_ML2_.jpg" class="card-img-top" alt="..." />
                                     <div className="card-items-overlay-content">
 
                                         <div className="star-icon">
@@ -1346,7 +1360,47 @@ function Home() {
                             </div>
 
 
+                            <div class="single-demo-image-card-items pb-2 my-3">
+                                <div className="single-demo-image-cards-top">
+                                    <img src="http://sc04.alicdn.com/kf/H5748910f0baf481fa0f1b36ada783d1fY.jpg" class="card-img-top" alt="..." />
+                                    <div className="card-items-overlay-content">
 
+
+                                        <div className="star-icon">
+                                            <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
+                                                <div className=" ">
+                                                    <h6 className="my-0">4.6</h6>
+                                                </div>
+                                                <div className="mx-1 ">
+                                                    <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
+                                                </div>
+
+                                                <div className="">
+
+                                                    <h6 className="my-0"> <span> | </span> 25</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </div>
+                                <div className="single-demo-image-cards-image-content px-2 " >
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <div className="d-flex align-items-center  ">
+                                        <h6 className="fs-5">TK 250</h6>
+                                        <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
+
+                                    </div>
+                                    <div className="add-to-cart-btn text-center   ">
+                                        <button type="button" className="btn btn-light add-to-cart-btns rounded-pill bordered bg-light text-dark me-1 "> Add to Cart</button>
+                                    </div>
+                                </div>
+
+                            </div>
 
                         </Carousel>
 
