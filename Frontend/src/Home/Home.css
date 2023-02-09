@@ -745,6 +745,9 @@
     /* background-color: lightblue; */
     font-size: 12px;
   }
+  body{
+    overflow-x: hidden;
+  }
 
   .react-multi-carousel-item {
     transform-style: preserve-3d;
@@ -927,7 +930,7 @@
   }
 
   .react-multi-carousel-list {
-    margin-right: -60px;
+    margin-left: -60px;
   }
 
   .single-demo-images-cards-section {

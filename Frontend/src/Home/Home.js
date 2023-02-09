@@ -331,7 +331,7 @@ function Home() {
                         draggable={true}
                         autoPlay={true}
                         partialVisible={true}
-                        autoPlaySpeed={3000}
+                        autoPlaySpeed={3100}
                         transitionDuration={500}
 
                     >
@@ -760,7 +760,7 @@ function Home() {
                             draggable={true}
                             autoPlay={true}
                             partialVisible={true}
-                            autoPlaySpeed={3000}
+                            autoPlaySpeed={3500}
                             transitionDuration={500}
                         >
                             <div class="best-selling-prouct-items pb-2 my-3">
@@ -971,7 +971,7 @@ function Home() {
                             draggable={true}
                             autoPlay={true}
                             partialVisible={true}
-                            autoPlaySpeed={3000}
+                            autoPlaySpeed={2500}
                             transitionDuration={500}
 
                         >
@@ -1383,7 +1383,7 @@ function Home() {
                             draggable={true}
                             autoPlay={true}
                             partialVisible={true}
-                            autoPlaySpeed={3000}
+                            autoPlaySpeed={2500}
                             transitionDuration={500} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
@@ -1565,7 +1565,7 @@ function Home() {
                             draggable={true}
                             autoPlay={true}
                             partialVisible={true}
-                            autoPlaySpeed={3000}
+                            autoPlaySpeed={3500}
                             transitionDuration={500}>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
