@@ -47,8 +47,8 @@ function Home() {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
+        speed: 3000,
+        autoplaySpeed: 3000,
         cssEase: "linear",
         overflowX: "hidden",
         arrows: false,
@@ -87,8 +87,8 @@ function Home() {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
+        speed: 3000,
+        autoplaySpeed: 3000,
         cssEase: "linear",
 
 
@@ -127,6 +127,7 @@ function Home() {
             breakpoint: { max: 4000, min: 3000 },
             items: 5,
 
+
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -134,7 +135,7 @@ function Home() {
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 1
+            items: 2
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
@@ -152,11 +153,11 @@ function Home() {
         superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
-            items: 4
+            items: 4,
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3
+            items: 4
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -164,7 +165,7 @@ function Home() {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 1
+            items: 2,
         }
     }
 
@@ -173,63 +174,6 @@ function Home() {
 
             <Navbar></Navbar>
 
-            {/* <section className="hero-sliders">
-
-                <div
-                    id="carouselExampleIndicators"
-                    class="carousel slide carousal-height"
-                    data-bs-ride="carousel"
-                >
-                    <div class="carousel-indicators">
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="0"
-                            class="active dot1"
-                            aria-current="true"
-                            aria-label="Slide 1"
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="1"
-                            class="dot2 mx-2"
-                            aria-label="Slide 2 "
-                        ></button>
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="2"
-                            class="dot3 mx-2"
-                            aria-label="Slide 3"
-                        ></button>
-                    </div>
-                    <div class="carousel-inner carousal-height">
-                        <div class="carousel-item active">
-                            <img
-                                src={hero}
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="https://i0.wp.com/www.nogorpolli.com/wp-content/uploads/2018/12/most-popular-men-fashion-clothing-in-easy-fashion-ltd-bangladesh-nogorpolli.jpg?fit=770%2C514&ssl=1"
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>
-                        <div class="carousel-item">
-                            <img
-                                src="https://www.nogorpolli.com/wp-content/uploads/2018/12/yellow-is-the-most-innovative-clothing-brand-in-bangladesh-nogorpolli-%E0%A6%A8%E0%A6%97%E0%A6%B0-%E0%A6%AA%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A7%80-nogor-polli-apparel-clothing-fashion-store.png"
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>
-                    </div>
-       
-                </div>
-            </section> */}
 
 
             <HeroSlider></HeroSlider>
@@ -297,7 +241,7 @@ function Home() {
                     <div className="browse-cat-single-item ">
                         <img src={img1} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> JACKET</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font py-0"> JACKET</h6></button>
 
                         </div>
 
@@ -305,35 +249,35 @@ function Home() {
                     <div className="browse-cat-single-item">
                         <img src={img2} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> LUXARY PANJABI</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font py-0"> LUXARY PANJABI</h6></button>
 
                         </div>
                     </div>
                     <div className="browse-cat-single-item">
                         <img src={img3} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> PREMIMUM T-SHIRT</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font py-0"> PREMIMUM T-SHIRT</h6></button>
 
                         </div>
                     </div>
                     <div className="browse-cat-single-item">
                         <img src={img4} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> LUXARY PANJABI</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font py-0"> LUXARY PANJABI</h6></button>
 
                         </div>
                     </div>
                     <div className="browse-cat-single-item">
                         <img src={img5} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> LUXARY PANJABI</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font py-0"> LUXARY PANJABI</h6></button>
 
                         </div>
                     </div>
                     <div className="browse-cat-single-item">
                         <img src={img6} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> JACKET</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font py-0"> JACKET</h6></button>
 
                         </div>
 
@@ -341,7 +285,7 @@ function Home() {
                     <div className="browse-cat-single-item">
                         <img src={img7} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> JACKET</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font py-0"> JACKET</h6></button>
 
                         </div>
 
@@ -349,7 +293,7 @@ function Home() {
                     <div className="browse-cat-single-item">
                         <img src={img6} />
                         <div className="browse-cat-single-inside-btn ">
-                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font"> JACKET</h6></button>
+                            <button type="button" className="btn btn-light text-dark btn-block w-100"><h6 className="  fs-4 my-0 browse-category-card-font py-0"> JACKET</h6></button>
 
                         </div>
 
@@ -1022,7 +966,15 @@ function Home() {
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
-                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                        <Carousel responsive={responsiveSingleDemoImageCards}
+                            swipeable={true}
+                            draggable={true}
+                            autoPlay={true}
+                            partialVisible={true}
+                            autoPlaySpeed={3000}
+                            transitionDuration={500}
+
+                        >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
                                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
@@ -1032,7 +984,7 @@ function Home() {
                                         <div className="star-icon">
                                             <div className="d-flex align-items-center px-2 star-review-overlay rounded-1  py-1 my-0">
                                                 <div className=" ">
-                                                    <h6 className="my-0">4.6</h6>
+                                                    <h6 className="my-0">4.9</h6>
                                                 </div>
                                                 <div className="mx-1 ">
                                                     <h6 className="my-0"><i class="fa-solid fa-star text-warning star-icon"></i></h6>
@@ -1050,7 +1002,7 @@ function Home() {
 
                                 </div>
                                 <div className="single-demo-image-cards-image-content px-2 " >
-                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt For man</p>
+                                    <p className="fs-6 text-secondary my-0 mt-2">Premimum Quality T-Shirt </p>
                                     <div className="d-flex align-items-center  ">
                                         <h6 className="fs-5">TK 250</h6>
                                         <p className="mt-2 mx-3 text-decoration-line-through">Tk. 250</p>
@@ -1193,13 +1145,21 @@ function Home() {
 
 
             <section className="single-demo-images-cards-section container bg-light px-0 my-5">
-                <div className="single-demo-image order-1">
+                <div className="single-demo-image order-md-1 order-sm-0">
                     <img src="http://sc04.alicdn.com/kf/H5ce1148978504006876ebfc7ecd6eeb4u.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
 
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
-                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                        <Carousel responsive={responsiveSingleDemoImageCards}
+                            swipeable={true}
+                            draggable={true}
+                            autoPlay={true}
+                            partialVisible={true}
+                            autoPlaySpeed={3000}
+                            transitionDuration={500}
+
+                        >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
                                     <img src="https://s.alicdn.com/@sc04/kf/H31b3c59519a84c0eb7d1f581d5c87f52A.jpg_300x300.jpg" class="card-img-top" alt="..." />
@@ -1418,7 +1378,13 @@ function Home() {
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
 
-                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                        <Carousel responsive={responsiveSingleDemoImageCards}
+                            swipeable={true}
+                            draggable={true}
+                            autoPlay={true}
+                            partialVisible={true}
+                            autoPlaySpeed={3000}
+                            transitionDuration={500} >
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
                                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />
@@ -1588,14 +1554,19 @@ function Home() {
             </section>
 
             <section className="single-demo-images-cards-section container bg-light mt-5 px-0">
-                <div className="single-demo-image order-1">
+                <div className="single-demo-image order-md-1 order-sm-0">
                     <img src="https://static-01.daraz.com.bd/p/3569b570fac7837cf27c31581dd94f39.png" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
 
                 </div>
                 <div className="single-demo-image-cards ">
                     <div className="ps-5">
 
-                        <Carousel responsive={responsiveSingleDemoImageCards} >
+                        <Carousel responsive={responsiveSingleDemoImageCards} swipeable={true}
+                            draggable={true}
+                            autoPlay={true}
+                            partialVisible={true}
+                            autoPlaySpeed={3000}
+                            transitionDuration={500}>
                             <div class="single-demo-image-card-items pb-2 my-3">
                                 <div className="single-demo-image-cards-top">
                                     <img src="https://www.grameenuniqlo.com/pub/media/catalog/product/cache/image/600x600/e9c3970ab036de70892d86c6d221abfe/p/r/product_photo-04.jpg" class="card-img-top" alt="..." />

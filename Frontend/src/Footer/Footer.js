@@ -7,13 +7,13 @@ import hero from "../images/hero.png";
 function Footer() {
     return (
         <>
-            <footer className="contatiner-fluid footer-whole-wrapper text-white  mt-5">
+            <footer className="contatiner-fluid footer-whole-wrapper text-white  mt-5 ">
                 <div className="footer-background-image">
                     <img src="https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg" />
                 </div>
 
 
-                <div className="footer-wrapper pt-5">
+                <div className="footer-wrapper pt-5 pb-5">
 
 
                     <div className="">

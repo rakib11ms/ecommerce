@@ -87,7 +87,7 @@ function Navbar() {
                                                 <h5 className="mb-2 login-text ">LOGIN</h5>
 
                                                 <div class="mb-3">
-                                                    <label for="exampleFormControlInput1" class="form-label">Mobile No or Email address</label>
+                                                    <label for="exampleFormControlInput1" class="form-label">Mobile No or Email</label>
                                                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                                 </div>
 
@@ -117,7 +117,7 @@ function Navbar() {
                                                 <h5 className="mb-2  login-text">REGISTER</h5>
 
                                                 <div class="mb-3">
-                                                    <label for="exampleFormControlInput1" class="form-label">Mobile No or Email address</label>
+                                                    <label for="exampleFormControlInput1" class="form-label">Mobile No or Email </label>
                                                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                                 </div>
 
