@@ -1,0 +1,108 @@
+.contact-cards-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-cards-1{
+    height: 155px;
+    width: 27%;
+    border: 2px solid #c4c4c4;
+    border-radius: 7px;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-left:1rem;
+    padding-right: 1rem;
+}
+
+ .icon-sizes {
+    font-size: 23px;
+    ;
+}
+
+.contact-phones{
+    color: #8A8A8A
+}
+
+.contact-cards-address{
+    color: #454545
+}
+
+.contact-section-wrapper{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form-text{
+    font-size: 15px;
+
+}
+.contact-border{
+    border-radius: 4px;
+}
+.get-in-touch-text{
+    color: rgb(158, 123, 57);
+    letter-spacing: 1px;
+}
+
+.get-in-touch-wrapper{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+
+}
+.line-under{
+    height: 2px;
+    width: 60%;
+    background-color:#d4d4d4;;
+    position: absolute;
+    text-align: center;
+    left:20%;
+
+}
+
+.contact-bg{
+    border:1px solid white;
+    background-color: #f4f4f4;
+    border-radius: 0;
+}
+
+.contact-section-google-map-wrapper{
+    height: 400px;
+    width: 100%;
+}
+.contact-section-google-map-wrapper>iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* .form-control:focus {
+    border-color: #f4f4f4;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(19, 18, 18, 0.6);
+  } */
+
+@media only screen and (max-width: 576px) {
+    * {
+      /* background-color: lightblue; */
+      font-size: 14px;
+    }
+    body{
+      overflow-x: hidden;
+    }
+
+    .contact-cards-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-cards-1{
+        width: 100%;
+    }
+    .contact-section-wrapper{
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    
+}

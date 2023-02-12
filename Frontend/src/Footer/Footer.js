@@ -1,3 +1,5 @@
+import React, { useState, useEffect, Suspense, lazy } from 'react';
+import { Link, Navigate, useNavigate, Routes, Route } from "react-router-dom";
 import "../Home/Home.css";
 import footer from "../images/footer_page.png";
 import company_logo from "../images/weblogo.png";
@@ -56,7 +58,7 @@ function Footer() {
                             <li className="my-2  ">Privacy Policy</li>
                             <li className="my-2  ">Shipping Information</li>
                             <li className="my-2  ">Return & Exchange Policy</li>
-                            <li className="my-2  ">Contact Us</li>
+                            <li className="my-2  "> <Link to="/contact-us" className='text-decoration-none text-light'> Contact Us</Link></li>
                             <li className="my-2  ">FAQs</li>
                         </div>
                     </div>

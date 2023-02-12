@@ -1,0 +1,15 @@
+.top-filter-by-search-by-wrapper{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+.slug-url{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 13px;
+
+}
+
+.filter-by-text{
+    letter-spacing: 1px;
+    /* font-weight: 500; */
+}
