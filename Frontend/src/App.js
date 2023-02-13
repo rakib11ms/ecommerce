@@ -5,6 +5,7 @@ import Home from "./Home/Home";
 import BrowserCatagories from "../src/Pages/BrowserCatagories/BrowserCatagories";
 import ContactUs from "./ContactUs/ContactUs";
 import ShopCategory from "./ShopCategory/ShopCategory";
+import ProductDetails from "./ProductDetails/ProductDetails";
 function App() {
   return (
     <div className="">
@@ -14,6 +15,7 @@ function App() {
     <Route path="/" element={<Home />}></Route>
     <Route path="/contact-us" element={<ContactUs />}></Route>
     <Route path="/shop-category" element={<ShopCategory />}></Route>
+    <Route path="/product-details" element={<ProductDetails />}></Route>
       {/* <BrowserCatagories /> */}
 
     </Routes>

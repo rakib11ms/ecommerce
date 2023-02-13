@@ -21,6 +21,7 @@
   flex: 1;
 
 }
+
 /* .react-multi-carousel-list {
   margin-right: -60px;
 } */
@@ -274,7 +275,7 @@
 .best-selling-prouct-items {
 
   border-radius: 6px;
-  width: 240px;
+  width: 245px;
 
   height: 340px;
   position: relative;
@@ -745,7 +746,8 @@
     /* background-color: lightblue; */
     font-size: 12px;
   }
-  body{
+
+  body {
     overflow-x: hidden;
   }
 
@@ -857,14 +859,15 @@
     margin-left: 20px;
   }
 
-  /* .best-selling-prouct-items {
+  .best-selling-prouct-items {
 
     border-radius: 6px;
-    width: 90%;
-    height: 340px;
+    width: 230px;
+
+    height: 320px;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  } */
+  }
 
 
 

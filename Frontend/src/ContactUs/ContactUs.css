@@ -85,7 +85,7 @@
 @media only screen and (max-width: 576px) {
     * {
       /* background-color: lightblue; */
-      font-size: 14px;
+      font-size: 12px;
     }
     body{
       overflow-x: hidden;

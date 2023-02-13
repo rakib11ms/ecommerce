@@ -1,3 +1,4 @@
+import { Link, Navigate, useNavigate, Routes, Route } from "react-router-dom";
 import "../Home/Home.css";
 import './Navbar.css';
 import { react, useState } from 'react'
@@ -36,9 +37,11 @@ function Navbar() {
                     </div>
 
                     <div className="me-5 pe-5">
+                    <Link to="/"> 
                         <div className="web-logo">
-                            <img src={weblogo} />
+                         <img src={weblogo} />
                         </div>
+                        </Link> 
                     </div>
 
                     <div className="right-logos-top text-secondary ">
@@ -141,7 +144,7 @@ function Navbar() {
                         </div>
                     </div>
                 </section>
-                <hr className="my-2" />
+                <hr className="my-1" />
 
                 <section className="navs ">
                     <nav class="navbar navbar-expand-lg navbar-light responsive-nav  ">
@@ -163,7 +166,7 @@ function Navbar() {
                             >
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
                                     <li class="nav-item dropdown ">
-                                        <a class="nav-link navbar-font" >HOME</a>
+                                        <Link to="/" class="nav-link navbar-font">HOME</Link>
                                     </li>
                                     <li class="nav-item dropdown nav-link-margin">
                                         <a
