@@ -195,6 +195,7 @@
   letter-spacing: 1px;
   position: relative;
   width: 100%;
+
   /* font-family: 'Poppins', sans-serif;
   font-weight:500;
   font-size: 1.6rem; */
@@ -856,7 +857,7 @@
   }
 
   .best-selling-products-images-wrapper {
-    margin-left: 20px;
+    margin-left:20px;
   }
 
   .best-selling-prouct-items {
