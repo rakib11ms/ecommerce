@@ -1,12 +1,12 @@
 .top-filter-by-search-by-wrapper {
     display: flex;
     justify-content: space-between;
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
 .slug-url {
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 13px;
 
 }
@@ -43,7 +43,7 @@
     padding-right: 8px;
     font-family: 'Montserrat', sans-serif;
     /* font-weight: 00; */
-    color:black;
+    color: black;
     color: rgb(53, 50, 50);
 
 }
@@ -70,17 +70,90 @@
     height: 10px;
 }
 
-.shop-category-right-sidebar-wrapper{
+.shop-category-right-sidebar-wrapper {
     width: 83%;
-    display:flex;
+    display: flex;
     /* justify-content: space-between; */
     flex-wrap: wrap;
     /* padding-left:3rem; */
 
 
 }
-.shop-category-right-sidebar-wrapper>div{
-/* flex-grow: 1;     */
-margin-left:3rem;
-margin-bottom:2.5rem
+
+.shop-category-right-sidebar-wrapper>div {
+    /* flex-grow: 1;     */
+    margin-left: 3rem;
+    margin-bottom: 2.5rem
+}
+
+@media only screen and (max-width: 576px) {
+    * {
+        /* background-color: lightblue; */
+        font-size: 12px;
+
+    }
+
+    body {
+        overflow-x: hidden;
+
+    }
+    .shop-category-main-wrapper {
+        width: 100%;
+        background-color: white;
+  
+        /* display: flex; */
+        /* align-items: start; */
+    
+    
+    }
+    
+
+    .shop-category-right-sidebar-wrapper {
+        width: 100%;
+        display: flex;
+        /* justify-content: space-between; */
+        flex-wrap: wrap;
+        background-color: white;
+
+        /* padding-left:3rem; */
+    
+    
+    }
+    .shop-category-sidebar-wrapper {
+        width: 0px;
+        /* padding-right: 8px; */
+        font-family: 'Montserrat', sans-serif;
+        padding: 0px;
+        color: black;
+        color: rgb(53, 50, 50);
+        background-color: white;
+
+    
+    }
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        /* z-index: 199; */
+        /* top: 0; */
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+      }
+      
+.overlay-contents {
+    position: relative;
+    /* top: -5%; */
+    width: 200px;
+    z-index: 990;
+    text-align: center;
+    /* margin-top: 10px; */
+    background-color: rgba(255,255,255, 0.9);
+    color:black;
+    padding: 5px ;
+    transition: all 0.2s ease-in;
+}
+
 }

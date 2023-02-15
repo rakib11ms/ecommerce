@@ -3,9 +3,12 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import React, { Component, useRef, useState } from "react";
 import "./ShopCategory.css";
+import OutsideClickHandler from 'react-outside-click-handler';
 
 
 function ShopCategory() {
+    const [filterClickStatus, setFilterClickStatus] = useState(false);
+    console.log('check', filterClickStatus)
 
     return (
         <>
@@ -18,7 +21,9 @@ function ShopCategory() {
                     </div>
                     <div className="top-filter-by-search-by-wrapper  mb-3">
                         <div className="">
-                            <h5 className="filter-by-text ">FILTER BY</h5>
+                            <h5 className="filter-by-text" onClick={() => setFilterClickStatus(!filterClickStatus)}>FILTER BY <i class="fa-solid fa-filter text-warning "></i>
+                            </h5>
+
                             <div className="filter-by-line"></div>
                         </div>
                         <div className="d-flex align-items-center ">
@@ -39,604 +44,619 @@ function ShopCategory() {
                         </div>
                     </div>
 
-                    <div className="shop-category-main-wrapper">
-                        <div className="shop-category-sidebar-wrapper ">
-                            <div className="shop-category-color-wrapper mt-2">
-                                <div className="">
-                                    <h6 className="sidebar-color-text  ">COLOR</h6>
-                                    <hr className="mt-2" />
-                                    <div className="color-text-bold-line">
-
-                                    </div>
-                                </div>
-
-                                <div className="d-flex ">
-                                    <div className="w-100 custom-scrollbar-left-shopbar">
-                                        <div class="form-check d-flex justify-content-between mt-2">
-                                            <div className="">
+                    <div className="shop-category-main-wrapper ">
 
 
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Black
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
 
+                        <div className="shop-category-sidebar-wrapper overlays">
 
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
+                            <OutsideClickHandler
+                                onOutsideClick={() => {
+                                    // alert('You clicked outside of this component!!!');
+                                    setFilterClickStatus(false)
+                                }}
+                            >
+                                <div className={filterClickStatus ? 'overlay-contents' : ''}>
+                                    <div className="shop-category-color-wrapper mt-2  ">
+                                        <div className="">
+                                            <h6 className="sidebar-color-text  ">COLOR</h6>
+                                            <hr className="mt-2" />
+                                            <div className="color-text-bold-line">
 
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Red
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
                                             </div>
                                         </div>
 
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
+                                        <div className="d-flex ">
+                                            <div className="w-100 custom-scrollbar-left-shopbar">
+                                                <div class="form-check d-flex justify-content-between mt-2">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Black
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Red
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Brown
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Grey
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Blue
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Pink
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
 
 
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Brown
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Grey
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Blue
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Pink
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-                            </div>
-
-                            <div className="shop-category-color-wrapper my-4">
-                                <div className="">
-                                    <h6 className="sidebar-color-text  ">PRICE</h6>
-                                    <hr className="mt-2" />
-                                    <div className="color-text-bold-line">
-
-                                    </div>
-                                </div>
-
-                                <div className="d-flex ">
-                                    <div className="w-100 ">
-                                        <div class="form-check d-flex justify-content-between mt-2">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    100 to 300
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-
-
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    301-500
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    501-1000
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    1001-2500
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    2501-3000
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    2501-3000
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    2501-3000
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
 
-                                    </div>
 
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
 
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
 
 
-                                </div>
-                            </div>
-                            <div className="shop-category-color-wrapper my-4">
-                                <div className="">
-                                    <h6 className="sidebar-color-text  ">SIZE</h6>
-                                    <hr className="mt-2" />
-                                    <div className="color-text-bold-line">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
 
-                                    </div>
-                                </div>
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
 
-                                <div className="d-flex ">
-                                    <div className="w-100 ">
-                                        <div class="form-check d-flex justify-content-between mt-2">
-                                            <div className="">
 
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
 
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    S
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (21)
-                                            </div>
-
-
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    M
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (20)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    L
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (38)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    XL
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (40)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                        XXL
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    XXXL
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (29)
-                                            </div>
-                                        </div>
-
-                                
-
-                                    </div>
-
-
-
-
-                                </div>
-                            </div>
-
-                            <div className="shop-category-color-wrapper">
-                                <div className="">
-                                    <h6 className="sidebar-color-text  ">CATEGORY</h6>
-                                    <hr className="mt-2" />
-                                    <div className="color-text-bold-line">
-
-                                    </div>
-                                </div>
-
-                                <div className="d-flex ">
-                                    <div className="w-100 custom-scrollbar-left-shopbar">
-                                        <div class="form-check d-flex justify-content-between mt-2">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Black
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-
-
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
 
 
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Red
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Brown
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Grey
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
 
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
-
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-
-                                                    White
-                                                </label>
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
-
 
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
 
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-between">
-                                            <div className="">
 
 
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                <label class="form-check-label" for="flexCheckDefault">
-
-                                                    White
-                                                </label>
-                                            </div>
-                                            <div className=" ">
-                                                (27)
-                                            </div>
                                         </div>
                                     </div>
 
+                                    <div className="shop-category-color-wrapper my-4  ">
+                                        <div className="">
+                                            <h6 className="sidebar-color-text  ">PRICE</h6>
+                                            <hr className="mt-2" />
+                                            <div className="color-text-bold-line">
+
+                                            </div>
+                                        </div>
+
+                                        <div className="d-flex ">
+                                            <div className="w-100 ">
+                                                <div class="form-check d-flex justify-content-between mt-2">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            100 to 300
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            301-500
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            501-1000
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            1001-2500
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            2501-3000
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            2501-3000
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            2501-3000
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                            </div>
 
 
 
+
+                                        </div>
+                                    </div>
+                                    <div className="shop-category-color-wrapper my-4  ">
+                                        <div className="">
+                                            <h6 className="sidebar-color-text  ">SIZE</h6>
+                                            <hr className="mt-2" />
+                                            <div className="color-text-bold-line">
+
+                                            </div>
+                                        </div>
+
+                                        <div className="d-flex ">
+                                            <div className="w-100 ">
+                                                <div class="form-check d-flex justify-content-between mt-2">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            S
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (21)
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            M
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (20)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            L
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (38)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            XL
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (40)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            XXL
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            XXXL
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (29)
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                    <div className="shop-category-color-wrapper  ">
+                                        <div className="">
+                                            <h6 className="sidebar-color-text  ">CATEGORY</h6>
+                                            <hr className="mt-2" />
+                                            <div className="color-text-bold-line">
+
+                                            </div>
+                                        </div>
+
+                                        <div className="d-flex ">
+                                            <div className="w-100 custom-scrollbar-left-shopbar">
+                                                <div class="form-check d-flex justify-content-between mt-2">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Black
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Red
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Brown
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Grey
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-between">
+                                                    <div className="">
+
+
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                                        <label class="form-check-label" for="flexCheckDefault">
+
+                                                            White
+                                                        </label>
+                                                    </div>
+                                                    <div className=" ">
+                                                        (27)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+
+                            </OutsideClickHandler>
 
                         </div>
 
+
                         <div className="shop-category-right-sidebar-wrapper ">
-                    
-                      
+
+
                             <div class="best-selling-prouct-items  ">
                                 <div className="best-selling-prouct-items-top">
                                     <img src="http://www.observerbd.com/2018/02/24/1519490624.jpg" class="card-img-top" alt="..." />
