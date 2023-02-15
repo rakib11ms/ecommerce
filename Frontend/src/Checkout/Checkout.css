@@ -1,3 +1,11 @@
 .authentication-buttons {
   margin-top: -3%;
 }
+.cashOnDelivary-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cashOnDelivary {
+  width: 100px;
+}

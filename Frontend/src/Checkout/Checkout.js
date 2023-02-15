@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-
+import cashOnDelivary from "../images/cash on delivery.png";
 import MenuItem from "@mui/material/MenuItem";
 
 const district = [
@@ -208,8 +208,9 @@ const Checkout = () => {
                     <TextField
                       id="outlined-select-currency"
                       select
-                      label="THANA"
-                      defaultValue="THANA"
+                      label="DISTRICT"
+                      defaultValue="DISTRICT"
+                      helperText="Please select your currency"
                     >
                       {district.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -233,8 +234,8 @@ const Checkout = () => {
                     <TextField
                       id="outlined-select-currency"
                       select
-                      label="Select"
-                      defaultValue="EUR"
+                      label="THANA"
+                      defaultValue="THANA"
                       helperText="Please select your currency"
                     >
                       {thanas.map((option) => (
@@ -258,11 +259,73 @@ const Checkout = () => {
                   <div>
                     <TextField
                       id="outlined-basic"
-                      label="Customer Name"
+                      label="Email"
                       variant="outlined"
                     />
                   </div>
                 </Box>
+              </div>
+              <div className="col-lg-12 col-md-12 col-12">
+                <Box
+                  sx={{
+                    width: 500,
+                    maxWidth: "100%",
+                  }}
+                >
+                  <TextField
+                    fullWidth
+                    label="ORDER NOTE (OPTIONAL)"
+                    id="fullWidth"
+                  />
+                </Box>
+              </div>
+            </div>
+            <div className="mt-5">
+              <h2>Payment Method</h2>
+              <hr className="payment-hr" />
+              <div className="row">
+                <div className="col-lg-6 col-md-6 col-6">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="exampleRadios1"
+                      value="option1"
+                    />
+                    <label class="form-check-label" for="exampleRadios1">
+                      <h4>Cash on delivary</h4>
+                    </label>
+                  </div>
+                  <div className="cashOnDelivary-div">
+                    <img
+                      className="cashOnDelivary"
+                      src={cashOnDelivary}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-6">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="exampleRadios1"
+                      value="option1"
+                    />
+                    <label class="form-check-label" for="exampleRadios1">
+                      <h4>Pay Online</h4>
+                    </label>
+                  </div>
+                  <div className="cashOnDelivary-div">
+                    <img
+                      className="cashOnDelivary"
+                      src={cashOnDelivary}
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
