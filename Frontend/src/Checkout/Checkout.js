@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Checkout.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
@@ -6,6 +6,22 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import cashOnDelivary from "../images/cash on delivery.png";
 import MenuItem from "@mui/material/MenuItem";
+import dbbl from "../images/ddbl.png";
+import nogod from "../images/nogod.png";
+import mastercardl from "../images/mastercard.png";
+import visa from "../images/visa.png";
+import roket from "../images/roket.png";
+import tShirt1 from "../images/card-tShirt1.png";
+import tShirt2 from "../images/card-tShirt2.png";
+import tShirt3 from "../images/card-tShirt3.png";
+import tShirt4 from "../images/card-tShirt4.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFileArrowDown,
+  faPhone,
+  faXmark,
+  faGift,
+} from "@fortawesome/free-solid-svg-icons";
 
 const district = [
   {
@@ -97,6 +113,8 @@ const thanas = [
 ];
 
 const Checkout = () => {
+  const [filterClickStatus, setFilterClickStatus] = useState(false);
+  console.log("check", filterClickStatus);
   return (
     <div>
       <div>
@@ -134,7 +152,7 @@ const Checkout = () => {
       </div>
 
       <div className="container mt-5">
-        <h1>DELIVARY & BILLING INFO</h1>
+        <h3>DELIVARY & BILLING INFO</h3>
         <div className="row">
           <div className="col-lg-7 col-md-7 col-sm-12 col-12">
             <div className="row">
@@ -152,6 +170,7 @@ const Checkout = () => {
                       id="outlined-basic"
                       label="Customer Name"
                       variant="outlined"
+                      className="order-review-input"
                     />
                   </div>
                 </Box>
@@ -170,6 +189,7 @@ const Checkout = () => {
                       id="outlined-number"
                       label="Number"
                       type="number"
+                      className="order-review-input"
                       InputLabelProps={{
                         shrink: true,
                       }}
@@ -191,6 +211,7 @@ const Checkout = () => {
                       id="outlined-basic"
                       label="Address"
                       variant="outlined"
+                      className="order-review-input"
                     />
                   </div>
                 </Box>
@@ -209,8 +230,8 @@ const Checkout = () => {
                       id="outlined-select-currency"
                       select
                       label="DISTRICT"
+                      className="order-review-input"
                       defaultValue="DISTRICT"
-                      helperText="Please select your currency"
                     >
                       {district.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -236,7 +257,7 @@ const Checkout = () => {
                       select
                       label="THANA"
                       defaultValue="THANA"
-                      helperText="Please select your currency"
+                      className="order-review-input"
                     >
                       {thanas.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -261,6 +282,7 @@ const Checkout = () => {
                       id="outlined-basic"
                       label="Email"
                       variant="outlined"
+                      className="order-review-input"
                     />
                   </div>
                 </Box>
@@ -268,8 +290,9 @@ const Checkout = () => {
               <div className="col-lg-12 col-md-12 col-12">
                 <Box
                   sx={{
-                    width: 500,
+                    width: "92%",
                     maxWidth: "100%",
+                    marginLeft: "3px",
                   }}
                 >
                   <TextField
@@ -280,14 +303,14 @@ const Checkout = () => {
                 </Box>
               </div>
             </div>
-            <div className="mt-5">
-              <h2>Payment Method</h2>
+            <div className="mt-5 payment-method-div">
+              <h3>PAYMENT METHOD</h3>
               <hr className="payment-hr" />
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-6">
                   <div class="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input "
                       type="radio"
                       name="exampleRadios"
                       id="exampleRadios1"
@@ -305,7 +328,7 @@ const Checkout = () => {
                     />
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-6">
+                <div className="col-lg-6 col-md-6 col-6 mb-5">
                   <div class="form-check">
                     <input
                       class="form-check-input"
@@ -318,18 +341,173 @@ const Checkout = () => {
                       <h4>Pay Online</h4>
                     </label>
                   </div>
-                  <div className="cashOnDelivary-div">
-                    <img
-                      className="cashOnDelivary"
-                      src={cashOnDelivary}
-                      alt=""
-                    />
+                  <div className="bank-logo-div">
+                    <img className="bank-logo" src={dbbl} alt="" />
+                    <img className="bank-logo" src={visa} alt="" />
+                    <img className="bank-logo" src={mastercardl} alt="" />
+                    <img className="bank-logo" src={roket} alt="" />
+                    <img className="bank-logo" src={nogod} alt="" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-7 col-md-7 col-sm-12 col-12"></div>
+          <div className="col-lg-5 col-md-5 col-sm-12 col-12">
+            <h3>ORDER REVIEW</h3>
+            <hr className="payment-hr" />
+            <h6>YOUR CART : 3 ITEMS</h6>
+            <hr className="payment-hr" />
+            <div className={filterClickStatus ? "overlay-contents" : ""}>
+              <div className="shop-category-color-wrapper mt-2  ">
+                <div className="d-flex ">
+                  <div className="w-100 custom-scrollbar-left-shopbar">
+                    <div class="form-check d-flex justify-content-between ">
+                      <div className="">
+                        <img
+                          className="img img-fluid order-review-img"
+                          src={tShirt1}
+                          alt=""
+                        />
+                        <label
+                          className=" ms-3 mt-2 form-check-label"
+                          for="flexCheckDefault"
+                        >
+                          <p>Premimum Quality T-Shirt For Men</p>
+                          <div className="d-flex align-items-center">
+                            <h4>Tk. 450</h4>
+                            <div className="ms-4">
+                              <h6>Tk 550</h6>
+                              <hr className="discount-hr" />
+                            </div>
+                          </div>
+                          <h4>Size: M</h4>
+                        </label>
+                      </div>
+                      <div className=" ">
+                        <FontAwesomeIcon icon={faXmark} />
+                      </div>
+                    </div>
+                    <div class="form-check d-flex justify-content-between ">
+                      <div className="">
+                        <img
+                          className="img img-fluid order-review-img"
+                          src={tShirt2}
+                          alt=""
+                        />
+                        <label
+                          className=" ms-3 mt-2 form-check-label"
+                          for="flexCheckDefault"
+                        >
+                          <p>Premimum Quality T-Shirt For Men</p>
+                          <div className="d-flex align-items-center">
+                            <h4>Tk. 450</h4>
+                            <div className="ms-4">
+                              <h6>Tk 550</h6>
+                              <hr className="discount-hr" />
+                            </div>
+                          </div>
+                          <h4>Size: M</h4>
+                        </label>
+                      </div>
+                      <div className=" ">
+                        <FontAwesomeIcon icon={faXmark} />
+                      </div>
+                    </div>
+                    <div class="form-check d-flex justify-content-between ">
+                      <div className="">
+                        <img
+                          className="img img-fluid order-review-img"
+                          src={tShirt3}
+                          alt=""
+                        />
+                        <label
+                          className=" ms-3 mt-2 form-check-label"
+                          for="flexCheckDefault"
+                        >
+                          <p>Premimum Quality T-Shirt For Men</p>
+                          <div className="d-flex align-items-center">
+                            <h4>Tk. 450</h4>
+                            <div className="ms-4">
+                              <h6>Tk 550</h6>
+                              <hr className="discount-hr" />
+                            </div>
+                          </div>
+                          <h4>Size: M</h4>
+                        </label>
+                      </div>
+                      <div className=" ">
+                        <FontAwesomeIcon icon={faXmark} />
+                      </div>
+                    </div>
+                    <div class="form-check d-flex justify-content-between ">
+                      <div className="">
+                        <img
+                          className="img img-fluid order-review-img"
+                          src={tShirt4}
+                          alt=""
+                        />
+                        <label
+                          className=" ms-3 mt-2 form-check-label"
+                          for="flexCheckDefault"
+                        >
+                          <p>Premimum Quality T-Shirt For Men</p>
+                          <div className="d-flex align-items-center">
+                            <h4>Tk. 450</h4>
+                            <div className="ms-4">
+                              <h6>Tk 550</h6>
+                              <hr className="discount-hr" />
+                            </div>
+                          </div>
+                          <h4>Size: M</h4>
+                        </label>
+                      </div>
+                      <div className=" ">
+                        <FontAwesomeIcon icon={faXmark} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div className="">
+              <div className="d-flex justify-content-between">
+                <h6>SUB-TOTAL</h6>
+                <p>$3500</p>
+              </div>
+              <hr />
+              <div className="d-flex justify-content-between">
+                <h6>DELIVARY CHARGE</h6>
+                <p>$70</p>
+              </div>
+              <hr />
+              <div className="d-flex justify-content-between">
+                <h6>TOTAL</h6>
+                <p>$3570</p>
+              </div>
+            </div>
+            <div>
+              <p>
+                <span>
+                  <FontAwesomeIcon icon={faGift} />
+                </span>{" "}
+                Have a Coupon or Promo Code?
+              </p>
+              <div className="d-flex">
+                <input
+                  className="form-control me-2"
+                  type="text"
+                  value="Coupon Code Here"
+                  aria-label="readonly input example"
+                  readonly
+                />
+                <button className="order-review-apply">Apply</button>
+              </div>
+            </div>
+            <div className="order-review-place-button-div">
+              <button className="order-review-place-button">PLACE ORDER</button>
+            </div>
+          </div>
         </div>
       </div>
 

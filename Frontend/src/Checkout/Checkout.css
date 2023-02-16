@@ -3,9 +3,63 @@
 }
 .cashOnDelivary-div {
   display: flex;
-  justify-content: center;
+  justify-content: justify;
   align-items: center;
 }
 .cashOnDelivary {
   width: 100px;
+  margin-left: 20%;
+}
+.payment-method-div {
+  margin-right: 8%;
+}
+.bank-logo-div {
+  border: 1px solid rgb(224, 224, 224);
+  display: flex;
+  padding: 5px;
+  position: relative;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.order-review-input {
+  width: 80%;
+  height: 10%;
+}
+.bank-logo {
+  width: 15%;
+  border: 1px solid rgb(233, 233, 233);
+  /* margin: 10px; */
+}
+.bank-logo:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.order-review-img {
+  width: 20%;
+}
+.discount-hr {
+  margin-top: -40%;
+  border: 1px solid rgb(0, 0, 0);
+  color: black;
+}
+.order-review-apply {
+  padding: 0px 30px 0px 30px;
+  border: none;
+  background-color: #6a6a6a;
+  color: white;
+}
+.order-review-input-text-area {
+  width: 110%;
+}
+.order-review-place-button-div {
+  margin-top: 7%;
+  display: flex;
+  justify-content: center;
+}
+.order-review-place-button {
+  border: none;
+  background-color: #aa8153;
+  color: white;
+  padding: 10px 40px 10px 40px;
 }
