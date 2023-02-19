@@ -1,8 +1,9 @@
 import { Link, Navigate, useNavigate, Routes, Route } from "react-router-dom";
 import "../Home/Home.css";
 import './Navbar.css';
-import { react, useState } from 'react'
+import { react, useState, useEffect } from 'react'
 import weblogo from "../images/weblogo.png";
+import axios from "axios";
 
 function Navbar() {
     // const [modalShow, setModalShow] = useState(false);
@@ -13,6 +14,26 @@ function Navbar() {
     //   }
 
     //   window.onload = myFunction;
+
+    const [activeParentCategory, setActiveParentCategory] = useState('');
+    const [allMenus, seAllMenus] = useState([]);
+    console.log('datas', allMenus)
+
+    useEffect(() => {
+        axios.get(`/api/v1/marketplace/categories-tree`).then(res => {
+            if (res.status == 200) {
+                seAllMenus(res.data.data);
+
+
+            }
+        })
+    }, [])
+    const [globalSearchValue,setGlobalSearchValue]=useState('');
+    const submitGlobalSearch=(e)=>{
+        e.preventDefault();
+        console.log('submiteed',globalSearchValue)
+
+    }
     return (
         <>
             <div className="container" style={{ cursor: "pointer" }}>
@@ -26,22 +47,27 @@ function Navbar() {
                                 {" "}
                                 <i className="fa fa-search text-dark"> </i>
                             </span>
+                            <form className="" onSubmit={submitGlobalSearch}>
                             <input
                                 type="text"
                                 class="form-control bg-transparent border-0"
                                 placeholder="Search Products..."
                                 aria-label="Username"
+                                value={globalSearchValue}
+                                onChange={(e)=>setGlobalSearchValue(e.target.value)}
                                 aria-describedby="basic-addon1"
                             />
+                            </form>
+                       
                         </div>
                     </div>
 
                     <div className="me-5 pe-5">
-                    <Link to="/"> 
-                        <div className="web-logo">
-                         <img src={weblogo} />
-                        </div>
-                        </Link> 
+                        <Link to="/">
+                            <div className="web-logo">
+                                <img src={weblogo} />
+                            </div>
+                        </Link>
                     </div>
 
                     <div className="right-logos-top text-secondary ">
@@ -168,7 +194,135 @@ function Navbar() {
                                     <li class="nav-item dropdown ">
                                         <Link to="/" class="nav-link navbar-font">HOME</Link>
                                     </li>
-                                    <li class="nav-item dropdown nav-link-margin">
+
+                                    {
+                                        allMenus.map((item, i) => {
+                                            return (<>
+                                                <li class="nav-item dropdown nav-link-margin">
+
+                                                    <a
+                                                        class="nav-link dropdown-toggle navbar-font"
+                                                        href="#"
+                                                        id="navbarDropdown"
+                                                        role="button"
+                                                        data-bs-toggle="dropdown"
+                                                        aria-expanded="false"
+                                                    >
+                                                        {item.title}
+                                                    </a>
+                                                    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                                        <div className="nav-dropdown-parent-vertical">
+                                                            <div className="nav-dropdown-parent-vertical-con1 ">
+                                                                {
+                                                                   item.child!==undefined &&  item.child.map((subCat, i) => {
+                                                                        return (
+                                                                            <>
+                                                                                <li>
+                                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                                        {subCat.title}
+                                                                                    </a>
+                                                                                </li>
+                                                                            </>
+                                                                        )
+                                                                    })
+                                                                }
+                                                                {/* <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Action
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Another action
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Something else
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Action
+                                                                    </a>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Action
+                                                                    </a>
+                                                                </li> */}
+                                                            </div>
+
+                                                            {/* <div className="nav-dropdown-parent-vertical-con2 ">
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Action
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Another action
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Something else
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Action
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Action
+                                                                    </a>
+                                                                </li>
+                                                            </div>
+
+                                                            <div className="nav-dropdown-parent-vertical-con3 ">
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Action
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Another action
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Something else
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Action
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item navbar-font" href="#">
+                                                                        Action
+                                                                    </a>
+                                                                </li>
+                                                            </div>
+                                                            <div className="nav-dropdown-parent-vertical-con-image ">
+
+                                                                <div className="nav-dropdown-parent-vertical-img">
+                                                                    <img src="http://www.easywellshop.com/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-25-at-5.58.23-PM.jpg" />
+                                                                </div>
+                                                            </div> */}
+                                                        </div>
+                                                    </ul>
+                                                </li>
+                                            </>)
+
+                                        })
+                                    }
+                                    {/* <li class="nav-item dropdown nav-link-margin">
                                         <a
                                             class="nav-link dropdown-toggle navbar-font"
                                             href="#"
@@ -480,7 +634,7 @@ function Navbar() {
                                                 </a>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                         </div>
