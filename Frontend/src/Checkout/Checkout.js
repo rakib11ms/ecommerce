@@ -123,13 +123,16 @@ const Checkout = () => {
       <div className="container">
         <h3 className="checkout-text">CHECKOUT</h3>
         <hr className="checkout-hr" />
-        <div>
-          <p>
-            Returning Customer? <span>Click here to login</span>
+        <div className="checkout-social-sites-div">
+          <p className="return-customer-text">
+            <span className="return-customer-text-span">
+              Returning Customer?{" "}
+            </span>
+            Click here to login
           </p>
-          <div className="authentication-buttons bg-light">
-            <div className="d-flex justify-content-center  w-100">
-              <div className="d-flex rounded-1 ">
+          <div className="authentication-buttons-div ">
+            <div className="auth-social-sites-div">
+              <div className="d-flex rounded-1 fb-auth-button mt-2">
                 <div className="fb-icon-login rounded-start py-1 px-2">
                   <i className="fab fa-facebook text-white"></i>
                 </div>
@@ -152,11 +155,11 @@ const Checkout = () => {
       </div>
 
       <div className="container mt-5">
-        <h3>DELIVARY & BILLING INFO</h3>
+        <h3 className="checkouts-tags-texts">DELIVARY & BILLING INFO</h3>
         <div className="row">
           <div className="col-lg-7 col-md-7 col-sm-12 col-12">
             <div className="row">
-              <div className="col-lg-6 col-md-6 col-6">
+              <div className="col-lg-6 col-md-6 col-12">
                 <Box
                   component="form"
                   sx={{
@@ -171,11 +174,12 @@ const Checkout = () => {
                       label="Customer Name"
                       variant="outlined"
                       className="order-review-input"
+                      size="small"
                     />
                   </div>
                 </Box>
               </div>
-              <div className="col-lg-6 col-md-6 col-6">
+              <div className="col-lg-6 col-md-6 col-12">
                 <Box
                   component="form"
                   sx={{
@@ -190,6 +194,7 @@ const Checkout = () => {
                       label="Number"
                       type="number"
                       className="order-review-input"
+                      size="small"
                       InputLabelProps={{
                         shrink: true,
                       }}
@@ -197,7 +202,7 @@ const Checkout = () => {
                   </div>
                 </Box>
               </div>
-              <div className="col-lg-6 col-md-6 col-6">
+              <div className="col-lg-6 col-md-6 col-12">
                 <Box
                   component="form"
                   sx={{
@@ -212,11 +217,12 @@ const Checkout = () => {
                       label="Address"
                       variant="outlined"
                       className="order-review-input"
+                      size="small"
                     />
                   </div>
                 </Box>
               </div>
-              <div className="col-lg-6 col-md-6 col-6">
+              <div className="col-lg-6 col-md-6 col-12">
                 <Box
                   component="form"
                   sx={{
@@ -232,6 +238,7 @@ const Checkout = () => {
                       label="DISTRICT"
                       className="order-review-input"
                       defaultValue="DISTRICT"
+                      size="small"
                     >
                       {district.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -242,7 +249,7 @@ const Checkout = () => {
                   </div>
                 </Box>
               </div>
-              <div className="col-lg-6 col-md-6 col-6">
+              <div className="col-lg-6 col-md-6 col-12">
                 <Box
                   component="form"
                   sx={{
@@ -258,6 +265,7 @@ const Checkout = () => {
                       label="THANA"
                       defaultValue="THANA"
                       className="order-review-input"
+                      size="small"
                     >
                       {thanas.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -268,7 +276,7 @@ const Checkout = () => {
                   </div>
                 </Box>
               </div>
-              <div className="col-lg-6 col-md-6 col-6">
+              <div className="col-lg-6 col-md-6 col-12">
                 <Box
                   component="form"
                   sx={{
@@ -283,18 +291,13 @@ const Checkout = () => {
                       label="Email"
                       variant="outlined"
                       className="order-review-input"
+                      size="small"
                     />
                   </div>
                 </Box>
               </div>
               <div className="col-lg-12 col-md-12 col-12">
-                <Box
-                  sx={{
-                    width: "92%",
-                    maxWidth: "100%",
-                    marginLeft: "3px",
-                  }}
-                >
+                <Box className="comment-text-area">
                   <TextField
                     fullWidth
                     label="ORDER NOTE (OPTIONAL)"
@@ -307,8 +310,8 @@ const Checkout = () => {
               <h3>PAYMENT METHOD</h3>
               <hr className="payment-hr" />
               <div className="row">
-                <div className="col-lg-6 col-md-6 col-6">
-                  <div class="form-check">
+                <div className="col-lg-6 col-md-6 col-12 mb-5">
+                  <div className="form-check">
                     <input
                       className="form-check-input "
                       type="radio"
@@ -328,8 +331,8 @@ const Checkout = () => {
                     />
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-6 mb-5">
-                  <div class="form-check">
+                <div className="col-lg-6 col-md-6 col-12 mb-5">
+                  <div className="form-check">
                     <input
                       class="form-check-input"
                       type="radio"
@@ -355,7 +358,7 @@ const Checkout = () => {
           <div className="col-lg-5 col-md-5 col-sm-12 col-12">
             <h3>ORDER REVIEW</h3>
             <hr className="payment-hr" />
-            <h6>YOUR CART : 3 ITEMS</h6>
+            <h6 className="orderReview-cart-items-tags">YOUR CART : 3 ITEMS</h6>
             <hr className="payment-hr" />
             <div className={filterClickStatus ? "overlay-contents" : ""}>
               <div className="shop-category-color-wrapper mt-2  ">
@@ -372,15 +375,17 @@ const Checkout = () => {
                           className=" ms-3 mt-2 form-check-label"
                           for="flexCheckDefault"
                         >
-                          <p>Premimum Quality T-Shirt For Men</p>
+                          <p className="items-tags">
+                            Premimum Quality T-Shirt For Men
+                          </p>
                           <div className="d-flex align-items-center">
-                            <h4>Tk. 450</h4>
+                            <h4 className="orer-tk-size">Tk. 450</h4>
                             <div className="ms-4">
-                              <h6>Tk 550</h6>
+                              <h6 className="order-off-text">Tk 550</h6>
                               <hr className="discount-hr" />
                             </div>
                           </div>
-                          <h4>Size: M</h4>
+                          <h4 className="orer-tk-size">Size: M</h4>
                         </label>
                       </div>
                       <div className=" ">
@@ -398,15 +403,17 @@ const Checkout = () => {
                           className=" ms-3 mt-2 form-check-label"
                           for="flexCheckDefault"
                         >
-                          <p>Premimum Quality T-Shirt For Men</p>
+                          <p className="items-tags">
+                            Premimum Quality T-Shirt For Men
+                          </p>
                           <div className="d-flex align-items-center">
-                            <h4>Tk. 450</h4>
+                            <h4 className="orer-tk-size">Tk. 450</h4>
                             <div className="ms-4">
-                              <h6>Tk 550</h6>
+                              <h6 className="order-off-text">Tk 550</h6>
                               <hr className="discount-hr" />
                             </div>
                           </div>
-                          <h4>Size: M</h4>
+                          <h4 className="orer-tk-size">Size: M</h4>
                         </label>
                       </div>
                       <div className=" ">
@@ -424,15 +431,17 @@ const Checkout = () => {
                           className=" ms-3 mt-2 form-check-label"
                           for="flexCheckDefault"
                         >
-                          <p>Premimum Quality T-Shirt For Men</p>
+                          <p className="items-tags">
+                            Premimum Quality T-Shirt For Men
+                          </p>
                           <div className="d-flex align-items-center">
-                            <h4>Tk. 450</h4>
+                            <h4 className="orer-tk-size">Tk. 450</h4>
                             <div className="ms-4">
-                              <h6>Tk 550</h6>
+                              <h6 className="order-off-text">Tk 550</h6>
                               <hr className="discount-hr" />
                             </div>
                           </div>
-                          <h4>Size: M</h4>
+                          <h4 className="orer-tk-size">Size: M</h4>
                         </label>
                       </div>
                       <div className=" ">
@@ -450,15 +459,17 @@ const Checkout = () => {
                           className=" ms-3 mt-2 form-check-label"
                           for="flexCheckDefault"
                         >
-                          <p>Premimum Quality T-Shirt For Men</p>
+                          <p className="items-tags">
+                            Premimum Quality T-Shirt For Men
+                          </p>
                           <div className="d-flex align-items-center">
-                            <h4>Tk. 450</h4>
+                            <h4 className="orer-tk-size">Tk. 450</h4>
                             <div className="ms-4">
-                              <h6>Tk 550</h6>
+                              <h6 className="order-off-text">Tk 550</h6>
                               <hr className="discount-hr" />
                             </div>
                           </div>
-                          <h4>Size: M</h4>
+                          <h4 className="orer-tk-size">Size: M</h4>
                         </label>
                       </div>
                       <div className=" ">
@@ -471,23 +482,23 @@ const Checkout = () => {
             </div>
             <hr />
             <div className="">
-              <div className="d-flex justify-content-between">
-                <h6>SUB-TOTAL</h6>
-                <p>$3500</p>
+              <div className="d-flex justify-content-between align-items-center">
+                <h6 className="sub-delivary">SUB-TOTAL</h6>
+                <p className="ammount-charge">$3500</p>
               </div>
               <hr />
-              <div className="d-flex justify-content-between">
-                <h6>DELIVARY CHARGE</h6>
-                <p>$70</p>
+              <div className="d-flex justify-content-between align-items-center">
+                <h6 className="sub-delivary">DELIVARY CHARGE</h6>
+                <p className="ammount-charge">$70</p>
               </div>
               <hr />
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between align-items-center">
                 <h6>TOTAL</h6>
-                <p>$3570</p>
+                <p className="ammount-charge">$3570</p>
               </div>
             </div>
             <div>
-              <p>
+              <p className="order-coupon-code">
                 <span>
                   <FontAwesomeIcon icon={faGift} />
                 </span>{" "}
@@ -497,11 +508,11 @@ const Checkout = () => {
                 <input
                   className="form-control me-2"
                   type="text"
-                  value="Coupon Code Here"
+                  placeholder="Coupon Code Here"
                   aria-label="readonly input example"
                   readonly
                 />
-                <button className="order-review-apply">Apply</button>
+                <button className="order-review-apply">APPLY</button>
               </div>
             </div>
             <div className="order-review-place-button-div">

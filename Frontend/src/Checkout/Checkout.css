@@ -1,10 +1,26 @@
-.authentication-buttons {
+.authentication-buttons-div {
   margin-top: -3%;
+}
+.auth-social-sites-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.fb-auth-button {
+  margin-bottom: 10px;
 }
 .cashOnDelivary-div {
   display: flex;
   justify-content: justify;
   align-items: center;
+}
+.comment-text-area {
+  width: 91%;
+  max-width: 100%;
+  margin-left: 6px;
 }
 .cashOnDelivary {
   width: 100px;
@@ -20,6 +36,25 @@
   position: relative;
   width: 100%;
   justify-content: space-evenly;
+}
+.checkout-social-sites-div {
+  background-color: #fafafa;
+  padding-bottom: 1.5rem;
+}
+.checkout-text {
+  font-weight: 700;
+}
+.return-customer-text-span {
+  color: #6a6a6a;
+}
+.return-customer-text {
+  color: black;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding-left: 2%;
+}
+.checkouts-tags-texts {
+  /* font-weight: 650; */
 }
 .order-review-input {
   width: 80%;
@@ -52,6 +87,33 @@
 .order-review-input-text-area {
   width: 110%;
 }
+.orderReview-cart-items-tags {
+  color: #616161;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.items-tags {
+  color: #979797;
+}
+.orer-tk-size {
+  color: #616161;
+}
+.order-off-text {
+  color: #979797;
+}
+.sub-delivary {
+  color: #979797;
+}
+.ammount-charge {
+  color: black;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.order-coupon-code {
+  color: #979797;
+}
+
 .order-review-place-button-div {
   margin-top: 7%;
   display: flex;
@@ -62,4 +124,17 @@
   background-color: #aa8153;
   color: white;
   padding: 10px 40px 10px 40px;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 576px) {
+  .authentication-buttons-div {
+    margin-top: 2%;
+  }
+  .auth-social-sites-div {
+  }
+  .comment-text-area {
+    width: 81%;
+    margin-top: 1rem;
+  }
 }
