@@ -1,11 +1,24 @@
+import React, { Component, useEffect, useRef, useState } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import hero from "../images/hero.png";
 import hero2 from "../images/hero2.png";
 import "./HeroSlider.css";
+import axios from "axios";
 
 function HeroSlider() {
+    const [HeroSliders,setHeroSliders]=useState([]);
+    console.log('hero sliders',HeroSliders)
+    useEffect(()=>{
+        axios.get(`/api/v1/marketplace/slider/home`).then(res => {
+            if (res.status == 200) {
+                setHeroSliders(res.data.data);
+
+
+            }
+        })
+    },[])
     return (
         <>
 
@@ -14,7 +27,7 @@ function HeroSlider() {
                 emulateTouch={true} infiniteLoop={true}
                 dots={false}
                 showStatus={false}
-
+                interval={6000}
                 dotVerticalPosition="right"
                 dotVerticalAlign="center"
 

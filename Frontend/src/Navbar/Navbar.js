@@ -34,6 +34,17 @@ function Navbar() {
         console.log('submiteed',globalSearchValue)
 
     }
+
+
+    const [logInEmailInput,setLogInEmailInput]=useState('');
+    const[logInPasswordInput,setLogInPasswordInput]=useState('');
+    const handleSubmitLogin=(e)=>{
+        e.preventDefault();
+        console.log('submit login ',logInEmailInput,logInPasswordInput)
+
+  
+    }
+
     return (
         <>
             <div className="container" style={{ cursor: "pointer" }}>
@@ -117,12 +128,12 @@ function Navbar() {
 
                                                 <div class="mb-3">
                                                     <label for="exampleFormControlInput1" class="form-label">Mobile No or Email</label>
-                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" value={logInEmailInput} placeholder="" onChange={(e)=>setLogInEmailInput(e.target.value)} />
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <label for="exampleFormControlInput1" class="form-label">Password</label>
-                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" value={logInPasswordInput} placeholder="" onChange={(e)=>setLogInPasswordInput(e.target.value)} />
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -132,7 +143,7 @@ function Navbar() {
                                                 </div>
 
                                                 <div className="my-3">
-                                                    <button type="submit" className="btn btn-secondary px-4 rounded-0 fw-bold"> LOGIN</button>
+                                                    <button type="submit" className="btn btn-secondary px-4 rounded-0 fw-bold" onClick={handleSubmitLogin}> LOGIN</button>
                                                 </div>
                                                 <div className="">
                                                     <p className="my-0">Forgot password?</p>
