@@ -749,8 +749,9 @@
 
   }
 
-  body {
-    overflow-x: none;
+  body,html{
+    overflow-x:hidden;
+
   }
 
   .react-multi-carousel-item {

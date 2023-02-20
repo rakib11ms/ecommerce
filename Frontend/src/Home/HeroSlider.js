@@ -11,7 +11,7 @@ function HeroSlider() {
     const [HeroSliders,setHeroSliders]=useState([]);
     console.log('hero sliders',HeroSliders)
     useEffect(()=>{
-        axios.get(`/api/v1/marketplace/slider/home`).then(res => {
+        axios.get(`/api/v1/marketplace/slider/home-small-banner`).then(res => {
             if (res.status == 200) {
                 setHeroSliders(res.data.data);
 
@@ -33,18 +33,19 @@ function HeroSlider() {
 
 
             >
-                <div>
-                    <img src="http://2.bp.blogspot.com/-tIn2KLvryHc/U73jHiyUwYI/AAAAAAAABjM/GlBN6nvEb4M/w1200-h630-p-k-no-nu/Web-Slide5.jpg" />
+                {
+                    HeroSliders.map((item,i)=>{
+                        return(
+                            <>
+                                   <div>
+                    <img src={`https://s3-ap-southeast-1.amazonaws.com/bbt.demo/${item.image}`} />
                     {/* <p className="legend">Legend 1</p> */}
                 </div>
-                <div>
-                    <img src="https://i0.wp.com/www.nogorpolli.com/wp-content/uploads/2018/12/richman-is-a-contemporary-fashion-clothing-brand-in-bangladesh-nogorpolli-%E0%A6%A8%E0%A6%97%E0%A6%B0-%E0%A6%AA%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A7%80-nogor-polli-apparel-clothing-fashion-store.png?fit=1200%2C630&ssl=1" />
-                    {/* <p className="legend">Legend 2</p> */}
-                </div>
-                <div>
-                    <img src="https://www.nogorpolli.com/wp-content/uploads/2018/12/yellow-is-the-most-innovative-clothing-brand-in-bangladesh-nogorpolli-%E0%A6%A8%E0%A6%97%E0%A6%B0-%E0%A6%AA%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A7%80-nogor-polli-apparel-clothing-fashion-store.png" />
-                    {/* <p className="legend">Legend 3</p> */}
-                </div>
+                            </>
+                        )
+                    })
+                }
+                
             </Carousel>
         </>
 
