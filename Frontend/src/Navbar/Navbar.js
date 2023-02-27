@@ -5,7 +5,25 @@ import { react, useState, useEffect } from 'react'
 import weblogo from "../images/weblogo.png";
 import axios from "axios";
 
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+
+
 function Navbar() {
+
+    const [open, setOpen] = useState(false);
+
+
+
     // const [modalShow, setModalShow] = useState(false);
 
     // function myFunction() {
@@ -85,7 +103,7 @@ function Navbar() {
                         <div className="">
                             <i className="fa fa-phone"></i>
                         </div>
-                        <div className="">
+                        <div className="" onClick={() => setOpen(true)}>
                             <i class="far fa-heart"></i>
                         </div>
                         <div className="" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -224,7 +242,7 @@ function Navbar() {
                                                     <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
                                                         <div className="nav-dropdown-parent-vertical">
 
-                                                         
+
                                                             <div className="nav-dropdown-parent-vertical-con1 ">
                                                                 {
                                                                     item.child !== undefined && item.child.map((subCat, i) => {
@@ -239,7 +257,7 @@ function Navbar() {
                                                                         )
                                                                     })
                                                                 }
-                                          
+
                                                             </div>
 
                                                             {/* <div className="nav-dropdown-parent-vertical-con2 ">
@@ -631,6 +649,87 @@ function Navbar() {
 
 
                 </section>
+
+                <Drawer open={open} anchor={"right"} onClose={() => setOpen(false)}>
+                    <div style={{ width: 400 }} >
+
+                        <div className="add-to-card-header">
+                            <div className="fs-2 d-flex align-items-center">
+                                <i class="fa fa-shopping-bag fa-1x" aria-hidden="true"></i>
+
+                                <div className="mx-3 text-secondary">
+                                    <h4> 3 ITEMS</h4>
+                                </div>
+
+                            </div>
+
+                            <div className="" onClick={() => setOpen(false)}>
+                                <button className="btn btn-white border border-secondary rounded px-3 py-0">Close</button>
+                            </div>
+
+
+                        </div>
+
+                        <div className="add-to-cart-items-wrapper">
+
+                            <div className="add-to-cart-items py-3 px-2 border-bottom">
+                                <div className="px-3 arrow-increment">
+
+                                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                    <h4 className="my-2">4</h4>
+                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+                                </div>
+                                <div className="">
+                                    <img className="add-to-cart-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT7GnoWHe0zRlCHRCr26V81QIRsAMl5aiT0n_dI2_IAeVf-DX87d7rmEoT_8G7goF57VU&usqp=CAU" />
+                                </div>
+                                <div className="px-3">
+                                    <div className="pb-0">Premium Branding Shirt for man</div>
+                                    <div className="d-flex   align-items-center py-0 my-0">
+                                        <h6 className="fs-5 py-0 my-0">TK 250</h6>
+                                        <p className="mt-1 mx-3 text-decoration-line-through py-0 my-0">Tk. 250</p>
+                                    </div>
+
+                                    <span className="fw-bold  text-muted"> Size: M</span>
+
+                                </div>
+                                <div className="close-btns">
+                                    <i className="fa fa-close"></i>
+                                </div>
+                            </div>
+
+                            <div className="add-to-cart-items py-3 px-2 border-bottom">
+                                <div className="px-3 arrow-increment">
+
+                                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                    <h4 className="my-2">1</h4>
+                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+                                </div>
+                                <div className="">
+                                    <img className="add-to-cart-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT7GnoWHe0zRlCHRCr26V81QIRsAMl5aiT0n_dI2_IAeVf-DX87d7rmEoT_8G7goF57VU&usqp=CAU" />
+                                </div>
+                                <div className="px-3">
+                                    <div className="pb-0">Premium Branding Shirt for man</div>
+                                    <div className="d-flex   align-items-center py-0 my-0">
+                                        <h6 className="fs-5 py-0 my-0">TK 250</h6>
+                                        <p className=" mt-1 mx-3 text-decoration-line-through py-0 my-0">Tk. 250</p>
+                                    </div>
+
+                                    <span className="fw-bold  text-muted "> Size: M</span>
+
+                                </div>
+                                <div className="close-btns">
+                                    <i className="fa fa-close"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </Drawer>
+
+
             </div>
 
 

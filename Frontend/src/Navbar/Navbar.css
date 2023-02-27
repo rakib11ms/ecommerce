@@ -138,8 +138,30 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
+.add-to-card-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 20px;
+  background-color:#d1d1d1;
+  /* border-top-left-radius: 10px; */
+}
+.add-to-cart-img{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+.add-to-cart-items{
+  display: flex;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+.close-btns{
+  align-self: flex-start;
+}
 
-
+.arrow-increment{
+  align-self: center;
+  cursor: pointer;
+}
 @media only screen and (max-width: 576px) {
   * {
     /* background-color: lightblue; */
