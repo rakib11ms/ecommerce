@@ -27,7 +27,7 @@ function HeroSlider() {
                 emulateTouch={true} infiniteLoop={true}
                 dots={false}
                 showStatus={false}
-                interval={6000}
+                interval={10000}
                 dotVerticalPosition="right"
                 dotVerticalAlign="center"
 

@@ -1,5 +1,5 @@
 .nav-dropdown-parent-vertical {
-  width: 700px;
+  /* width: 700px; */
 
   display: flex;
   /* height: 200px; */
@@ -17,6 +17,13 @@
 .dropdown-menu>li>a:focus {
   background-color: #f3f3f3;
 }
+
+.nav-dropdown-parent-vertical-con1>li>a:active{
+  background-color: #f3f3f3;
+
+}
+
+
 
 
 
@@ -41,7 +48,7 @@
   display: block;
 }
 
-.nav-dropdown-parent-vertical-con1 {
+/* .nav-dropdown-parent-vertical-con1 {
   width: 20%;
 }
 
@@ -56,7 +63,7 @@
 .nav-dropdown-parent-vertical-con-image {
   width: 40%;
   height: 100%;
-}
+} */
 
 .nav-dropdown-parent-vertical-img {
   width: 80%;

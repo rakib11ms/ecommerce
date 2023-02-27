@@ -28,21 +28,21 @@ function Navbar() {
             }
         })
     }, [])
-    const [globalSearchValue,setGlobalSearchValue]=useState('');
-    const submitGlobalSearch=(e)=>{
+    const [globalSearchValue, setGlobalSearchValue] = useState('');
+    const submitGlobalSearch = (e) => {
         e.preventDefault();
-        console.log('submiteed',globalSearchValue)
+        console.log('submiteed', globalSearchValue)
 
     }
 
 
-    const [logInEmailInput,setLogInEmailInput]=useState('');
-    const[logInPasswordInput,setLogInPasswordInput]=useState('');
-    const handleSubmitLogin=(e)=>{
+    const [logInEmailInput, setLogInEmailInput] = useState('');
+    const [logInPasswordInput, setLogInPasswordInput] = useState('');
+    const handleSubmitLogin = (e) => {
         e.preventDefault();
-        console.log('submit login ',logInEmailInput,logInPasswordInput)
+        console.log('submit login ', logInEmailInput, logInPasswordInput)
 
-  
+
     }
 
     return (
@@ -59,17 +59,17 @@ function Navbar() {
                                 <i className="fa fa-search text-dark"> </i>
                             </span>
                             <form className="" onSubmit={submitGlobalSearch}>
-                            <input
-                                type="text"
-                                class="form-control bg-transparent border-0"
-                                placeholder="Search Products..."
-                                aria-label="Username"
-                                value={globalSearchValue}
-                                onChange={(e)=>setGlobalSearchValue(e.target.value)}
-                                aria-describedby="basic-addon1"
-                            />
+                                <input
+                                    type="text"
+                                    class="form-control bg-transparent border-0"
+                                    placeholder="Search Products..."
+                                    aria-label="Username"
+                                    value={globalSearchValue}
+                                    onChange={(e) => setGlobalSearchValue(e.target.value)}
+                                    aria-describedby="basic-addon1"
+                                />
                             </form>
-                       
+
                         </div>
                     </div>
 
@@ -128,12 +128,12 @@ function Navbar() {
 
                                                 <div class="mb-3">
                                                     <label for="exampleFormControlInput1" class="form-label">Mobile No or Email</label>
-                                                    <input type="email" class="form-control" id="exampleFormControlInput1" value={logInEmailInput} placeholder="" onChange={(e)=>setLogInEmailInput(e.target.value)} />
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" value={logInEmailInput} placeholder="" onChange={(e) => setLogInEmailInput(e.target.value)} />
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <label for="exampleFormControlInput1" class="form-label">Password</label>
-                                                    <input type="email" class="form-control" id="exampleFormControlInput1" value={logInPasswordInput} placeholder="" onChange={(e)=>setLogInPasswordInput(e.target.value)} />
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" value={logInPasswordInput} placeholder="" onChange={(e) => setLogInPasswordInput(e.target.value)} />
                                                 </div>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -223,9 +223,11 @@ function Navbar() {
                                                     </a>
                                                     <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
                                                         <div className="nav-dropdown-parent-vertical">
+
+                                                         
                                                             <div className="nav-dropdown-parent-vertical-con1 ">
                                                                 {
-                                                                   item.child!==undefined &&  item.child.map((subCat, i) => {
+                                                                    item.child !== undefined && item.child.map((subCat, i) => {
                                                                         return (
                                                                             <>
                                                                                 <li>
@@ -237,32 +239,7 @@ function Navbar() {
                                                                         )
                                                                     })
                                                                 }
-                                                                {/* <li>
-                                                                    <a class="dropdown-item navbar-font" href="#">
-                                                                        Action
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="dropdown-item navbar-font" href="#">
-                                                                        Another action
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="dropdown-item navbar-font" href="#">
-                                                                        Something else
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a class="dropdown-item navbar-font" href="#">
-                                                                        Action
-                                                                    </a>
-                                                                </li>
-
-                                                                <li>
-                                                                    <a class="dropdown-item navbar-font" href="#">
-                                                                        Action
-                                                                    </a>
-                                                                </li> */}
+                                          
                                                             </div>
 
                                                             {/* <div className="nav-dropdown-parent-vertical-con2 ">
