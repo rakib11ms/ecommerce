@@ -27,7 +27,7 @@ function HeroSlider() {
                 emulateTouch={true} infiniteLoop={true}
                 dots={false}
                 showStatus={false}
-                interval={10000}
+                interval={7000}
                 dotVerticalPosition="right"
                 dotVerticalAlign="center"
 
@@ -37,8 +37,8 @@ function HeroSlider() {
                     HeroSliders.map((item,i)=>{
                         return(
                             <>
-                                   <div>
-                    <img src={`https://s3-ap-southeast-1.amazonaws.com/bbt.demo/${item.image}`} />
+                                   <div key={i}>
+                    <img src={`https://s3-ap-southeast-1.amazonaws.com/bbt.demo/${item.image}`} alt="as" />
                     {/* <p className="legend">Legend 1</p> */}
                 </div>
                             </>
